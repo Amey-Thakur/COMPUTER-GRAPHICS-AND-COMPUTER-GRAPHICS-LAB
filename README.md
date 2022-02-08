@@ -16,7 +16,7 @@
 ## THE WALL
  - CG [Chapter - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/THE%20WALL/CG_Chapter-1.pdf)
 
-#Assignments
+## Assignments
  - CG [Assignment - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Assignments/CG_Assignment-1.pdf)
  - CG [Assignment - 2](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Assignments/CG_Assignment-2.pdf)
  - CG [Assignment](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Assignments/CG%20Assignment.pdf)

@@ -1,5 +1,5 @@
 # COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB
- CG & CGL [SEMESTER IV]
+ CSC404: CG & CSL402: CG LAB [SEMESTER IV]
  
  ---
  
@@ -33,3 +33,7 @@
 
 ## Test
 - [CG Test](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/CG_Test_B-50.pdf)
+
+
+
+

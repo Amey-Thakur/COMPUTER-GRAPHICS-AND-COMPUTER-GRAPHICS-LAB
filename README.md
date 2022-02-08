@@ -25,7 +25,7 @@
  - CGL [Experiments](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/PRACTICAL%20LAB.pdf)
 
 ## Computer Graphics Project
- >An attempt to create an augmented reality stack builder game for Android using Google's ARCore, Unity, and C#.
+ >**An attempt to create an augmented reality stack builder game for Android using Google's ARCore, Unity, and C#.**
    
   - [Android APK](https://github.com/Amey-Thakur/AR-STACK-GAME/blob/main/AR-Stack-Game.apk?raw=true) 
  

@@ -27,7 +27,7 @@
 ## Computer Graphics Project
  >**[Augmented Reality Stack Builder Game](https://github.com/Amey-Thakur/AR-STACK-GAME) - PROJECT REPOSITORY**
  
- - An attempt to create an augmented reality stack builder game for Android using Google's ARCore, Unity, and C#.
+ - **An attempt to create an augmented reality stack builder game for Android using Google's ARCore, Unity, and C#.**
    
  - [Android APK](https://github.com/Amey-Thakur/AR-STACK-GAME/blob/main/AR-Stack-Game.apk?raw=true) 
  
@@ -35,4 +35,3 @@
 
 ## Test
 - [CG Test](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/CG_Test_B-50.pdf)
-

@@ -22,7 +22,7 @@
  - CG [Assignment](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Assignments/CG%20Assignment.pdf)
 
 ## Computer Graphics Lab
- - CGL [Experiments](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/PRACTICAL%20LAB.pdf)
+ - CG Lab [Experiments](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/PRACTICAL%20LAB.pdf)
 
 ## Computer Graphics Project
  >**[Augmented Reality Stack Builder Game](https://github.com/Amey-Thakur/AR-STACK-GAME) - PROJECT REPOSITORY**

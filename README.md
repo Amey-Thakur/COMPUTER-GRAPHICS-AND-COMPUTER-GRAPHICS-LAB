@@ -8,12 +8,13 @@
  
  ---
  
- ## My Preparation
+## My Preparation
  - [Sem-IV Syllabus](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/My%20Preparation/Syllabus.png)
  - [Sem-IV Modules](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/My%20Preparation/Modules.png)
  - [Blueprint](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Blueprint%20(CG).png)
 
 ## THE WALL
+>**[MEGA SATISH](https://github.com/msatmod) - AUTHOR**
  - CG [Chapter - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/THE%20WALL/CG_Chapter-1.pdf)
 
 ## Assignments

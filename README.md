@@ -4,7 +4,7 @@
  ---
  
  - [X] **[Syllabus](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/SE-Comps_CBCGS_Syllabus.pdf)**
- - [x] **COA - [Reference Books](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Reference%20Books)**
+ - [x] **CG - [Reference Books](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Reference%20Books)**
  
  ---
  

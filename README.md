@@ -4,7 +4,7 @@
  ---
  
  - [X] **[Syllabus](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/SE-Comps_CBCGS_Syllabus.pdf)**
- - [x] **CG - [Reference Books](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Reference%20Books)**
+ - [X] **CG - [Reference Books](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Reference%20Books)**
  
  ---
  
@@ -15,6 +15,7 @@
 
 ## THE WALL
 >**[MEGA SATISH](https://github.com/msatmod) - AUTHOR**
+ 
  - CG [Chapter - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/THE%20WALL/CG_Chapter-1.pdf)
 
 ## Assignments

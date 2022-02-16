@@ -33,4 +33,4 @@
  - [X] **[Android APK](https://github.com/Amey-Thakur/AR-STACK-GAME/blob/main/AR-Stack-Game.apk?raw=true) - Try the application!** 
 
 ## Test
-- [CG Test](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/CG_Test_B-50.pdf)
+ - [CG Test](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/CG_Test_B-50.pdf)

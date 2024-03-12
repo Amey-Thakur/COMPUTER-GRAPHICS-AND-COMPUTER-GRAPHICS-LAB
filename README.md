@@ -1,4 +1,5 @@
 # COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB
+
  👍🏻 CSC404: CG & CSL402: CG LAB [SEMESTER IV]
  
  ---
@@ -62,4 +63,4 @@
 
 <p align="center"> <b> 👉🏻 Subject as a part of the 4th Semester of Engineering @ University of Mumbai 👈🏻 <b> </p>
  
-<p align="center"><a href='https://github.com/Amey-Thakur/ACHIEVEMENTS#engineering', style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>
+<p align="center"><a href='https://github.com/Amey-Thakur/ENGINEERING', style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>

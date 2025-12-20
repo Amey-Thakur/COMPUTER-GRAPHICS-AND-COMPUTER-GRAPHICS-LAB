@@ -227,9 +227,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 </div>
 
-### 👥 Project Authors
-
 <div align="center">
+
+  ### 👥 Project Authors
 
   **Terna Engineering College | Computer Engineering | Batch of 2022**
 

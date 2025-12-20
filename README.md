@@ -37,13 +37,13 @@
 
 ## Computer Graphics Lab
  
- >**CG Lab [Experiments](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/CG%20Lab/PRACTICAL%20LAB.pdf) - JOURNAL**
+ >**CG Lab [Experiments](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) - JOURNAL**
 
- - CG Lab [Experiment - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/CG%20Lab/Experiment-1)
+ - CG Lab [Experiment - 1](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-1)
  
- - CG Lab [Experiment - 2](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/CG%20Lab/Experiment-2)
+ - CG Lab [Experiment - 2](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-2)
  
- - CG Lab [Experiment - 3](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/CG%20Lab/Experiment-3)
+ - CG Lab [Experiment - 3](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-3)
 
 
 ## Computer Graphics Project

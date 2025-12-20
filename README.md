@@ -67,7 +67,7 @@ This collection includes **9 comprehensive reference materials** covering all ma
 | # | Resource | Focus Area |
 |:-:|:---|:---|
 | 1 | [CG Techmax](Reference%20Books/CG%20Techmax.pdf) | Complete syllabus coverage |
-| 2 | [CG Notes](Reference%20Books/CG_Notes.pdf) | Comprehensive lecture notes |
+| 2 | [CG Notes](Reference%20Books/CG_Notes.pdf) | Comprehensive lecture notes by Amey Thakur |
 | 3 | [CG-I](Reference%20Books/CG-I.pdf) | Graphics fundamentals and primitives |
 | 4 | [CG-II](Reference%20Books/CG-II.pdf) | Transformations and viewing |
 | 5 | [CG-III](Reference%20Books/CG-III.pdf) | 3D graphics and projections |

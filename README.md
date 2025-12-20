@@ -219,12 +219,31 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
   [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-purple.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Technology](https://img.shields.io/badge/Technology-ARCore%20%7C%20Unity-blue.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+
+  ### 🎮 Augmented Reality Stack Builder Game
+
+  **An immersive AR gaming experience built with Unity, ARCore, and C#**
 
 </div>
 
-> **[Augmented Reality Stack Builder Game](https://github.com/Amey-Thakur/AR-STACK-GAME)** - An immersive AR gaming experience
+### 👥 Project Authors
 
-An attempt to create an augmented reality stack builder game for Android using Google's ARCore, Unity, and C#. This project demonstrates the practical application of computer graphics concepts in modern AR development.
+<div align="center">
+
+  **Terna Engineering College | Computer Engineering | Batch of 2022**
+
+  | <img src="https://github.com/Amey-Thakur.png" width="120" alt="Amey Thakur"> | <img src="https://github.com/msatmod.png" width="120" alt="Mega Satish"> |
+  | :---: | :---: |
+  | [**Amey Thakur**](https://github.com/Amey-Thakur) | [**Mega Satish**](https://github.com/msatmod) |
+
+</div>
+
+### 📖 Project Overview
+
+An attempt to create an augmented reality stack builder game for Android using **Google's ARCore**, **Unity**, and **C#**. This project demonstrates the practical application of computer graphics concepts in modern AR development, including 3D rendering, real-time tracking, and interactive game mechanics.
+
+### 🔗 Resources
 
 | Resource | Description |
 |:---|:---|

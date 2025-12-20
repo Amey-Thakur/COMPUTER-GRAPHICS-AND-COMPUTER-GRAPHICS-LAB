@@ -233,9 +233,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
   **Terna Engineering College | Computer Engineering | Batch of 2022**
 
-  | <img src="https://github.com/Amey-Thakur.png" width="120" alt="Amey Thakur"> | <img src="https://github.com/msatmod.png" width="120" alt="Mega Satish"> |
+  | <img src="https://github.com/Amey-Thakur.png" width="120" alt="Amey Thakur"> | <img src="https://github.com/rizvihasan.png" width="120" alt="Hasan Rizvi"> |
   | :---: | :---: |
-  | [**Amey Thakur**](https://github.com/Amey-Thakur) | [**Mega Satish**](https://github.com/msatmod) |
+  | [**Amey Thakur**](https://github.com/Amey-Thakur) | [**Hasan Rizvi**](https://github.com/rizvihasan) |
 
 </div>
 

@@ -18,7 +18,7 @@
 
   ---
 
-  [📖 Overview](#overview) &nbsp;·&nbsp; [📂 Contents](#repository-contents) &nbsp;·&nbsp; [📚 Reference Books](#reference-books) &nbsp;·&nbsp; [📝 The Wall](#the-wall) &nbsp;·&nbsp; [✏️ Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [📄 Assignments](#assignments) &nbsp;·&nbsp; [🧪 Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [🎮 Project](#computer-graphics-project) &nbsp;·&nbsp; [📋 Syllabus](#syllabus) &nbsp;·&nbsp; [📘 Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [📜 License](#license) &nbsp;·&nbsp; [ℹ️ About](#about-this-repository) &nbsp;·&nbsp; [🙏🏻 Acknowledgments](#acknowledgments)
+  [📖 Overview](#overview) &nbsp;·&nbsp; [📂 Contents](#repository-contents) &nbsp;·&nbsp; [📚 Reference Books](#reference-books) &nbsp;·&nbsp; [👫🏻 The Wall](#the-wall) &nbsp;·&nbsp; [✏️ Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [📄 Assignments](#assignments) &nbsp;·&nbsp; [📝 Practice Test](#practice-test) &nbsp;·&nbsp; [🧪 Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [🎮 Project](#computer-graphics-project) &nbsp;·&nbsp; [📋 Syllabus](#syllabus) &nbsp;·&nbsp; [📘 Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [📜 License](#license) &nbsp;·&nbsp; [ℹ️ About](#about-this-repository) &nbsp;·&nbsp; [🙏🏻 Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -100,24 +100,25 @@ This collection includes **9 comprehensive reference materials** covering all ma
 </td>
 <td align="center">
 <a href="https://github.com/msatmod">
-<img src="THE%20WALL/Mega_Satish.png" alt="Mega Satish" width="150" height="150"/><br/>
+<img src="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/blob/main/THE%20WALL/Mega_Satish.png?raw=true" alt="Mega Satish" width="150" height="150"/><br/>
 <b>Mega Satish</b>
 </a>
 </td>
 </tr>
 </table>
 
-**Notes Authored by [MEGA SATISH](https://github.com/msatmod)**
-
 </div>
 
-Comprehensive chapter-wise notes curated by Mega Satish:
+> [!IMPORTANT]
+> 💝 **Special Thanks**: A heartfelt thank you to Mega for her constant support, patience, and clarity throughout this journey. Learning alongside her made a real difference, not only because she explained concepts so clearly, but because she truly cared about understanding them together. Her thoughtful approach to teaching, openness to discussion, and steady encouragement turned challenges into meaningful learning moments. This work reflects the growth that came from learning side by side. Thank you, Mega, for everything you shared and taught along the way.
+
+### The Wall - Notes Authored by [MEGA SATISH](https://github.com/msatmod)
+
+Comprehensive chapter-wise notes curated by Mega Satish, covering all essential topics:
 
 | Chapter | Resource | Topics Covered |
 |:-:|:---|:---|
 | 1 | [CG Chapter - 1](THE%20WALL/CG_Chapter-1.pdf) | Introduction to computer graphics and graphics systems |
-
-> 💝 **Special Thanks**: A heartfelt thank you to Mega for her constant support, patience, and clarity throughout this journey. Learning alongside her made a real difference, not only because she explained concepts so clearly, but because she truly cared about understanding them together. Her thoughtful approach to teaching, openness to discussion, and steady encouragement turned challenges into meaningful learning moments. This work reflects the growth that came from learning side by side. Thank you, Mega, for everything you shared and taught along the way.
 
 > [!NOTE]
 > **COVID-19 Impact**: This coursework was completed during the COVID-19 pandemic in 2020. Due to the nationwide lockdown and the sudden transition to online learning, several planned laboratory sessions and collaborative note-taking activities could not be carried out as originally intended. Despite these challenges, efforts were made to adapt and preserve as much work as possible. The limited chapter notes in this section reflect the disruption caused by the pandemic, rather than a lack of effort or commitment.
@@ -130,10 +131,10 @@ Study materials and planning resources for effective exam preparation:
 
 | Resource | Description |
 |:---|:---|
+| 📝 [CG Notes](Reference%20Books/CG_Notes.pdf) | Comprehensive lecture notes by Amey Thakur |
 | 📝 [Syllabus Breakdown](My%20Preparation/Syllabus.png) | Detailed module-wise syllabus notes |
 | 📊 [Module Planning](My%20Preparation/Modules.png) | Topic organization and study schedule |
 | 🎯 [Examination Blueprint](Blueprint%20(CG).png) | Question paper pattern and marking scheme |
-| 📄 [CG Test](CG_Test_B-50.pdf) | Practice test paper |
 | 🏆 [Achievement Certificate](Certificate.jpg) | Recognition in computer graphics excellence |
 
 ---
@@ -149,6 +150,16 @@ Academic assignments for comprehensive learning and practice:
 | 3 | **CG Assignment** | Comprehensive graphics concepts | [📄 View](Assignments/CG%20Assignment.pdf) |
 
 **Topics Covered**: Graphics Primitives (Line drawing - DDA, Bresenham's · Circle and ellipse algorithms) · Transformations (2D/3D translation, rotation, scaling, reflection, shearing) · Viewing & Clipping (Window-to-viewport mapping · Cohen-Sutherland clipping) · Curves (Bezier curves · B-spline curves · Parametric representations) · Rendering (Hidden surface removal · Illumination models · Shading techniques)
+
+---
+
+### Practice Test
+
+Mid-semester practice assessment:
+
+| Test | Date | Time | Class | Link |
+|:---|:---:|:---:|:---:|:---:|
+| **Practice Test CG** | May 5, 2020 | 10:00 AM - 11:00 AM | SE B-50 | [📄 View](CG_Test_B-50.pdf) |
 
 ---
 
@@ -334,7 +345,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
      ========================================================================================= -->
 <div align="center">
 
-  **[⬆ Back to Top](#computer-graphics-and-computer-graphics-lab)** &nbsp;·&nbsp; **[📖 Overview](#overview)** &nbsp;·&nbsp; **[📂 Contents](#repository-contents)** &nbsp;·&nbsp; **[📚 Reference Books](#reference-books)** &nbsp;·&nbsp; **[📝 The Wall](#the-wall)** &nbsp;·&nbsp; **[✏️ Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[📄 Assignments](#assignments)** &nbsp;·&nbsp; **[🧪 Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[🎮 Project](#computer-graphics-project)** &nbsp;·&nbsp; **[📋 Syllabus](#syllabus)** &nbsp;·&nbsp; **[📘 Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[📜 License](#license)** &nbsp;·&nbsp; **[ℹ️ About](#about-this-repository)** &nbsp;·&nbsp; **[🙏🏻 Acknowledgments](#acknowledgments)**
+  **[⬆ Back to Top](#computer-graphics-and-computer-graphics-lab)** &nbsp;·&nbsp; **[📖 Overview](#overview)** &nbsp;·&nbsp; **[📂 Contents](#repository-contents)** &nbsp;·&nbsp; **[📚 Reference Books](#reference-books)** &nbsp;·&nbsp; **[�🏻 The Wall](#the-wall)** &nbsp;·&nbsp; **[✏️ Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[📄 Assignments](#assignments)** &nbsp;·&nbsp; **[📝 Practice Test](#practice-test)** &nbsp;·&nbsp; **[🧪 Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[🎮 Project](#computer-graphics-project)** &nbsp;·&nbsp; **[📋 Syllabus](#syllabus)** &nbsp;·&nbsp; **[📘 Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[📜 License](#license)** &nbsp;·&nbsp; **[ℹ️ About](#about-this-repository)** &nbsp;·&nbsp; **[🙏🏻 Acknowledgments](#acknowledgments)**
 
   <br>
 

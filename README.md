@@ -136,17 +136,13 @@ Study materials and planning resources for effective exam preparation:
 
 Academic assignments for comprehensive learning and practice:
 
-<div align="center">
+| # | Assignment | Description | Link |
+|:-:|:---|:---|:---:|
+| 1 | **Assignment 1** | Graphics primitives and line drawing algorithms | [📄 View](Assignments/CG_Assignment-1.pdf) |
+| 2 | **Assignment 2** | Transformations and clipping techniques | [📄 View](Assignments/CG_Assignment-2.pdf) |
+| 3 | **CG Assignment** | Comprehensive graphics concepts | [📄 View](Assignments/CG%20Assignment.pdf) |
 
-**[📂 Browse All Assignments](Assignments/)**
-
-</div>
-
-| Resource | Description |
-|:---|:---|
-| 📝 [Assignment 1](Assignments/CG_Assignment-1.pdf) | Graphics primitives and line drawing algorithms |
-| 📝 [Assignment 2](Assignments/CG_Assignment-2.pdf) | Transformations and clipping techniques |
-| 📝 [CG Assignment](Assignments/CG%20Assignment.pdf) | Comprehensive graphics concepts |
+**Topics Covered**: Graphics Primitives (Line drawing - DDA, Bresenham's · Circle and ellipse algorithms) · Transformations (2D/3D translation, rotation, scaling, reflection, shearing) · Viewing & Clipping (Window-to-viewport mapping · Cohen-Sutherland clipping) · Curves (Bezier curves · B-spline curves · Parametric representations) · Rendering (Hidden surface removal · Illumination models · Shading techniques)
 
 ---
 

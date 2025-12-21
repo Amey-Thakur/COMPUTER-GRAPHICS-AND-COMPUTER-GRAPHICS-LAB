@@ -176,7 +176,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
   [![Language](https://img.shields.io/badge/Language-C-blueviolet.svg)](Computer%20Graphics%20Lab/)
   [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-brightgreen.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
 
-  **[📂 Browse All Experiments](Computer%20Graphics%20Lab/)**
+
 
 </div>
 

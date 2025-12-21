@@ -237,14 +237,14 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 <div align="center">
 
+  ### 🎮 Augmented Reality Stack Builder Game
+
+  **An immersive AR gaming experience built with Unity, ARCore, and C#**
+
   [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-purple.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Technology](https://img.shields.io/badge/Technology-ARCore%20%7C%20Unity-blue.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
-
-  ### 🎮 Augmented Reality Stack Builder Game
-
-  **An immersive AR gaming experience built with Unity, ARCore, and C#**
 
 </div>
 

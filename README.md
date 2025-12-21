@@ -226,6 +226,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 | Resource | Description |
 |:---|:---|
 | 🧪 [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
+| 📖 [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
 ---
 

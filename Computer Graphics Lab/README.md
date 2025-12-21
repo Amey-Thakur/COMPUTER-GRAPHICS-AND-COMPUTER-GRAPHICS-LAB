@@ -1,29 +1,43 @@
-<!-- HEADER -->
+<!-- =========================================================================================
+                                     HEADER SECTION
+     ========================================================================================= -->
 <div align="center">
 
+  <!-- Title -->
   # Computer Graphics Lab
 
+  <!-- Subtitle -->
   ### CSL402 · Semester IV · Computer Engineering
 
+  <!-- Badges -->
   [![Curated by](https://img.shields.io/badge/Curated%20by-Amey%20Thakur-blue.svg)](https://github.com/Amey-Thakur)
-  [![Experiments](https://img.shields.io/badge/Experiments-3-green.svg)](#quick-navigation)
-  [![Language](https://img.shields.io/badge/Language-C-orange.svg)](.)
+  [![Programs](https://img.shields.io/badge/Programs-4-yellowgreen.svg)](#quick-navigation)
+  [![Language](https://img.shields.io/badge/Language-C-blueviolet.svg)](./)
+  [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-brightgreen.svg)](PRACTICAL%20LAB.pdf)
 
-  **A comprehensive collection of 3 experiments covering fundamental graphics algorithms with detailed comments, proper documentation, and industry-standard coding practices using the graphics.h library.**
+  <!-- Short Description -->
+  **A comprehensive collection of 4 programs across 3 experiments covering fundamental graphics algorithms with detailed comments, proper documentation, and industry-standard coding practices using the graphics.h library.**
+
+  ---
+
+  <!-- Navigation Links -->
+  **[📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[⭕ Experiment 2](#-experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[🚀 How to Use](#-how-to-use)** &nbsp;·&nbsp; **[📖 Learning Path](#-learning-path)**
 
 </div>
 
 ---
 
-<div align="center">
+> [!TIP]
+> **Graphics Visualization**: Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and symmetry properties - is essential for implementing efficient graphics algorithms.
 
-  [📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs) &nbsp;·&nbsp; [⭕ Experiment 2](#-experiment-2-circle-drawing-1-program) &nbsp;·&nbsp; [🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program) &nbsp;·&nbsp; [🚀 How to Use](#-how-to-use) &nbsp;·&nbsp; [📖 Learning Path](#-learning-path)
-
-</div>
+> [!WARNING]
+> **Environment Setup**: These programs require **Turbo C++** or a compatible environment with the **graphics.h** library. Modern compilers like GCC/Clang do not support graphics.h natively. Use DOSBox with Turbo C++ or WinBGIm library for modern systems.
 
 ---
 
-<!-- EXPERIMENT 1 -->
+<!-- =========================================================================================
+                                     EXPERIMENT 1
+     ========================================================================================= -->
 ## 📏 Experiment 1: Line Drawing & Basic Shapes (2 Programs)
 
 | # | Program | Algorithm | Description |
@@ -33,7 +47,9 @@
 
 ---
 
-<!-- EXPERIMENT 2 -->
+<!-- =========================================================================================
+                                     EXPERIMENT 2
+     ========================================================================================= -->
 ## ⭕ Experiment 2: Circle Drawing (1 Program)
 
 | # | Program | Algorithm | Description |
@@ -42,7 +58,9 @@
 
 ---
 
-<!-- EXPERIMENT 3 -->
+<!-- =========================================================================================
+                                     EXPERIMENT 3
+     ========================================================================================= -->
 ## 🔵 Experiment 3: Ellipse Drawing (1 Program)
 
 | # | Program | Algorithm | Description |
@@ -51,7 +69,9 @@
 
 ---
 
-<!-- HOW TO USE -->
+<!-- =========================================================================================
+                                     HOW TO USE
+     ========================================================================================= -->
 ## 🚀 How to Use
 
 These programs require **Turbo C++** or a compatible environment with the **graphics.h** library.
@@ -80,7 +100,9 @@ tc
 
 ---
 
-<!-- LEARNING PATH -->
+<!-- =========================================================================================
+                                     LEARNING PATH
+     ========================================================================================= -->
 ## 📖 Learning Path
 
 **Beginner Level:**
@@ -99,7 +121,9 @@ tc
 
 ---
 
-<!-- LAB MANUAL -->
+<!-- =========================================================================================
+                                     LAB MANUAL
+     ========================================================================================= -->
 ## 📖 Lab Manual
 
 | Resource | Description |
@@ -108,14 +132,19 @@ tc
 
 ---
 
-<!-- FOOTER -->
+<!-- =========================================================================================
+                                     FOOTER SECTION
+     ========================================================================================= -->
 <div align="center">
 
-  **[⬆ Back to Top](#computer-graphics-lab)** &nbsp;·&nbsp; **[📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[⭕ Experiment 2](#-experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[🚀 How to Use](#-how-to-use)** &nbsp;·&nbsp; **[📖 Learning Path](#-learning-path)**
+  <!-- Footer Navigation -->
+  **[⬆ Back to Top](#computer-graphics-lab)**
+
+  **[📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[⭕ Experiment 2](#-experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[🚀 How to Use](#-how-to-use)** &nbsp;·&nbsp; **[📖 Learning Path](#-learning-path)**
 
   <br>
 
-  **[🏠 Back to Main Repository](../)** &nbsp;·&nbsp; **[📄 Assignments](../Assignments/)**
+  **[🏠 Back to Main Repository](../)**
 
 </div>
 

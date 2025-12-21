@@ -1,4 +1,6 @@
-<!-- HEADER -->
+<!-- =========================================================================================
+                                     HEADER SECTION
+     ========================================================================================= -->
 <div align="center">
 
   <img src="https://raw.githubusercontent.com/Amey-Thakur/COMPUTER-ENGINEERING/main/university-of-mumbai-logo.png" alt="University of Mumbai" width="200"/>
@@ -8,21 +10,23 @@
   ### CSC404 & CSL402 · Semester IV · Computer Engineering
 
   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-  [![University](https://img.shields.io/badge/University-Mumbai-orange.svg)](https://mu.ac.in/)
-  [![Institution](https://img.shields.io/badge/Institution-Terna%20Engineering%20College-green.svg)](https://ternaengg.ac.in/)
+  [![University](https://img.shields.io/badge/University-Mumbai-%23A6192E.svg)](https://mu.ac.in/)
+  [![Institution](https://img.shields.io/badge/Institution-Terna%20Engineering%20College-orange.svg)](https://ternaengg.ac.in/)
   [![Curated by](https://img.shields.io/badge/Curated%20by-Amey%20Thakur-blue.svg)](https://github.com/Amey-Thakur)
 
   **A comprehensive academic resource for Computer Graphics (CG) and Computer Graphics Laboratory (CG Lab), covering fundamental graphics algorithms, 2D/3D transformations, rendering techniques, and practical implementations using graphics programming.**
 
   ---
 
-  [📖 Overview](#overview) &nbsp;·&nbsp; [📂 Contents](#repository-contents) &nbsp;·&nbsp; [📚 Reference Books](#reference-books) &nbsp;·&nbsp; [📝 The Wall](#the-wall) &nbsp;·&nbsp; [✏️ Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [📄 Assignments](#assignments) &nbsp;·&nbsp; [🧪 Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [🎮 Project](#computer-graphics-project) &nbsp;·&nbsp; [📋 Syllabus](#syllabus) &nbsp;·&nbsp; [📘 Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [📜 License](#license) &nbsp;·&nbsp; [ℹ️ About](#about-this-repository) &nbsp;·&nbsp; [🙏 Acknowledgments](#acknowledgments)
+  [📖 Overview](#overview) &nbsp;·&nbsp; [📂 Contents](#repository-contents) &nbsp;·&nbsp; [📚 Reference Books](#reference-books) &nbsp;·&nbsp; [📝 The Wall](#the-wall) &nbsp;·&nbsp; [✏️ Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [📄 Assignments](#assignments) &nbsp;·&nbsp; [🧪 Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [🎮 Project](#computer-graphics-project) &nbsp;·&nbsp; [📋 Syllabus](#syllabus) &nbsp;·&nbsp; [📘 Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [📜 License](#license) &nbsp;·&nbsp; [ℹ️ About](#about-this-repository) &nbsp;·&nbsp; [🙏🏻 Acknowledgments](#acknowledgments)
 
 </div>
 
 ---
 
-<!-- OVERVIEW -->
+<!-- =========================================================================================
+                                     OVERVIEW SECTION
+     ========================================================================================= -->
 ## Overview
 
 Computer Graphics (CSC404) and Computer Graphics Lab (CSL402) are core subjects in the Second Year (Semester IV) of the Computer Engineering curriculum at the University of Mumbai. These courses provide foundational knowledge of graphics systems, algorithms for drawing primitives, transformations, and the mathematical principles underlying visual computing.
@@ -57,7 +61,9 @@ All materials in this repository were gathered, organized, and documented by me 
 
 ---
 
-<!-- CONTENTS -->
+<!-- =========================================================================================
+                                     CONTENTS SECTION
+     ========================================================================================= -->
 ## Repository Contents
 
 ### Reference Books
@@ -146,7 +152,9 @@ Academic assignments for comprehensive learning and practice:
 
 ---
 
-<!-- LABORATORY -->
+<!-- =========================================================================================
+                                     LABORATORY SECTION
+     ========================================================================================= -->
 ## Computer Graphics Laboratory
 
 The laboratory component (CSL402) focuses on hands-on implementation of various graphics algorithms using C programming with the graphics.h library, providing practical experience in visualizing geometric primitives and transformations.
@@ -207,7 +215,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 ---
 
-<!-- PROJECT -->
+<!-- =========================================================================================
+                                     PROJECT SECTION
+     ========================================================================================= -->
 ## Computer Graphics Project
 
 <div align="center">
@@ -250,15 +260,22 @@ An augmented reality stack-builder game for Android developed using **Google's A
 
 ---
 
-<!-- SYLLABUS -->
+<!-- =========================================================================================
+                                     SYLLABUS SECTION
+     ========================================================================================= -->
 ## Syllabus
 
 > 📋 **[Official CBCGS Syllabus](SE-Comps_CBCGS_Syllabus.pdf)**  
 > Complete Second Year Computer Engineering syllabus document from the University of Mumbai, including detailed course outcomes, assessment criteria, and module specifications for Computer Graphics and Computer Graphics Lab.
 
+> [!IMPORTANT]
+> Always verify the latest syllabus details with the official University of Mumbai website, as curriculum updates may occur after this repository's archival date.
+
 ---
 
-<!-- USAGE -->
+<!-- =========================================================================================
+                                     USAGE GUIDELINES SECTION
+     ========================================================================================= -->
 ## Usage Guidelines
 
 This repository is openly shared to support learning and knowledge exchange across the academic community.
@@ -274,16 +291,21 @@ The documentation and organization may provide insights into academic resource c
 
 ---
 
-<!-- LICENSE -->
+<!-- =========================================================================================
+                                     LICENSE SECTION
+     ========================================================================================= -->
 ## License
+
+> [!NOTE]
+> **Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original author.
 
 This repository and all linked academic content are made available under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See the [LICENSE](LICENSE) file for complete terms.
 
-**Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original author.
-
 ---
 
-<!-- ABOUT -->
+<!-- =========================================================================================
+                                     ABOUT SECTION
+     ========================================================================================= -->
 ## About This Repository
 
 **Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur)  
@@ -307,10 +329,12 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 
 ---
 
-<!-- FOOTER -->
+<!-- =========================================================================================
+                                     FOOTER SECTION
+     ========================================================================================= -->
 <div align="center">
 
-  **[⬆ Back to Top](#computer-graphics-and-computer-graphics-lab)** &nbsp;·&nbsp; **[📖 Overview](#overview)** &nbsp;·&nbsp; **[📂 Contents](#repository-contents)** &nbsp;·&nbsp; **[📚 Reference Books](#reference-books)** &nbsp;·&nbsp; **[📝 The Wall](#the-wall)** &nbsp;·&nbsp; **[✏️ Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[📄 Assignments](#assignments)** &nbsp;·&nbsp; **[🧪 Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[🎮 Project](#computer-graphics-project)** &nbsp;·&nbsp; **[📋 Syllabus](#syllabus)** &nbsp;·&nbsp; **[📘 Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[📜 License](#license)** &nbsp;·&nbsp; **[ℹ️ About](#about-this-repository)** &nbsp;·&nbsp; **[🙏 Acknowledgments](#acknowledgments)**
+  **[⬆ Back to Top](#computer-graphics-and-computer-graphics-lab)** &nbsp;·&nbsp; **[📖 Overview](#overview)** &nbsp;·&nbsp; **[📂 Contents](#repository-contents)** &nbsp;·&nbsp; **[📚 Reference Books](#reference-books)** &nbsp;·&nbsp; **[📝 The Wall](#the-wall)** &nbsp;·&nbsp; **[✏️ Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[📄 Assignments](#assignments)** &nbsp;·&nbsp; **[🧪 Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[🎮 Project](#computer-graphics-project)** &nbsp;·&nbsp; **[📋 Syllabus](#syllabus)** &nbsp;·&nbsp; **[📘 Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[📜 License](#license)** &nbsp;·&nbsp; **[ℹ️ About](#about-this-repository)** &nbsp;·&nbsp; **[🙏🏻 Acknowledgments](#acknowledgments)**
 
   <br>
 

@@ -172,9 +172,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 <div align="center">
 
-  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-brightgreen.svg)](Computer%20Graphics%20Lab/)
-  [![Language](https://img.shields.io/badge/Language-C-blue.svg)](Computer%20Graphics%20Lab/)
-  [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-orange.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
+  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-yellowgreen.svg)](Computer%20Graphics%20Lab/)
+  [![Language](https://img.shields.io/badge/Language-C-blueviolet.svg)](Computer%20Graphics%20Lab/)
+  [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-brightgreen.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
 
   **[📂 Browse All Experiments](Computer%20Graphics%20Lab/)**
 

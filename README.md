@@ -180,6 +180,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 </div>
 
+> [!TIP]
+> **Graphics Visualization**: Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and homogeneous coordinates - is essential for implementing efficient graphics algorithms and debugging visual output.
+
 ### Laboratory Experiments
 
 | Experiment | Topic | Algorithm | View |

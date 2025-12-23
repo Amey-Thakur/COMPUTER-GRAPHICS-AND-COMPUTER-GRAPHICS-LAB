@@ -185,11 +185,11 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 ### Laboratory Experiments
 
-| # | Experiment | Topic | Algorithm | View |
-|:-:|:---|:---|:---|:-:|
-| 1 | **Experiment 1** | Line Drawing & Basic Shapes | Bresenham's Algorithm, Graphics Primitives | [View](Computer%20Graphics%20Lab/Experiment-1/) |
-| 2 | **Experiment 2** | Circle Drawing | Midpoint Circle Algorithm | [View](Computer%20Graphics%20Lab/Experiment-2/) |
-| 3 | **Experiment 3** | Ellipse Drawing | Midpoint Ellipse Algorithm | [View](Computer%20Graphics%20Lab/Experiment-3/) |
+| Experiment | Topic | Algorithm | View |
+|:-:|:---|:---|:-:|
+| **1** | Line Drawing & Basic Shapes | Bresenham's Algorithm, Graphics Primitives | [View](Computer%20Graphics%20Lab/Experiment-1/) |
+| **2** | Circle Drawing | Midpoint Circle Algorithm | [View](Computer%20Graphics%20Lab/Experiment-2/) |
+| **3** | Ellipse Drawing | Midpoint Ellipse Algorithm | [View](Computer%20Graphics%20Lab/Experiment-3/) |
 
 ### Program Details
 

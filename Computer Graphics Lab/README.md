@@ -21,7 +21,7 @@
   ---
 
   <!-- Navigation Links -->
-  **[📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[⭕ Experiment 2](#-experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[🚀 How to Use](#-how-to-use)** &nbsp;·&nbsp; **[📖 Learning Path](#-learning-path)**
+  **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)**
 
 </div>
 
@@ -38,10 +38,10 @@
 <!-- =========================================================================================
                                      EXPERIMENT 1
      ========================================================================================= -->
-## 📏 Experiment 1: Line Drawing & Basic Shapes (2 Programs)
+## Experiment 1: Line Drawing & Basic Shapes (2 Programs)
 
 | # | Program | Algorithm | Description |
-|:---|:---|:---|:---|
+|:-:|:---|:---|:---|
 | 1 | [Bresenhams_Line_Algorithm.c](Experiment-1/Bresenhams_Line_Algorithm.c) | Bresenham's Line | Efficient line drawing using integer arithmetic |
 | 2 | [Basic_Graphics_Shapes.c](Experiment-1/Basic_Graphics_Shapes.c) | Graphics Primitives | Rectangle, circle, line, ellipse, bar primitives |
 
@@ -50,10 +50,10 @@
 <!-- =========================================================================================
                                      EXPERIMENT 2
      ========================================================================================= -->
-## ⭕ Experiment 2: Circle Drawing (1 Program)
+## Experiment 2: Circle Drawing (1 Program)
 
 | # | Program | Algorithm | Description |
-|:---|:---|:---|:---|
+|:-:|:---|:---|:---|
 | 1 | [Midpoint_Circle_Algorithm.c](Experiment-2/Midpoint_Circle_Algorithm.c) | Midpoint Circle | Circle generation using 8-way symmetry |
 
 ---
@@ -61,10 +61,10 @@
 <!-- =========================================================================================
                                      EXPERIMENT 3
      ========================================================================================= -->
-## 🔵 Experiment 3: Ellipse Drawing (1 Program)
+## Experiment 3: Ellipse Drawing (1 Program)
 
 | # | Program | Algorithm | Description |
-|:---|:---|:---|:---|
+|:-:|:---|:---|:---|
 | 1 | [Midpoint_Ellipse_Algorithm.c](Experiment-3/Midpoint_Ellipse_Algorithm.c) | Midpoint Ellipse | Ellipse generation using 4-way symmetry |
 
 ---
@@ -72,7 +72,7 @@
 <!-- =========================================================================================
                                      HOW TO USE
      ========================================================================================= -->
-## 🚀 How to Use
+## How to Use
 
 These programs require **Turbo C++** or a compatible environment with the **graphics.h** library.
 
@@ -103,7 +103,7 @@ tc
 <!-- =========================================================================================
                                      LEARNING PATH
      ========================================================================================= -->
-## 📖 Learning Path
+## Learning Path
 
 **Beginner Level:**
 - Start with Experiment 1 (Basic Graphics Shapes)
@@ -124,11 +124,11 @@ tc
 <!-- =========================================================================================
                                      LAB MANUAL
      ========================================================================================= -->
-## 📖 Lab Manual
+## Lab Manual
 
-| Resource | Description |
-|:---|:---|
-| [PRACTICAL LAB.pdf](PRACTICAL%20LAB.pdf) | Complete laboratory manual with all experiments |
+| # | Resource | Description |
+|:-:|:---|:---|
+| 1 | [PRACTICAL LAB.pdf](PRACTICAL%20LAB.pdf) | Complete laboratory manual with all experiments |
 
 ---
 
@@ -138,9 +138,9 @@ tc
 <div align="center">
 
   <!-- Footer Navigation -->
-  **[⬆ Back to Top](#computer-graphics-lab)**
+  **[↑ Back to Top](#computer-graphics-lab)**
 
-  **[📏 Experiment 1](#-experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[⭕ Experiment 2](#-experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[🔵 Experiment 3](#-experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[🚀 How to Use](#-how-to-use)** &nbsp;·&nbsp; **[📖 Learning Path](#-learning-path)**
+  **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)**
 
   <br>
 

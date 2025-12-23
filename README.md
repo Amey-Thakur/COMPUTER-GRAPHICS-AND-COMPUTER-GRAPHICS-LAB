@@ -155,7 +155,7 @@ Academic assignments for comprehensive learning and practice:
 
 ### Practice Test
 
-Mid-semester practice assessment:
+Practice assessment details:
 
 | # | Test | Date | Time | Class | Link |
 |:-:|:---|:---:|:---:|:---:|:---:|

@@ -21,7 +21,7 @@
   ---
 
   <!-- Navigation Links -->
-  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
+  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Lab Manual](#lab-manual)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
 
 </div>
 
@@ -88,6 +88,17 @@ tc
 ---
 
 <!-- =========================================================================================
+                                     LAB MANUAL
+     ========================================================================================= -->
+## Lab Manual
+
+| # | Resource | Description |
+|:-:|:---|:---|
+| 1 | [PRACTICAL LAB.pdf](PRACTICAL%20LAB.pdf) | Complete laboratory manual with all experiments |
+
+---
+
+<!-- =========================================================================================
                                      EXPERIMENT 1
      ========================================================================================= -->
 ## Experiment 1: Line Drawing & Basic Shapes (2 Programs)
@@ -122,17 +133,6 @@ tc
 
 
 <!-- =========================================================================================
-                                     LAB MANUAL
-     ========================================================================================= -->
-## Lab Manual
-
-| # | Resource | Description |
-|:-:|:---|:---|
-| 1 | [PRACTICAL LAB.pdf](PRACTICAL%20LAB.pdf) | Complete laboratory manual with all experiments |
-
----
-
-<!-- =========================================================================================
                                      FOOTER SECTION
      ========================================================================================= -->
 <div align="center">
@@ -140,7 +140,7 @@ tc
   <!-- Footer Navigation -->
   **[↑ Back to Top](#computer-graphics-lab)**
 
-  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
+  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Lab Manual](#lab-manual)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
 
   <br>
 

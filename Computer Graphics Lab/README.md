@@ -36,6 +36,58 @@
 ---
 
 <!-- =========================================================================================
+                                     HOW TO USE SECTION
+     ========================================================================================= -->
+## How to Use
+
+These programs require **Turbo C++** or a compatible environment with the **graphics.h** library.
+
+### Using Turbo C++
+
+1. **Open** Turbo C++ IDE
+2. **Load** the `.c` file
+3. **Compile** using: `Alt + F9`
+4. **Run** using: `Ctrl + F9`
+
+### Using DOSBox with Turbo C++
+
+1. **Install** DOSBox on your system
+2. **Mount** your Turbo C directory
+3. **Navigate** to the file location
+4. **Compile and run** as above
+
+Example:
+```
+mount c c:\tc
+c:
+cd bgi
+tc
+```
+
+---
+
+<!-- =========================================================================================
+                                     LEARNING PATH SECTION
+     ========================================================================================= -->
+## Learning Path
+
+**Beginner Level:**
+- Start with Experiment 1 (Basic Graphics Shapes)
+- Understand graphics primitives and library functions
+
+**Intermediate Level:**
+- Explore Experiment 1 (Bresenham's Line Algorithm)
+- Learn efficient line drawing with integer arithmetic
+
+**Advanced Level:**
+- Study Experiment 2 (Midpoint Circle Algorithm)
+- Understand 8-way symmetry and decision parameter
+- Analyze Experiment 3 (Midpoint Ellipse Algorithm)
+- Master two-region approach and 4-way symmetry
+
+---
+
+<!-- =========================================================================================
                                      EXPERIMENT 1
      ========================================================================================= -->
 ## Experiment 1: Line Drawing & Basic Shapes (2 Programs)
@@ -67,59 +119,7 @@
 |:-:|:---|:---|:---|
 | 1 | [Midpoint_Ellipse_Algorithm.c](Experiment-3/Midpoint_Ellipse_Algorithm.c) | Midpoint Ellipse | Ellipse generation using 4-way symmetry |
 
----
 
-<!-- =========================================================================================
-                                     HOW TO USE
-     ========================================================================================= -->
-## How to Use
-
-These programs require **Turbo C++** or a compatible environment with the **graphics.h** library.
-
-### Using Turbo C++
-
-1. **Open** Turbo C++ IDE
-2. **Load** the `.c` file
-3. **Compile** using: `Alt + F9`
-4. **Run** using: `Ctrl + F9`
-
-### Using DOSBox with Turbo C++
-
-1. **Install** DOSBox on your system
-2. **Mount** your Turbo C directory
-3. **Navigate** to the file location
-4. **Compile and run** as above
-
-Example:
-```
-mount c c:\tc
-c:
-cd bgi
-tc
-```
-
----
-
-<!-- =========================================================================================
-                                     LEARNING PATH
-     ========================================================================================= -->
-## Learning Path
-
-**Beginner Level:**
-- Start with Experiment 1 (Basic Graphics Shapes)
-- Understand graphics primitives and library functions
-
-**Intermediate Level:**
-- Explore Experiment 1 (Bresenham's Line Algorithm)
-- Learn efficient line drawing with integer arithmetic
-
-**Advanced Level:**
-- Study Experiment 2 (Midpoint Circle Algorithm)
-- Understand 8-way symmetry and decision parameter
-- Analyze Experiment 3 (Midpoint Ellipse Algorithm)
-- Master two-region approach and 4-way symmetry
-
----
 
 <!-- =========================================================================================
                                      LAB MANUAL

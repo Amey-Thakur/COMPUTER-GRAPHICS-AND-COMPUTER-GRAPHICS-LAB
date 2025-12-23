@@ -131,6 +131,7 @@ tc
 | 1 | [Midpoint_Ellipse_Algorithm.c](Experiment-3/Midpoint_Ellipse_Algorithm.c) | Midpoint Ellipse | Ellipse generation using 4-way symmetry |
 
 
+---
 
 <!-- =========================================================================================
                                      FOOTER SECTION

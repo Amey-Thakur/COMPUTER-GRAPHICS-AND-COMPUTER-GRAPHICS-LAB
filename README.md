@@ -18,7 +18,7 @@
 
   ---
 
-  [📖 Overview](#overview) &nbsp;·&nbsp; [📂 Contents](#repository-contents) &nbsp;·&nbsp; [📚 Reference Books](#reference-books) &nbsp;·&nbsp; [👫🏻 The Wall](#the-wall) &nbsp;·&nbsp; [✏️ Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [📄 Assignments](#assignments) &nbsp;·&nbsp; [📝 Practice Test](#practice-test) &nbsp;·&nbsp; [🧪 Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [🎮 Project](#computer-graphics-project) &nbsp;·&nbsp; [📋 Syllabus](#syllabus) &nbsp;·&nbsp; [📘 Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [📜 License](#license) &nbsp;·&nbsp; [ℹ️ About](#about-this-repository) &nbsp;·&nbsp; [🙏🏻 Acknowledgments](#acknowledgments)
+  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Project](#computer-graphics-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -88,7 +88,7 @@ This collection includes **9 comprehensive reference materials** covering all ma
 
 <div align="center">
 
-**Collaborative Study Notes**
+**Collaborative Study Notes by Amey & Mega**
 
 <table>
 <tr>
@@ -129,13 +129,13 @@ Comprehensive chapter-wise notes curated by Mega Satish, covering all essential 
 
 Study materials and planning resources for effective exam preparation:
 
-| Resource | Description |
-|:---|:---|
-| 📝 [CG Notes](Reference%20Books/CG_Notes.pdf) | Comprehensive lecture notes by Amey Thakur |
-| 📝 [Syllabus Breakdown](My%20Preparation/Syllabus.png) | Detailed module-wise syllabus notes |
-| 📊 [Module Planning](My%20Preparation/Modules.png) | Topic organization and study schedule |
-| 🎯 [Examination Blueprint](Blueprint%20(CG).png) | Question paper pattern and marking scheme |
-| 🏆 [Achievement Certificate](Certificate.jpg) | Recognition in computer graphics excellence |
+| # | Resource | Description |
+|:-:|:---|:---|
+| 1 | [CG Notes](Reference%20Books/CG_Notes.pdf) | Comprehensive lecture notes by Amey Thakur |
+| 2 | [Syllabus Breakdown](My%20Preparation/Syllabus.png) | Detailed module-wise syllabus notes |
+| 3 | [Module Planning](My%20Preparation/Modules.png) | Topic organization and study schedule |
+| 4 | [Examination Blueprint](Blueprint%20(CG).png) | Question paper pattern and marking scheme |
+| 5 | [Achievement Certificate](Certificate.jpg) | Recognition in computer graphics excellence |
 
 ---
 
@@ -145,9 +145,9 @@ Academic assignments for comprehensive learning and practice:
 
 | # | Assignment | Description | Link |
 |:-:|:---|:---|:---:|
-| 1 | **Assignment 1** | Graphics primitives and line drawing algorithms | [📄 View](Assignments/CG_Assignment-1.pdf) |
-| 2 | **Assignment 2** | Transformations and clipping techniques | [📄 View](Assignments/CG_Assignment-2.pdf) |
-| 3 | **CG Assignment** | Comprehensive graphics concepts | [📄 View](Assignments/CG%20Assignment.pdf) |
+| 1 | **Assignment 1** | Graphics primitives and line drawing algorithms | [View](Assignments/CG_Assignment-1.pdf) |
+| 2 | **Assignment 2** | Transformations and clipping techniques | [View](Assignments/CG_Assignment-2.pdf) |
+| 3 | **CG Assignment** | Comprehensive graphics concepts | [View](Assignments/CG%20Assignment.pdf) |
 
 **Topics Covered**: Graphics Primitives (Line drawing - DDA, Bresenham's · Circle and ellipse algorithms) · Transformations (2D/3D translation, rotation, scaling, reflection, shearing) · Viewing & Clipping (Window-to-viewport mapping · Cohen-Sutherland clipping) · Curves (Bezier curves · B-spline curves · Parametric representations) · Rendering (Hidden surface removal · Illumination models · Shading techniques)
 
@@ -157,9 +157,9 @@ Academic assignments for comprehensive learning and practice:
 
 Mid-semester practice assessment:
 
-| Test | Date | Time | Class | Link |
-|:---|:---:|:---:|:---:|:---:|
-| **Practice Test CG** | May 5, 2020 | 10:00 AM - 11:00 AM | SE B-50 | [📄 View](CG_Test_B-50.pdf) |
+| # | Test | Date | Time | Class | Link |
+|:-:|:---|:---:|:---:|:---:|:---:|
+| 1 | **Practice Test CG** | May 5, 2020 | 10:00 AM - 11:00 AM | SE B-50 | [View](CG_Test_B-50.pdf) |
 
 ---
 
@@ -185,16 +185,16 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 ### Laboratory Experiments
 
-| Experiment | Topic | Algorithm | View |
-|:---|:---|:---|:-:|
-| **Experiment 1** | Line Drawing & Basic Shapes | Bresenham's Algorithm, Graphics Primitives | [📂](Computer%20Graphics%20Lab/Experiment-1/) |
-| **Experiment 2** | Circle Drawing | Midpoint Circle Algorithm | [📂](Computer%20Graphics%20Lab/Experiment-2/) |
-| **Experiment 3** | Ellipse Drawing | Midpoint Ellipse Algorithm | [📂](Computer%20Graphics%20Lab/Experiment-3/) |
+| # | Experiment | Topic | Algorithm | View |
+|:-:|:---|:---|:---|:-:|
+| 1 | **Experiment 1** | Line Drawing & Basic Shapes | Bresenham's Algorithm, Graphics Primitives | [View](Computer%20Graphics%20Lab/Experiment-1/) |
+| 2 | **Experiment 2** | Circle Drawing | Midpoint Circle Algorithm | [View](Computer%20Graphics%20Lab/Experiment-2/) |
+| 3 | **Experiment 3** | Ellipse Drawing | Midpoint Ellipse Algorithm | [View](Computer%20Graphics%20Lab/Experiment-3/) |
 
 ### Program Details
 
 <details>
-<summary><strong>📏 Experiment 1: Line Drawing & Basic Shapes (2 Programs)</strong></summary>
+<summary><strong>Experiment 1: Line Drawing & Basic Shapes (2 Programs)</strong></summary>
 
 | Program | Algorithm | Description | Code |
 |:---|:---|:---|:-:|
@@ -204,7 +204,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 </details>
 
 <details>
-<summary><strong>⭕ Experiment 2: Circle Drawing (1 Program)</strong></summary>
+<summary><strong>Experiment 2: Circle Drawing (1 Program)</strong></summary>
 
 | Program | Algorithm | Description | Code |
 |:---|:---|:---|:-:|
@@ -213,7 +213,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 </details>
 
 <details>
-<summary><strong>🔵 Experiment 3: Ellipse Drawing (1 Program)</strong></summary>
+<summary><strong>Experiment 3: Ellipse Drawing (1 Program)</strong></summary>
 
 | Program | Algorithm | Description | Code |
 |:---|:---|:---|:-:|
@@ -223,10 +223,10 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 ### Laboratory Documentation
 
-| Resource | Description |
-|:---|:---|
-| 🧪 [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
-| 📖 [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
+| # | Resource | Description |
+|:-:|:---|:---|
+| 1 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
+| 2 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
 ---
 
@@ -265,10 +265,10 @@ An augmented reality stack-builder game for Android developed using **Google's A
 
 ### 🔗 Resources
 
-| Resource | Description |
-|:---|:---|
-| 🎮 [Project Repository](https://github.com/Amey-Thakur/AR-STACK-GAME) | Complete source code and documentation |
-| 📱 [Android APK](https://github.com/Amey-Thakur/AR-STACK-GAME/blob/main/AR-Stack-Game.apk?raw=true) | Download and try the application |
+| # | Resource | Description |
+|:-:|:---|:---|
+| 1 | [Project Repository](https://github.com/Amey-Thakur/AR-STACK-GAME) | Complete source code and documentation |
+| 2 | [Android APK](https://github.com/Amey-Thakur/AR-STACK-GAME/blob/main/AR-Stack-Game.apk?raw=true) | Download and try the application |
 
 ---
 
@@ -277,7 +277,7 @@ An augmented reality stack-builder game for Android developed using **Google's A
      ========================================================================================= -->
 ## Syllabus
 
-> 📋 **[Official CBCGS Syllabus](SE-Comps_CBCGS_Syllabus.pdf)**  
+> **[Official CBCGS Syllabus](SE-Comps_CBCGS_Syllabus.pdf)**  
 > Complete Second Year Computer Engineering syllabus document from the University of Mumbai, including detailed course outcomes, assessment criteria, and module specifications for Computer Graphics and Computer Graphics Lab.
 
 > [!IMPORTANT]
@@ -347,13 +347,13 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 <div align="center">
 
   <!-- Footer Navigation -->
-  **[⬆ Back to Top](#computer-graphics-and-computer-graphics-lab)**
+  **[↑ Back to Top](#computer-graphics-and-computer-graphics-lab)**
 
-  **[📖 Overview](#overview)** &nbsp;·&nbsp; **[📂 Contents](#repository-contents)** &nbsp;·&nbsp; **[📚 Reference Books](#reference-books)** &nbsp;·&nbsp; **[👫🏻 The Wall](#the-wall)** &nbsp;·&nbsp; **[✏️ Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[📄 Assignments](#assignments)** &nbsp;·&nbsp; **[📝 Practice Test](#practice-test)** &nbsp;·&nbsp; **[🧪 Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[🎮 Project](#computer-graphics-project)** &nbsp;·&nbsp; **[📋 Syllabus](#syllabus)** &nbsp;·&nbsp; **[📘 Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[📜 License](#license)** &nbsp;·&nbsp; **[ℹ️ About](#about-this-repository)** &nbsp;·&nbsp; **[🙏🏻 Acknowledgments](#acknowledgments)**
+  **[Overview](#overview)** &nbsp;·&nbsp; **[Contents](#repository-contents)** &nbsp;·&nbsp; **[Reference Books](#reference-books)** &nbsp;·&nbsp; **[The Wall](#the-wall)** &nbsp;·&nbsp; **[Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[Assignments](#assignments)** &nbsp;·&nbsp; **[Practice Test](#practice-test)** &nbsp;·&nbsp; **[Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[Project](#computer-graphics-project)** &nbsp;·&nbsp; **[Syllabus](#syllabus)** &nbsp;·&nbsp; **[Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[License](#license)** &nbsp;·&nbsp; **[About](#about-this-repository)** &nbsp;·&nbsp; **[Acknowledgments](#acknowledgments)**
 
   <br>
 
-  **[🧪 Computer Graphics Laboratory](Computer%20Graphics%20Lab/)** &nbsp;·&nbsp; **[🎮 AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
+  **[Computer Graphics Laboratory](Computer%20Graphics%20Lab/)** &nbsp;·&nbsp; **[AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
 
 </div>
 

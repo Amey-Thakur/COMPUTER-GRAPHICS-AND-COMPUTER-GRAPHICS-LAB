@@ -21,7 +21,7 @@
   ---
 
   <!-- Navigation Links -->
-  **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)**
+  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
 
 </div>
 
@@ -140,7 +140,7 @@ tc
   <!-- Footer Navigation -->
   **[↑ Back to Top](#computer-graphics-lab)**
 
-  **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)** &nbsp;·&nbsp; **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)**
+  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
 
   <br>
 

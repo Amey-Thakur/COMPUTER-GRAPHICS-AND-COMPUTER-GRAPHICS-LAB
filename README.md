@@ -263,7 +263,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 An augmented reality stack-builder game for Android developed using **Google's ARCore**, **Unity**, and **C#**. The game leverages real-time AR tracking to overlay interactive 3D blocks onto the physical environment, challenging players to stack blocks as high as possible. This project showcases the practical application of computer graphics principles including 3D rendering, spatial mapping, physics simulation, and immersive user interaction.
 
-### 🔗 Resources
+### Resources
 
 | # | Resource | Description |
 |:-:|:---|:---|

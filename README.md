@@ -353,7 +353,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 
   <br>
 
-  **[Computer Graphics Laboratory](Computer%20Graphics%20Lab/)** &nbsp;·&nbsp; **[AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
+  **[Computer Graphics Laboratory](Computer%20Graphics%20Lab/)** &nbsp;·&nbsp; **[🎮 AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
 
 </div>
 

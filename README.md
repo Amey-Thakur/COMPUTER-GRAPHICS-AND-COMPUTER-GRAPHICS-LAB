@@ -257,7 +257,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 > [!IMPORTANT]
 > ### 🤝🏻 Special Acknowledgement
-> *Special thanks to [Hasan Rizvi](https://github.com/rizvihasan) for his meaningful contributions, guidance, and support that helped shape this work.*
+> *Special thanks to **[Hasan Rizvi](https://github.com/rizvihasan)** for his meaningful contributions, guidance, and support that helped shape this work.*
 
 ### Project Overview
 

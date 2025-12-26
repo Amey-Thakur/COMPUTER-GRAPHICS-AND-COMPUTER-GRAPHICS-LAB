@@ -145,9 +145,9 @@ Academic assignments for comprehensive learning and practice:
 
 | # | Assignment | Description |
 |:-:|:---|:---|
-| 1 | [**Assignment 1**](Assignments/CG_Assignment-1.pdf) | Graphics primitives and line drawing algorithms |
-| 2 | [**Assignment 2**](Assignments/CG_Assignment-2.pdf) | Transformations and clipping techniques |
-| 3 | [**CG Assignment**](Assignments/CG%20Assignment.pdf) | Comprehensive graphics concepts |
+| 1 | [Assignment 1](Assignments/CG_Assignment-1.pdf) | Graphics primitives and line drawing algorithms |
+| 2 | [Assignment 2](Assignments/CG_Assignment-2.pdf) | Transformations and clipping techniques |
+| 3 | [CG Assignment](Assignments/CG%20Assignment.pdf) | Comprehensive graphics concepts |
 
 **Topics Covered**: Graphics Primitives (Line drawing - DDA, Bresenham's · Circle and ellipse algorithms) · Transformations (2D/3D translation, rotation, scaling, reflection, shearing) · Viewing & Clipping (Window-to-viewport mapping · Cohen-Sutherland clipping) · Curves (Bezier curves · B-spline curves · Parametric representations) · Rendering (Hidden surface removal · Illumination models · Shading techniques)
 
@@ -159,7 +159,7 @@ Practice assessment details:
 
 | # | Test | Date | Time | Class |
 |:-:|:---|:-:|:-:|:-:|
-| 1 | [**Practice Test CG**](CG_Test_B-50.pdf) | May 5, 2020 | 10:00 AM - 11:00 AM | SE B-50 |
+| 1 | [Practice Test CG](CG_Test_B-50.pdf) | May 5, 2020 | 10:00 AM - 11:00 AM | SE B-50 |
 
 ---
 
@@ -251,7 +251,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 <div align="center">
 
 ### 👥 Authors
-| <img src="https://github.com/Amey-Thakur.png" width="150" alt="Amey Thakur"><br>[**Amey Thakur**](https://github.com/Amey-Thakur) | <img src="https://github.com/rizvihasan.png" width="150" alt="Hasan Rizvi"><br>[**Hasan Rizvi**](https://github.com/rizvihasan) |
+| <img src="https://github.com/Amey-Thakur.png" width="150" alt="Amey Thakur"><br>[Amey Thakur](https://github.com/Amey-Thakur) | <img src="https://github.com/rizvihasan.png" width="150" alt="Hasan Rizvi"><br>[Hasan Rizvi](https://github.com/rizvihasan) |
 | :---: | :---: |
 </div>
 
@@ -331,9 +331,9 @@ This repository represents a comprehensive collection of study materials, refere
 
 ### Acknowledgments
 
-Grateful acknowledgment to [Mega Satish](https://github.com/msatmod) for her exceptional contribution to this repository through "THE WALL" - comprehensive chapter-wise notes that became an invaluable resource for understanding complex graphics concepts. Her constant support, patience, and clarity throughout this journey made a real difference. Learning alongside her was transformative, not only because she explained concepts so clearly, but because she truly cared about understanding them together. Her thoughtful approach to teaching, openness to discussion, and steady encouragement turned challenges into meaningful learning moments. This work reflects the growth that came from learning side by side. Thank you, Mega, for everything you shared and taught along the way.
+Grateful acknowledgment to **[Mega Satish](https://github.com/msatmod)** for her exceptional contribution to this repository through "THE WALL" - comprehensive chapter-wise notes that became an invaluable resource for understanding complex graphics concepts. Her constant support, patience, and clarity throughout this journey made a real difference. Learning alongside her was transformative, not only because she explained concepts so clearly, but because she truly cared about understanding them together. Her thoughtful approach to teaching, openness to discussion, and steady encouragement turned challenges into meaningful learning moments. This work reflects the growth that came from learning side by side. Thank you, Mega, for everything you shared and taught along the way.
 
-Grateful acknowledgment to [Hasan Rizvi](https://github.com/rizvihasan) for his exceptional contribution to this repository through the AR Stack Game project. Working alongside Hasan was a truly enriching experience - his technical expertise, creative problem-solving, and unwavering dedication made every challenge feel surmountable. Beyond his coding skills, it was his collaborative spirit and enthusiasm for innovation that transformed this project from an idea into a fully functional AR application. His patience in debugging, willingness to explore new technologies, and commitment to delivering quality work inspired growth and learning throughout the development process. Thank you, Hasan, for being an outstanding project partner and for all the knowledge you shared along the way.
+Grateful acknowledgment to **[Hasan Rizvi](https://github.com/rizvihasan)** for his exceptional contribution to this repository through the AR Stack Game project. Working alongside Hasan was a truly enriching experience - his technical expertise, creative problem-solving, and unwavering dedication made every challenge feel surmountable. Beyond his coding skills, it was his collaborative spirit and enthusiasm for innovation that transformed this project from an idea into a fully functional AR application. His patience in debugging, willingness to explore new technologies, and commitment to delivering quality work inspired growth and learning throughout the development process. Thank you, Hasan, for being an outstanding project partner and for all the knowledge you shared along the way.
 
 Special thanks to the faculty members of the Department of Computer Engineering at Terna Engineering College for their guidance and instruction in Computer Graphics. Their clear teaching and continued support helped develop a strong understanding of graphics algorithms and visualization techniques.
 
@@ -347,9 +347,9 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 <div align="center">
 
   <!-- Footer Navigation -->
-  **[↑ Back to Top](#computer-graphics-and-computer-graphics-lab)**
+  [↑ Back to Top](#computer-graphics-and-computer-graphics-lab)
 
-  **[Overview](#overview)** &nbsp;·&nbsp; **[Contents](#repository-contents)** &nbsp;·&nbsp; **[Reference Books](#reference-books)** &nbsp;·&nbsp; **[The Wall](#the-wall)** &nbsp;·&nbsp; **[Personal Preparation](#personal-preparation)** &nbsp;·&nbsp; **[Assignments](#assignments)** &nbsp;·&nbsp; **[Practice Test](#practice-test)** &nbsp;·&nbsp; **[Laboratory](#computer-graphics-laboratory)** &nbsp;·&nbsp; **[Project](#computer-graphics-project)** &nbsp;·&nbsp; **[Syllabus](#syllabus)** &nbsp;·&nbsp; **[Usage Guidelines](#usage-guidelines)** &nbsp;·&nbsp; **[License](#license)** &nbsp;·&nbsp; **[About](#about-this-repository)** &nbsp;·&nbsp; **[Acknowledgments](#acknowledgments)**
+  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Project](#computer-graphics-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 

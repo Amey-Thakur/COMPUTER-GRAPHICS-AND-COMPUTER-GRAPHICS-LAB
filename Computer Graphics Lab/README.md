@@ -139,9 +139,9 @@ tc
 <div align="center">
 
   <!-- Footer Navigation -->
-  **[↑ Back to Top](#computer-graphics-lab)**
+  [↑ Back to Top](#computer-graphics-lab)
 
-  **[How to Use](#how-to-use)** &nbsp;·&nbsp; **[Learning Path](#learning-path)** &nbsp;·&nbsp; **[Lab Manual](#lab-manual)** &nbsp;·&nbsp; **[Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs)** &nbsp;·&nbsp; **[Experiment 2](#experiment-2-circle-drawing-1-program)** &nbsp;·&nbsp; **[Experiment 3](#experiment-3-ellipse-drawing-1-program)**
+  [How to Use](#how-to-use) &nbsp;·&nbsp; [Learning Path](#learning-path) &nbsp;·&nbsp; [Lab Manual](#lab-manual) &nbsp;·&nbsp; [Experiment 1](#experiment-1-line-drawing--basic-shapes-2-programs) &nbsp;·&nbsp; [Experiment 2](#experiment-2-circle-drawing-1-program) &nbsp;·&nbsp; [Experiment 3](#experiment-3-ellipse-drawing-1-program)
 
   <br>
 
@@ -153,7 +153,7 @@ tc
 
 <div align="center">
 
-  ### [Computer Graphics and Computer Graphics Lab](https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB)
+  ### [Computer Graphics and Computer Graphics Lab](../)
 
   **CSC404 & CSL402 · Semester IV · Computer Engineering**
 

@@ -349,9 +349,9 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
   <!-- Footer Navigation -->
   [↑ Back to Top](#computer-graphics-and-computer-graphics-lab)
 
-  [↑ **Back to Top**](#computer-graphics-and-computer-graphics-lab)
+  [↑ Back to Top](#computer-graphics-and-computer-graphics-lab)
 
-  [**Overview**](#overview) &nbsp;·&nbsp; [**Contents**](#repository-contents) &nbsp;·&nbsp; [**Reference Books**](#reference-books) &nbsp;·&nbsp; [**The Wall**](#the-wall) &nbsp;·&nbsp; [**Personal Preparation**](#personal-preparation) &nbsp;·&nbsp; [**Assignments**](#assignments) &nbsp;·&nbsp; [**Practice Test**](#practice-test) &nbsp;·&nbsp; [**Laboratory**](#computer-graphics-laboratory) &nbsp;·&nbsp; [**Project**](#computer-graphics-project) &nbsp;·&nbsp; [**Syllabus**](#syllabus) &nbsp;·&nbsp; [**Usage Guidelines**](#usage-guidelines) &nbsp;·&nbsp; [**License**](#license) &nbsp;·&nbsp; [**About**](#about-this-repository) &nbsp;·&nbsp; [**Acknowledgments**](#acknowledgments)
+  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Project](#computer-graphics-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 

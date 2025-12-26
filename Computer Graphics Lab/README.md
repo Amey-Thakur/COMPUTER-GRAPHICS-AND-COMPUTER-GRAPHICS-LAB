@@ -103,10 +103,10 @@ tc
      ========================================================================================= -->
 ## Experiment 1: Line Drawing & Basic Shapes (2 Programs)
 
-| # | Program | Algorithm | Description |
-|:-:|:---|:---|:---|
-| 1 | [Bresenhams_Line_Algorithm.c](Experiment-1/Bresenhams_Line_Algorithm.c) | Bresenham's Line | Efficient line drawing using integer arithmetic |
-| 2 | [Basic_Graphics_Shapes.c](Experiment-1/Basic_Graphics_Shapes.c) | Graphics Primitives | Rectangle, circle, line, ellipse, bar primitives |
+| # | Program | Algorithm | Description | Source Code |
+|:-:|:---|:---|:---|:-:|
+| 1 | Bresenhams_Line_Algorithm.c | Bresenham's Line | Efficient line drawing using integer arithmetic | [View](Experiment-1/Bresenhams_Line_Algorithm.c) |
+| 2 | Basic_Graphics_Shapes.c | Graphics Primitives | Rectangle, circle, line, ellipse, bar primitives | [View](Experiment-1/Basic_Graphics_Shapes.c) |
 
 ---
 
@@ -115,9 +115,9 @@ tc
      ========================================================================================= -->
 ## Experiment 2: Circle Drawing (1 Program)
 
-| # | Program | Algorithm | Description |
-|:-:|:---|:---|:---|
-| 1 | [Midpoint_Circle_Algorithm.c](Experiment-2/Midpoint_Circle_Algorithm.c) | Midpoint Circle | Circle generation using 8-way symmetry |
+| # | Program | Algorithm | Description | Source Code |
+|:-:|:---|:---|:---|:-:|
+| 1 | Midpoint_Circle_Algorithm.c | Midpoint Circle | Circle generation using 8-way symmetry | [View](Experiment-2/Midpoint_Circle_Algorithm.c) |
 
 ---
 
@@ -126,9 +126,9 @@ tc
      ========================================================================================= -->
 ## Experiment 3: Ellipse Drawing (1 Program)
 
-| # | Program | Algorithm | Description |
-|:-:|:---|:---|:---|
-| 1 | [Midpoint_Ellipse_Algorithm.c](Experiment-3/Midpoint_Ellipse_Algorithm.c) | Midpoint Ellipse | Ellipse generation using 4-way symmetry |
+| # | Program | Algorithm | Description | Source Code |
+|:-:|:---|:---|:---|:-:|
+| 1 | Midpoint_Ellipse_Algorithm.c | Midpoint Ellipse | Ellipse generation using 4-way symmetry | [View](Experiment-3/Midpoint_Ellipse_Algorithm.c) |
 
 
 ---

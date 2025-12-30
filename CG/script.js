@@ -461,3 +461,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pre-draw something
     setTimeout(() => renderRandomLines(false), 500);
 });
+
+// 3D Tilt Interaction Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const tiltElements = document.querySelectorAll('.tilt-effect');
+
+    tiltElements.forEach(el => {
+        el.addEventListener('mousemove', handleTilt);
+        el.addEventListener('mouseleave', resetTilt);
+    });
+
+    function handleTilt(e) {
+        const el = e.currentTarget;
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the element.
+        const y = e.clientY - rect.top;  // y position within the element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateXVal = ((y - centerY) / centerY) * 20; // Max rotation X
+        const rotateYVal = ((centerX - x) / centerX) * 20; // Max rotation Y
+
+        // Apply transform
+        el.style.transform = `perspective(1000px) rotateX(${rotateXVal}deg) rotateY(${rotateYVal}deg) scale3d(1.05, 1.05, 1.05)`;
+    }
+
+    function resetTilt(e) {
+        const el = e.currentTarget;
+        el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    }
+});

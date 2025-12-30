@@ -390,6 +390,15 @@ background: var(--accent-hover) !important;
     box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.3) !important;
 }
 
+/* 3D Tilt Effect */
+.tilt-effect {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    display: inline-flex;
+    /* Maintain flex layout if used */
+}
+
 .hero h1 {
     font-weight: 900;
     font-size: 3rem;

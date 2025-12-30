@@ -349,6 +349,15 @@ h5 {
     border-color: transparent;
 }
 
+/* --- Hero Buttons --- */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 @keyframes softPulse {
     0% {
         transform: scale(1);

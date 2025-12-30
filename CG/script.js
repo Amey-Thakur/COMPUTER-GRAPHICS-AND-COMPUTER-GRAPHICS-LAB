@@ -474,21 +474,189 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleTilt(e) {
         const el = e.currentTarget;
         const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left; // x position within the element.
-        const y = e.clientY - rect.top;  // y position within the element.
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateXVal = ((y - centerY) / centerY) * 20; // Max rotation X
-        const rotateYVal = ((centerX - x) / centerX) * 20; // Max rotation Y
+        const rotateXVal = ((y - centerY) / centerY) * 8; // Subtle rotation
+        const rotateYVal = ((centerX - x) / centerX) * 8;
 
-        // Apply transform
-        el.style.transform = `perspective(1000px) rotateX(${rotateXVal}deg) rotateY(${rotateYVal}deg) scale3d(1.05, 1.05, 1.05)`;
+        el.style.transform = `perspective(500px) rotateX(${rotateXVal}deg) rotateY(${rotateYVal}deg) scale3d(1.02, 1.02, 1.02)`;
     }
 
     function resetTilt(e) {
         const el = e.currentTarget;
-        el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        el.style.transform = 'perspective(500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
     }
 });
+
+// Stack Builder Mini-Game
+(function () {
+    const canvas = document.getElementById('stackCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const overlay = document.getElementById('stack-overlay');
+    const startBtn = document.getElementById('startStackGame');
+    const scoreDisplay = document.getElementById('stack-score');
+    const scoreValue = document.getElementById('score-value');
+
+    let gameRunning = false;
+    let animationId = null;
+    let score = 0;
+    let stack = [];
+    let currentBlock = null;
+    let direction = 1;
+    let speed = 2;
+
+    const BLOCK_HEIGHT = 20;
+    const COLORS = ['#8b5cf6', '#a78bfa', '#c4b5fd', '#7c3aed', '#6d28d9'];
+
+    function initGame() {
+        score = 0;
+        speed = 2;
+        stack = [];
+        scoreValue.textContent = '0';
+
+        // Base block
+        stack.push({
+            x: canvas.width / 2 - 60,
+            y: canvas.height - BLOCK_HEIGHT,
+            width: 120,
+            color: COLORS[0]
+        });
+
+        spawnBlock();
+    }
+
+    function spawnBlock() {
+        const lastBlock = stack[stack.length - 1];
+        currentBlock = {
+            x: 0,
+            y: lastBlock.y - BLOCK_HEIGHT,
+            width: lastBlock.width,
+            color: COLORS[stack.length % COLORS.length]
+        };
+        direction = 1;
+    }
+
+    function update() {
+        if (!currentBlock) return;
+
+        currentBlock.x += speed * direction;
+
+        // Bounce off walls
+        if (currentBlock.x + currentBlock.width > canvas.width) {
+            direction = -1;
+        } else if (currentBlock.x < 0) {
+            direction = 1;
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw stacked blocks
+        stack.forEach(block => {
+            ctx.fillStyle = block.color;
+            ctx.fillRect(block.x, block.y, block.width, BLOCK_HEIGHT - 2);
+        });
+
+        // Draw current moving block
+        if (currentBlock) {
+            ctx.fillStyle = currentBlock.color;
+            ctx.fillRect(currentBlock.x, currentBlock.y, currentBlock.width, BLOCK_HEIGHT - 2);
+        }
+    }
+
+    function placeBlock() {
+        if (!currentBlock || !gameRunning) return;
+
+        const lastBlock = stack[stack.length - 1];
+        const overlap = Math.min(currentBlock.x + currentBlock.width, lastBlock.x + lastBlock.width) -
+            Math.max(currentBlock.x, lastBlock.x);
+
+        if (overlap <= 0) {
+            // Game Over
+            gameOver();
+            return;
+        }
+
+        // Calculate new block dimensions
+        const newX = Math.max(currentBlock.x, lastBlock.x);
+        const newWidth = overlap;
+
+        stack.push({
+            x: newX,
+            y: currentBlock.y,
+            width: newWidth,
+            color: currentBlock.color
+        });
+
+        score++;
+        scoreValue.textContent = score;
+        speed = Math.min(speed + 0.15, 6); // Increase difficulty
+
+        // Check if stack is getting too tall (scroll view)
+        if (stack.length > 10) {
+            stack.forEach(block => block.y += BLOCK_HEIGHT);
+            stack = stack.filter(block => block.y < canvas.height);
+        }
+
+        spawnBlock();
+
+        // Perfect placement bonus
+        if (Math.abs(newWidth - lastBlock.width) < 5) {
+            playCelebrateSound();
+        }
+    }
+
+    function gameOver() {
+        gameRunning = false;
+        cancelAnimationFrame(animationId);
+
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 20px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Game Over!', canvas.width / 2, canvas.height / 2 - 15);
+        ctx.font = '14px Inter, sans-serif';
+        ctx.fillText('Score: ' + score, canvas.width / 2, canvas.height / 2 + 15);
+        ctx.font = '11px Inter, sans-serif';
+        ctx.fillStyle = '#a78bfa';
+        ctx.fillText('Click to restart', canvas.width / 2, canvas.height / 2 + 40);
+
+        overlay.style.display = 'none';
+    }
+
+    function gameLoop() {
+        if (!gameRunning) return;
+        update();
+        draw();
+        animationId = requestAnimationFrame(gameLoop);
+    }
+
+    function startGame() {
+        overlay.style.display = 'none';
+        scoreDisplay.style.display = 'block';
+        gameRunning = true;
+        initGame();
+        gameLoop();
+    }
+
+    // Event Listeners
+    startBtn.addEventListener('click', startGame);
+
+    canvas.addEventListener('click', () => {
+        if (gameRunning) {
+            placeBlock();
+        } else if (score > 0) {
+            // Restart after game over
+            startGame();
+        }
+    });
+})();

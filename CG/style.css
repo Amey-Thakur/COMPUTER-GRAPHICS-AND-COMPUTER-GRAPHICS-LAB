@@ -396,7 +396,8 @@ background: var(--accent-hover) !important;
     transition: transform 0.1s ease-out;
     will-change: transform;
     display: inline-flex;
-    /* Maintain flex layout if used */
+    align-items: center;
+    /* Fix icon/text vertical alignment */
 }
 
 .hero h1 {

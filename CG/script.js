@@ -1093,15 +1093,135 @@ document.addEventListener('DOMContentLoaded', () => {
             shareBtn.style.display = 'block';
             shareBtn.onclick = (e) => {
                 e.stopPropagation(); // Prevent restart
-                const text = `I scored ${score} in Stack Builder! Can you beat the Dev Score of ${DEVELOPER_SCORE}? 🚀 Play now at ${window.location.href}`;
-                navigator.clipboard.writeText(text).then(() => {
-                    const originalText = shareBtn.innerHTML;
-                    shareBtn.innerHTML = '<i class="fas fa-check me-1"></i>Copied!';
-                    setTimeout(() => shareBtn.innerHTML = originalText, 2000);
-                });
+                shareResult();
             };
         }
     }
+
+    /* =========================================
+       SHARE RESULTS FUNCTIONALITY (OOPM Style)
+       ========================================= */
+    let currentShareImageBlob = null;
+
+    window.shareResult = async function () {
+        const modal = document.getElementById('share-modal');
+        const previewContainer = document.getElementById('share-preview');
+        const overlay = document.querySelector('.share-modal-overlay');
+
+        if (!modal || !previewContainer) return;
+
+        // Reset previous content
+        previewContainer.innerHTML = '<div class="text-center p-5" style="color: white;"><i class="fas fa-spinner fa-spin fa-2x text-accent"></i><p class="mt-3 text-secondary">Generating preview...</p></div>';
+
+        // Show Modal
+        overlay.classList.add('active');
+
+        try {
+            // Target the game container
+            const targetEl = document.getElementById('stack-game-wrapper'); // Wrapper captures shake too
+            if (!targetEl) throw new Error("Game container not found");
+
+            // Use html2canvas to capture the element
+            // We need to wait a moment if animation is happening
+            const canvas = await html2canvas(targetEl, {
+                backgroundColor: '#0f172a', // Dark background
+                scale: 2, // High resolution
+                logging: false,
+                useCORS: true,
+                ignoreElements: (element) => {
+                    // Ignore existing share buttons/controls to avoid clutter
+                    return element.id === 'share-score-btn' || element.id === 'sound-toggle';
+                }
+            });
+
+            // Display in preview
+            previewContainer.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = canvas.toDataURL('image/png');
+            img.style.maxWidth = '100%';
+            img.style.borderRadius = '8px';
+            previewContainer.appendChild(img);
+
+            // Store blob for sharing/downloading
+            canvas.toBlob(blob => {
+                currentShareImageBlob = blob;
+            });
+
+        } catch (err) {
+            console.error("Capture failed:", err);
+            previewContainer.innerHTML = '<div class="text-center p-4 text-danger"><i class="fas fa-exclamation-circle me-2"></i>Failed to generate preview.</div>';
+        }
+    }
+
+    window.closeShareModal = function () {
+        const overlay = document.querySelector('.share-modal-overlay');
+        if (overlay) overlay.classList.remove('active');
+    }
+
+    window.downloadShareImage = function () {
+        if (!currentShareImageBlob) return;
+
+        const url = URL.createObjectURL(currentShareImageBlob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `CG_StackBuilder_Result_${Date.now()}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    window.copyShareLink = function () {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            const btn = document.querySelector('button[onclick="copyShareLink()"]');
+            if (btn) {
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check me-2"></i>Copied!';
+                btn.style.backgroundColor = '#22c55e'; // Green
+                btn.style.color = '#fff';
+
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            }
+        });
+    }
+
+    window.shareNative = async function () {
+        if (navigator.share && currentShareImageBlob) {
+            try {
+                const file = new File([currentShareImageBlob], 'stack_builder_result.png', { type: 'image/png' });
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    await navigator.share({
+                        title: 'CG Lab Portfolio',
+                        text: `Check out my Stack Builder score!`,
+                        files: [file]
+                    });
+                } else {
+                    await navigator.share({
+                        title: 'CG Lab Portfolio',
+                        text: `Check out the Stack Builder game!`,
+                        url: window.location.href
+                    });
+                }
+            } catch (err) {
+                console.log('Error sharing:', err);
+            }
+        } else {
+            alert("Web Share API not supported on this device/browser.");
+        }
+    }
+
+    // Close modal on outside click
+    document.addEventListener('click', (e) => {
+        const overlay = document.querySelector('.share-modal-overlay');
+        if (overlay && e.target === overlay) {
+            closeShareModal();
+        }
+    });
 
     function updateLeaderboard(newScore) {
         if (newScore > 0) {

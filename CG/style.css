@@ -448,6 +448,156 @@ background: var(--accent-hover) !important;
     /* Lift */
 }
 
+/* =========================================
+   SHARE MODAL STYLES (Adapted from OOPM)
+   ========================================= */
+.share-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.share-modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.share-modal {
+    background: var(--card-bg);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.share-modal-overlay.active .share-modal {
+    transform: scale(1);
+}
+
+.share-modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.share-modal-header h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+}
+
+.share-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s;
+}
+
+.share-modal-close:hover {
+    color: var(--text-primary);
+}
+
+.share-modal-body {
+    padding: 20px;
+    background: var(--bg-color);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.share-preview {
+    background: #1e1b4b;
+    /* Dark theme match */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+.share-preview canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.share-author-badge {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 0;
+    border: 1px solid #334155;
+    flex-wrap: wrap;
+}
+
+.share-author-badge a {
+    color: #a78bfa;
+    /* Accent color match */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.share-author-badge a:hover {
+    color: #c4b5fd;
+    text-decoration: underline;
+}
+
+.share-badge-separator {
+    color: #475569;
+}
+
+.share-modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    background: var(--card-bg);
+}
+
+@media (max-width: 576px) {
+    .share-modal-footer {
+        flex-direction: column;
+    }
+
+    .share-modal-footer .btn {
+        width: 100%;
+    }
+}
+
 .award-scene:hover .award-badge-card.flipped {
     transform: translateY(-5px) rotateX(180deg);
     /* Lift while flipped */

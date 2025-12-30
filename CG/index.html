@@ -498,7 +498,7 @@
                                     </div>
 
                                     <!-- Share Button (Hidden by default) -->
-                                    <button id="share-score-btn" class="btn btn-sm"
+                                    <button id="share-score-btn" class="btn btn-sm" onclick="shareResult()"
                                         style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); 
                                         background: #2563eb; color: white; font-size: 0.8rem; padding: 4px 12px; border-radius: 15px; display: none; z-index: 10;">
                                         <i class="fas fa-share-alt me-1"></i>Share Score
@@ -578,10 +578,10 @@
                 </div>
                 <div class="share-author-badge">
                     <i class="fas fa-code me-2"></i>
-                    Created by <a href="https://github.com/Amey-Thakur" target="_blank">Amey Thakur</a>
-                    <span class="share-badge-separator">|</span>
-                    <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB"
-                        target="_blank">CG Lab Portfolio</a>
+                    Created by <a href="https://github.com/Amey-Thakur" target="_blank" class="ms-1">Amey Thakur</a>
+                    <span class="share-badge-separator ms-2">|</span>
+                    <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB" target="_blank"
+                        class="ms-2">CG Lab Portfolio</a>
                 </div>
             </div>
             <div class="share-modal-footer">
@@ -598,6 +598,8 @@
         </div>
     </div>
 
+    <!-- Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="script.js"></script>
     <script>
         // Service Worker Registration for PWA

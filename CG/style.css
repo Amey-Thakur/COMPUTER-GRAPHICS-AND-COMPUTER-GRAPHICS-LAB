@@ -598,25 +598,39 @@ background: var(--accent-hover) !important;
     }
 }
 
-/* Difficulty Buttons */
+/* iOS Segmented Control */
+.ios-segmented-control {
+    background: rgba(118, 118, 128, 0.24);
+    backdrop-filter: blur(10px);
+    border-radius: 999px;
+    /* Pill shape */
+    padding: 2px;
+    border: none;
+}
+
 .difficulty-btn {
     font-size: 0.75rem;
     background: transparent;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    position: relative;
+    border-radius: 999px;
+    margin: 0;
 }
 
 .difficulty-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .difficulty-btn.active {
-    background: rgba(255, 255, 255, 0.25);
+    background: #636366;
+    /* iOS Dark Mode Segment Active */
+    color: white;
     font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    outline: 2px solid rgba(255, 255, 255, 0.8);
-    outline-offset: -2px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.04);
+    outline: none;
 }
 
 .award-scene:hover .award-badge-card.flipped {

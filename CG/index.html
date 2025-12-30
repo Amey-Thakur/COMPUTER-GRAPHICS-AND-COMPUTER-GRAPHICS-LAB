@@ -752,6 +752,39 @@
         </div>
     </div>
 
+    <!-- Keyboard Shortcut Hint -->
+    <div id="kbd-hint" class="kbd-hint">
+        <span>Press</span>
+        <kbd>Ctrl</kbd>
+        <span>+</span>
+        <kbd>K</kbd>
+        <span>to search</span>
+    </div>
+
+    <!-- Command Palette Overlay -->
+    <div id="cmd-overlay" class="cmd-overlay">
+        <div class="cmd-modal">
+            <div class="cmd-header">
+                <i class="fas fa-search"></i>
+                <input type="text" id="cmd-input" placeholder="Search experiments, visualizers, or commands..."
+                    autocomplete="off">
+                <span class="cmd-esc"><kbd>ESC</kbd></span>
+            </div>
+            <div class="cmd-body">
+                <div id="cmd-results" class="cmd-results">
+                    <!-- Results injected here -->
+                </div>
+            </div>
+            <div class="cmd-footer">
+                <div class="cmd-keys">
+                    <span><kbd class="k-small">↑</kbd> <kbd class="k-small">↓</kbd> to navigate</span>
+                    <span><kbd class="k-small">↵</kbd> to select</span>
+                    <span><kbd class="k-small">T</kbd> to toggle theme</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="script.js"></script>

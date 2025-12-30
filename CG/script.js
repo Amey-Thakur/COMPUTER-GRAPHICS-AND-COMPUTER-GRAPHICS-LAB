@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Rendered with Love ❤️",
         "Pixels Perfected ✨",
         "100% Geometry 📐",
-        "High Five! ✋",
+        "High Five! ✋🏻",
         "You're a Star! 🌟",
         "+1 Kudos 🚀",
         "Contribution: Ack ✅",

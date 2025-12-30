@@ -327,10 +327,23 @@ h5 {
     transition: all 0.3s ease;
 }
 
-.badge-pulse:hover {
-    animation: none;
-    transform: scale(1.05);
-    background: var(--accent-hover) !important;
+background: var(--accent-hover) !important;
+}
+
+.award-badge {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+.award-badge:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.3) !important;
+}
+
+.award-badge:hover i {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.5));
 }
 
 .hero h1 {

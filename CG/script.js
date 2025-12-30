@@ -416,6 +416,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Award Badge Interaction
+document.addEventListener('DOMContentLoaded', () => {
+    const awardBadge = document.querySelector('.award-badge');
+    if (awardBadge) {
+        awardBadge.addEventListener('click', () => {
+            // Heart shaped confetti if possible, or standard fallback
+            const duration = 3000;
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#8b5cf6', '#ec4899']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#8b5cf6', '#ec4899']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+
+            // Play joyful sound
+            playCelebrateSound();
+        });
+    }
+});
+
 // Initialize Default Tab
 document.addEventListener('DOMContentLoaded', () => {
     switchTab('raster');

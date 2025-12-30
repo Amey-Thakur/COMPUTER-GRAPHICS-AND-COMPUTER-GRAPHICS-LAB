@@ -440,74 +440,78 @@
 
                             <!-- Interactive Stack Builder Game -->
                             <div class="col-md-6 text-center">
-                                <div id="stack-game-wrapper" class="stack-game-container"
-                                    style="position: relative; display: inline-block;">
-                                    <canvas id="stackCanvas" width="280" height="320"
-                                        style="border-radius: 12px; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); cursor: pointer;"></canvas>
+                                <!-- iPhone 17 Pro Max Frame -->
+                                <div class="iphone-frame">
+                                    <!-- Dynamic Island -->
+                                    <div class="dynamic-island">
+                                        <!-- Camera indication is handled by CSS -->
+                                    </div>
 
-                                    <!-- Start Overlay with Difficulty -->
-                                    <div id="stack-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-                                        display: flex; flex-direction: column; align-items: center; justify-content: center; 
-                                        background: rgba(0,0,0,0.6); border-radius: 12px;">
-                                        <i class="fas fa-cubes"
-                                            style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 8px;"></i>
-                                        <p style="color: #a78bfa; font-size: 0.75rem; margin-bottom: 12px;">Choose
-                                            Difficulty</p>
-                                        <div class="d-flex gap-2 mb-2">
-                                            <button class="btn btn-sm difficulty-btn" data-difficulty="easy"
-                                                style="background: #10b981; color: white; font-size: 0.7rem; padding: 4px 10px;">Easy</button>
-                                            <button class="btn btn-sm difficulty-btn active" data-difficulty="medium"
-                                                style="background: #8b5cf6; color: white; font-size: 0.7rem; padding: 4px 10px;">Medium</button>
-                                            <button class="btn btn-sm difficulty-btn" data-difficulty="hard"
-                                                style="background: #ef4444; color: white; font-size: 0.7rem; padding: 4px 10px;">Hard</button>
+                                    <!-- Screen & Game Wrapper -->
+                                    <div class="iphone-screen">
+                                        <div id="stack-game-wrapper" class="stack-game-container">
+                                            <canvas id="stackCanvas" width="340" height="700"></canvas>
+
+                                            <!-- Start Overlay -->
+                                            <div id="stack-overlay"
+                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.6);">
+                                                <i class="fas fa-cubes"
+                                                    style="font-size: 3rem; color: var(--accent-color); margin-bottom: 12px;"></i>
+                                                <p style="color: #a78bfa; font-size: 0.9rem; margin-bottom: 20px;">
+                                                    Choose Difficulty</p>
+                                                <div class="d-flex gap-2 mb-3">
+                                                    <button class="btn btn-sm difficulty-btn" data-difficulty="easy"
+                                                        style="background: #10b981; color: white;">Easy</button>
+                                                    <button class="btn btn-sm difficulty-btn active"
+                                                        data-difficulty="medium"
+                                                        style="background: #8b5cf6; color: white;">Medium</button>
+                                                    <button class="btn btn-sm difficulty-btn" data-difficulty="hard"
+                                                        style="background: #ef4444; color: white;">Hard</button>
+                                                </div>
+                                                <button id="startStackGame" class="btn btn-sm btn-primary-custom"
+                                                    style="font-weight: 600;">
+                                                    <i class="fas fa-play me-2"></i>Start Game
+                                                </button>
+                                            </div>
+
+                                            <!-- Tutorial Overlay -->
+                                            <div id="tutorial-overlay"
+                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.85); z-index: 20; display: none;">
+                                                <h5 style="color: #fbbf24; margin-bottom: 15px; font-size: 1.2rem;">
+                                                    How to Play</h5>
+                                                <p
+                                                    style="color: white; font-size: 0.9rem; padding: 0 30px; line-height: 1.6; text-align: center;">
+                                                    Tap to drop the block.<br>
+                                                    Align perfectly for <b style="color: #fbbf24;">Streak
+                                                        Bonuses</b>!<br>
+                                                    Don't miss the stack!
+                                                </p>
+                                                <button id="close-tutorial" class="btn btn-sm btn-outline-light mt-4"
+                                                    style="font-size: 0.9rem; px-4">Got it!</button>
+                                            </div>
+
+                                            <!-- Score, Sound, Combo, Share -->
+                                            <div id="stack-score"
+                                                style="position: absolute; color: white; font-weight: bold; border-radius: 20px; display: none;">
+                                                Score: <span id="score-value">0</span>
+                                            </div>
+
+                                            <button id="sound-toggle"
+                                                style="position: absolute; background: rgba(0,0,0,0.5); border: none; color: white; border-radius: 50%; cursor: pointer; display: none;"
+                                                title="Toggle Sound">
+                                                <i class="fas fa-volume-up"></i>
+                                            </button>
+
+                                            <button id="share-score-btn" class="btn btn-sm" onclick="shareResult()"
+                                                style="position: absolute; background: #2563eb; color: white; font-size: 0.85rem; padding: 6px 16px; border-radius: 20px; display: none; z-index: 10; left: 50%; transform: translateX(-50%); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);">
+                                                <i class="fas fa-share-alt me-2"></i>Share Score
+                                            </button>
+
+                                            <div id="combo-display"
+                                                style="position: absolute; left: 50%; transform: translateX(-50%); color: #fbbf24; font-weight: bold; font-size: 1rem; display: none; text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);">
+                                            </div>
                                         </div>
-                                        <button id="startStackGame" class="btn btn-sm btn-primary-custom mt-1">
-                                            <i class="fas fa-play me-1"></i>Start Game
-                                        </button>
                                     </div>
-
-                                    <!-- Score Display -->
-                                    <div id="stack-score" style="position: absolute; top: 8px; left: 50%; transform: translateX(-50%); 
-                                        color: white; font-weight: bold; font-size: 0.85rem; display: none;
-                                        background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px;">
-                                        Score: <span id="score-value">0</span>
-                                    </div>
-
-                                    <!-- Sound Toggle -->
-                                    <button id="sound-toggle"
-                                        style="position: absolute; top: 8px; right: 8px; 
-                                        background: rgba(0,0,0,0.5); border: none; color: white; 
-                                        width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: none; font-size: 0.8rem;"
-                                        title="Toggle Sound">
-                                        <i class="fas fa-volume-up"></i>
-                                    </button>
-
-                                    <!-- Tutorial Overlay -->
-                                    <div id="tutorial-overlay"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-                                        display: flex; flex-direction: column; align-items: center; justify-content: center; 
-                                        background: rgba(0,0,0,0.85); border-radius: 12px; z-index: 20; display: none;">
-                                        <h5 style="color: #fbbf24; margin-bottom: 10px;">How to Play</h5>
-                                        <p style="color: white; font-size: 0.8rem; padding: 0 20px; line-height: 1.4;">
-                                            Tap to drop the block.<br>
-                                            Align perfectly for <span style="color: #fbbf24;">Streak Bonuses</span>!<br>
-                                            Don't miss the stack!
-                                        </p>
-                                        <button id="close-tutorial" class="btn btn-sm btn-outline-light mt-2"
-                                            style="font-size: 0.8rem;">Got it!</button>
-                                    </div>
-
-                                    <!-- Share Button (Hidden by default) -->
-                                    <button id="share-score-btn" class="btn btn-sm" onclick="shareResult()"
-                                        style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); 
-                                        background: #2563eb; color: white; font-size: 0.8rem; padding: 4px 12px; border-radius: 15px; display: none; z-index: 10;">
-                                        <i class="fas fa-share-alt me-1"></i>Share Score
-                                    </button>
-
-                                    <!-- Combo Display -->
-                                    <div id="combo-display" style="position: absolute; top: 45px; left: 50%; transform: translateX(-50%); 
-                                        color: #fbbf24; font-weight: bold; font-size: 0.9rem; display: none;
-                                        text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);"></div>
                                 </div>
                                 <p class="text-secondary mt-2 mb-0"><small>Tap/Click to stack blocks!</small></p>
                             </div>

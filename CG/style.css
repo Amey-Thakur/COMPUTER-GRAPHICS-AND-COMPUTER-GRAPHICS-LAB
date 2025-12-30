@@ -358,6 +358,47 @@ background: var(--accent-hover) !important;
     animation: shake 0.5s ease-in-out !important;
 }
 
+/* Fade In/Out Animation for Combo Display */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.9);
+    }
+}
+
+/* Difficulty Button Styles */
+.difficulty-btn {
+    border: none;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.difficulty-btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.difficulty-btn.active,
+.difficulty-btn:focus {
+    outline: 2px solid white !important;
+    opacity: 1;
+}
+
 /* 3D Flip Badge */
 .award-scene {
     perspective: 1000px;

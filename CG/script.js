@@ -492,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Stack Builder Mini-Game (Enhanced)
+// Stack Builder Mini-Game (Enhanced - Phase 1)
 (function () {
     const canvas = document.getElementById('stackCanvas');
     if (!canvas) return;
@@ -502,23 +502,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('startStackGame');
     const scoreDisplay = document.getElementById('stack-score');
     const scoreValue = document.getElementById('score-value');
+    const soundToggle = document.getElementById('sound-toggle');
+    const comboDisplay = document.getElementById('combo-display');
+    const difficultyBtns = document.querySelectorAll('.difficulty-btn');
 
+    // Game State
     let gameRunning = false;
     let animationId = null;
     let score = 0;
-    let streak = 0; // Perfect placements in a row
+    let streak = 0;
     let stack = [];
     let currentBlock = null;
     let direction = 1;
     let speed = 2;
+    let baseSpeed = 2;
+    let speedIncrement = 0.12;
     let stars = [];
-    let highScore = parseInt(localStorage.getItem('stackGameHighScore')) || 0;
+    let soundEnabled = localStorage.getItem('stackSoundEnabled') !== 'false';
+    let difficulty = localStorage.getItem('stackDifficulty') || 'medium';
+
+    // Leaderboard (Top 3)
+    let leaderboard = JSON.parse(localStorage.getItem('stackLeaderboard')) || [];
+    let highScore = leaderboard[0] || 0;
 
     const BLOCK_HEIGHT = 20;
     const COLORS = ['#8b5cf6', '#a78bfa', '#c4b5fd', '#7c3aed', '#6d28d9'];
 
+    // Difficulty Settings
+    const DIFFICULTY_SETTINGS = {
+        easy: { baseSpeed: 1.5, speedIncrement: 0.08, maxSpeed: 4 },
+        medium: { baseSpeed: 2, speedIncrement: 0.12, maxSpeed: 5.5 },
+        hard: { baseSpeed: 3, speedIncrement: 0.18, maxSpeed: 7 }
+    };
+
+    // Initialize difficulty buttons
+    difficultyBtns.forEach(btn => {
+        if (btn.dataset.difficulty === difficulty) {
+            btn.style.outline = '2px solid white';
+        }
+        btn.addEventListener('click', () => {
+            difficultyBtns.forEach(b => b.style.outline = 'none');
+            btn.style.outline = '2px solid white';
+            difficulty = btn.dataset.difficulty;
+            localStorage.setItem('stackDifficulty', difficulty);
+        });
+    });
+
+    // Sound Toggle
+    if (soundToggle) {
+        updateSoundIcon();
+        soundToggle.addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            localStorage.setItem('stackSoundEnabled', soundEnabled);
+            updateSoundIcon();
+        });
+    }
+
+    function updateSoundIcon() {
+        if (soundToggle) {
+            soundToggle.innerHTML = soundEnabled ?
+                '<i class="fas fa-volume-up"></i>' :
+                '<i class="fas fa-volume-mute"></i>';
+        }
+    }
+
     // Buzz sound for game over
     function playBuzzSound() {
+        if (!soundEnabled) return;
         try {
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             const oscillator = audioCtx.createOscillator();
@@ -537,6 +587,86 @@ document.addEventListener('DOMContentLoaded', () => {
             oscillator.start(audioCtx.currentTime);
             oscillator.stop(audioCtx.currentTime + 0.2);
         } catch (e) { /* Audio not supported */ }
+    }
+
+    // Celebration sound for perfect/combo
+    function playCelebrationSound() {
+        if (!soundEnabled) return;
+        try {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(523, audioCtx.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659, audioCtx.currentTime + 0.1); // E5
+            oscillator.frequency.setValueAtTime(784, audioCtx.currentTime + 0.2); // G5
+
+            gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.3);
+        } catch (e) { /* Audio not supported */ }
+    }
+
+    // Confetti celebration for high score
+    function launchConfetti() {
+        const confettiColors = ['#8b5cf6', '#a78bfa', '#fbbf24', '#ec4899', '#10b981', '#fff'];
+        const confettiCount = 50;
+        const wrapper = document.getElementById('stack-game-wrapper');
+        if (!wrapper) return;
+
+        for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 8 + 4}px;
+                height: ${Math.random() * 8 + 4}px;
+                background: ${confettiColors[Math.floor(Math.random() * confettiColors.length)]};
+                left: ${Math.random() * 100}%;
+                top: -10px;
+                border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+                pointer-events: none;
+                z-index: 100;
+            `;
+            wrapper.appendChild(confetti);
+
+            // Animate falling
+            const duration = Math.random() * 1500 + 1000;
+            const xOffset = (Math.random() - 0.5) * 100;
+            confetti.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(350px) translateX(${xOffset}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], {
+                duration: duration,
+                easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+            });
+
+            setTimeout(() => confetti.remove(), duration);
+        }
+    }
+
+    // Color utility functions for gradients
+    function lightenColor(hex, percent) {
+        const num = parseInt(hex.slice(1), 16);
+        const amt = Math.round(2.55 * percent);
+        const R = Math.min(255, (num >> 16) + amt);
+        const G = Math.min(255, ((num >> 8) & 0x00FF) + amt);
+        const B = Math.min(255, (num & 0x0000FF) + amt);
+        return `rgb(${R},${G},${B})`;
+    }
+
+    function darkenColor(hex, percent) {
+        const num = parseInt(hex.slice(1), 16);
+        const amt = Math.round(2.55 * percent);
+        const R = Math.max(0, (num >> 16) - amt);
+        const G = Math.max(0, ((num >> 8) & 0x00FF) - amt);
+        const B = Math.max(0, (num & 0x0000FF) - amt);
+        return `rgb(${R},${G},${B})`;
     }
 
     // Generate starfield
@@ -591,10 +721,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function initGame() {
         score = 0;
         streak = 0;
-        speed = 2;
         stack = [];
         scoreValue.textContent = '0';
         generateStars();
+
+        // Apply difficulty settings
+        const settings = DIFFICULTY_SETTINGS[difficulty];
+        baseSpeed = settings.baseSpeed;
+        speedIncrement = settings.speedIncrement;
+        speed = baseSpeed;
+
+        // Hide combo display
+        if (comboDisplay) comboDisplay.style.display = 'none';
 
         // Base block
         stack.push({
@@ -637,24 +775,54 @@ document.addEventListener('DOMContentLoaded', () => {
         // Draw background elements
         drawBackground();
 
-        // Draw stacked blocks with subtle glow
+        // Draw shadow preview (where block will land)
+        if (currentBlock && stack.length > 0) {
+            const lastBlock = stack[stack.length - 1];
+            ctx.fillStyle = 'rgba(139, 92, 246, 0.2)';
+            ctx.strokeStyle = 'rgba(139, 92, 246, 0.4)';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([4, 4]);
+            ctx.strokeRect(lastBlock.x, lastBlock.y - BLOCK_HEIGHT, lastBlock.width, BLOCK_HEIGHT - 2);
+            ctx.setLineDash([]);
+        }
+
+        // Draw stacked blocks with gradient and 3D effect
         stack.forEach((block, i) => {
+            // Create gradient for 3D effect
+            const gradient = ctx.createLinearGradient(block.x, block.y, block.x, block.y + BLOCK_HEIGHT);
+            gradient.addColorStop(0, lightenColor(block.color, 20));
+            gradient.addColorStop(0.5, block.color);
+            gradient.addColorStop(1, darkenColor(block.color, 20));
+
             // Glow effect for recent blocks
             if (i >= stack.length - 3) {
                 ctx.shadowColor = block.color;
                 ctx.shadowBlur = 8;
             }
-            ctx.fillStyle = block.color;
+            ctx.fillStyle = gradient;
             ctx.fillRect(block.x, block.y, block.width, BLOCK_HEIGHT - 2);
+
+            // 3D edge highlight
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillRect(block.x, block.y, block.width, 2);
             ctx.shadowBlur = 0;
         });
 
-        // Draw current moving block
+        // Draw current moving block with gradient
         if (currentBlock) {
+            const gradient = ctx.createLinearGradient(currentBlock.x, currentBlock.y, currentBlock.x, currentBlock.y + BLOCK_HEIGHT);
+            gradient.addColorStop(0, lightenColor(currentBlock.color, 20));
+            gradient.addColorStop(0.5, currentBlock.color);
+            gradient.addColorStop(1, darkenColor(currentBlock.color, 20));
+
             ctx.shadowColor = currentBlock.color;
             ctx.shadowBlur = 10;
-            ctx.fillStyle = currentBlock.color;
+            ctx.fillStyle = gradient;
             ctx.fillRect(currentBlock.x, currentBlock.y, currentBlock.width, BLOCK_HEIGHT - 2);
+
+            // 3D edge highlight
+            ctx.fillStyle = 'rgba(255,255,255,0.3)';
+            ctx.fillRect(currentBlock.x, currentBlock.y, currentBlock.width, 2);
             ctx.shadowBlur = 0;
         }
 
@@ -693,17 +861,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         score++;
 
-        // Streak logic
+        // Streak logic with combo display
         if (isPerfect) {
             streak++;
             score += streak; // Bonus points for streak
-            playCelebrateSound();
+            playCelebrationSound();
+
+            // Show combo display for 3+ streak
+            if (streak >= 3 && comboDisplay) {
+                comboDisplay.textContent = `🔥 Perfect x${streak}!`;
+                comboDisplay.style.display = 'block';
+                comboDisplay.style.animation = 'none';
+                comboDisplay.offsetHeight; // Trigger reflow
+                comboDisplay.style.animation = 'fadeInOut 1s ease-out';
+            }
         } else {
             streak = 0;
+            if (comboDisplay) comboDisplay.style.display = 'none';
         }
 
         scoreValue.textContent = score;
-        speed = Math.min(speed + 0.12, 5.5);
+        const settings = DIFFICULTY_SETTINGS[difficulty];
+        speed = Math.min(speed + speedIncrement, settings.maxSpeed);
 
         // Scroll view
         if (stack.length > 12) {
@@ -718,12 +897,17 @@ document.addEventListener('DOMContentLoaded', () => {
         gameRunning = false;
         cancelAnimationFrame(animationId);
 
-        // Shake animation on wrapper
-        const wrapper = document.getElementById('stack-game-wrapper');
-        if (wrapper) {
-            wrapper.classList.add('shake');
-            setTimeout(() => wrapper.classList.remove('shake'), 400);
-        }
+        // Shake animation using JS
+        let shakeCount = 0;
+        const shakeInterval = setInterval(() => {
+            const offset = shakeCount % 2 === 0 ? 8 : -8;
+            canvas.style.transform = `translateX(${offset}px)`;
+            shakeCount++;
+            if (shakeCount >= 8) {
+                clearInterval(shakeInterval);
+                canvas.style.transform = 'translateX(0)';
+            }
+        }, 50);
 
         // Buzz sound
         playBuzzSound();
@@ -747,6 +931,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.font = 'bold 14px Inter, sans-serif';
             ctx.fillStyle = '#fbbf24';
             ctx.fillText('🎉 NEW HIGH SCORE! 🎉', canvas.width / 2, canvas.height / 2 - 50);
+            launchConfetti(); // Confetti celebration!
         }
 
         ctx.fillStyle = '#fff';
@@ -756,15 +941,35 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.font = '14px Inter, sans-serif';
         ctx.fillText('Score: ' + score, canvas.width / 2, canvas.height / 2 + 15);
 
-        ctx.font = '12px Inter, sans-serif';
-        ctx.fillStyle = '#a78bfa';
-        ctx.fillText('Best: ' + highScore, canvas.width / 2, canvas.height / 2 + 35);
+        // Update leaderboard
+        updateLeaderboard(score);
 
         ctx.font = '11px Inter, sans-serif';
+        ctx.fillStyle = '#a78bfa';
+
+        // Display top 3 scores
+        ctx.fillText('🏆 Top Scores:', canvas.width / 2, canvas.height / 2 + 40);
+        ctx.font = '10px Inter, sans-serif';
+        leaderboard.slice(0, 3).forEach((s, i) => {
+            const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
+            ctx.fillText(`${medal} ${s}`, canvas.width / 2, canvas.height / 2 + 55 + (i * 12));
+        });
+
+        ctx.font = '10px Inter, sans-serif';
         ctx.fillStyle = '#94a3b8';
-        ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 60);
+        ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 100);
 
         overlay.style.display = 'none';
+    }
+
+    function updateLeaderboard(newScore) {
+        if (newScore > 0) {
+            leaderboard.push(newScore);
+            leaderboard.sort((a, b) => b - a);
+            leaderboard = leaderboard.slice(0, 3); // Keep top 3
+            localStorage.setItem('stackLeaderboard', JSON.stringify(leaderboard));
+            highScore = leaderboard[0];
+        }
     }
 
     function gameLoop() {
@@ -777,6 +982,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         overlay.style.display = 'none';
         scoreDisplay.style.display = 'block';
+        if (soundToggle) soundToggle.style.display = 'block';
         gameRunning = true;
         initGame();
         gameLoop();
@@ -785,13 +991,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listeners
     startBtn.addEventListener('click', startGame);
 
-    canvas.addEventListener('click', () => {
+    // Click and Touch support
+    canvas.addEventListener('click', handleTap);
+    canvas.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        handleTap();
+    }, { passive: false });
+
+    function handleTap() {
         if (gameRunning) {
             placeBlock();
         } else if (score > 0) {
             startGame();
         }
-    });
+    }
 
     // Draw initial background preview
     generateStars();

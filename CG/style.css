@@ -330,20 +330,63 @@ h5 {
 background: var(--accent-hover) !important;
 }
 
-.award-badge {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: default;
+/* 3D Flip Badge */
+.award-scene {
+    perspective: 1000px;
+    cursor: pointer;
 }
 
-.award-badge:hover {
-    transform: translateY(-5px) scale(1.02);
+.award-badge-card {
+    position: relative;
+    width: 320px;
+    /* Fixed width to prevent layout jump */
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.award-badge-card.flipped {
+    transform: rotateX(180deg);
+}
+
+.award-badge-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-front {
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.award-back {
+    transform: rotateX(180deg);
+    box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.4);
+}
+
+/* Hover effect on scene (lifts the whole card) */
+.award-scene:hover .award-badge-card {
+    transform: translateY(-5px);
+    /* Lift */
+}
+
+.award-scene:hover .award-badge-card.flipped {
+    transform: translateY(-5px) rotateX(180deg);
+    /* Lift while flipped */
+}
+
+/* Front face specific hover visual */
+.award-scene:hover .award-front {
     border-color: var(--accent-color) !important;
     box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.3) !important;
-}
-
-.award-badge:hover i {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.5));
 }
 
 .hero h1 {

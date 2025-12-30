@@ -416,38 +416,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Award Badge Interaction
+// Award Badge Interaction (3D Flip)
 document.addEventListener('DOMContentLoaded', () => {
-    const awardBadge = document.querySelector('.award-badge');
-    if (awardBadge) {
-        awardBadge.addEventListener('click', () => {
-            // Heart shaped confetti if possible, or standard fallback
-            const duration = 3000;
-            const end = Date.now() + duration;
+    const awardScene = document.querySelector('.award-scene');
+    const awardCard = document.querySelector('.award-badge-card');
 
-            (function frame() {
-                confetti({
-                    particleCount: 5,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 },
-                    colors: ['#8b5cf6', '#ec4899']
-                });
-                confetti({
-                    particleCount: 5,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 },
-                    colors: ['#8b5cf6', '#ec4899']
-                });
+    if (awardScene && awardCard) {
+        awardScene.addEventListener('click', () => {
+            if (!awardCard.classList.contains('flipped')) {
+                // Play simplified sound
+                playCelebrateSound();
 
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
-                }
-            }());
+                // Flip
+                awardCard.classList.add('flipped');
 
-            // Play joyful sound
-            playCelebrateSound();
+                // Revert after 3 seconds
+                setTimeout(() => {
+                    awardCard.classList.remove('flipped');
+                }, 3000);
+            }
         });
     }
 });

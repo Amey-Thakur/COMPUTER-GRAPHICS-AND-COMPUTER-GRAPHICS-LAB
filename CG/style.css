@@ -1457,39 +1457,34 @@ kbd {
     padding: 1px 4px;
 }
 
-/* Sound Toggle - Positioned beside Dynamic Island */
+/* Sound Toggle */
 #sound-toggle {
     position: absolute;
-    top: 10px;
-    /* Same as notch */
-    left: calc(50% + 58px);
-    /* Right of notch: (notch 96px / 2) + 10px gap */
-    background: #000;
-    /* Same as notch */
+    top: 25px;
+    /* Aligned with notch area */
+    right: 25px;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     cursor: pointer;
     z-index: 10001;
     /* Above Overlays */
-    width: 28px;
-    /* Same as notch height */
-    height: 28px;
-    /* Same as notch height */
-    border-radius: 14px;
-    /* Pill shape */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Same as notch */
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #sound-toggle:hover {
-    width: 40px;
-    height: 32px;
-    border-radius: 16px;
-    background: #1a1a1a;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 #sound-toggle:active {

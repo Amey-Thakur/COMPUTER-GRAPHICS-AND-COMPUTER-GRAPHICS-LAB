@@ -1040,6 +1040,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Buzz sound
         playBuzzSound();
 
+        // 1. Hide Global HUD Elements (Score & Global Sound Toggle)
+        // This prevents them from overlapping the Game Over Card
+        const globalScoreDisplay = document.getElementById('stack-score');
+        const globalSoundToggle = document.getElementById('sound-toggle');
+
+        if (globalScoreDisplay) globalScoreDisplay.style.display = 'none';
+        if (globalSoundToggle) globalSoundToggle.style.display = 'none';
+
         const isNewHighScore = score > highScore;
         if (isNewHighScore) {
             highScore = score;
@@ -1302,6 +1310,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
+        if (gameRunning) return;
+
+        // Reset Global HUD
+        const globalScoreDisplay = document.getElementById('stack-score');
+        const globalSoundToggle = document.getElementById('sound-toggle');
+        if (globalScoreDisplay) globalScoreDisplay.style.display = 'block';
+        if (globalSoundToggle) globalSoundToggle.style.display = 'flex';
         // Check for tutorial
         const tutorialShown = localStorage.getItem('stackTutorialShown');
         if (!tutorialShown && tutorialOverlay) {

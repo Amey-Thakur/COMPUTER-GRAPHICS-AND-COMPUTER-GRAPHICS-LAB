@@ -1947,3 +1947,163 @@ kbd {
         display: none;
     }
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Matching AOA)
+   ========================================= */
+
+/* Tablet and Mobile - 768px and below */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-top: 40px;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    /* Smaller Control Buttons */
+    .control-btn,
+    #theme-toggle,
+    #install-btn,
+    #share-toggle {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.9rem;
+    }
+
+    /* Stats Container - Better Mobile Layout */
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .stat-item {
+        min-width: 70px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    /* Cards - Full Width on Mobile */
+    .card-custom {
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile - 576px and below */
+@media (max-width: 576px) {
+
+    /* Share Modal Footer - Stack Buttons Vertically */
+    .share-modal-footer {
+        flex-direction: column;
+    }
+
+    .share-modal-footer .btn {
+        width: 100%;
+    }
+
+    /* Hero Adjustments */
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    /* Section Titles */
+    .section-title h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra Small Mobile - 480px and below */
+@media (max-width: 480px) {
+
+    /* Center Top Controls on Very Small Screens */
+    .top-controls,
+    header .d-flex.gap-2 {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        justify-content: center !important;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    /* Hero Compact */
+    .hero {
+        padding: 25px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    /* Share Toggle - Center Beautifully */
+    #share-toggle,
+    #install-btn {
+        margin: 0 auto;
+    }
+
+    /* Stats - Stack Vertically */
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    /* Command Palette - Full Width */
+    .cmd-modal {
+        width: 95%;
+        max-width: none;
+        margin: 0 10px;
+    }
+
+    /* Game Over Overlay - Adjusted for Mobile */
+    #game-over-overlay>div {
+        width: 95% !important;
+        padding: 20px !important;
+    }
+}
+
+/* Game Screen Mobile Optimization */
+@media (max-width: 400px) {
+    #stack-game-wrapper {
+        max-width: 280px;
+    }
+
+    #game-over-overlay h1 {
+        font-size: 2.5rem !important;
+    }
+
+    #game-over-overlay h2 {
+        font-size: 1.5rem !important;
+    }
+}

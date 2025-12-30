@@ -505,6 +505,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const soundToggle = document.getElementById('sound-toggle');
     const comboDisplay = document.getElementById('combo-display');
     const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+    const tutorialOverlay = document.getElementById('tutorial-overlay');
+    const closeTutorialBtn = document.getElementById('close-tutorial');
+    const shareBtn = document.getElementById('share-score-btn');
+
+    // Constants
+    const DEVELOPER_SCORE = 25; // Challenge score to beat
 
     // Game State
     let gameRunning = false;
@@ -1047,6 +1053,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillStyle = '#fbbf24';
             ctx.fillText('🎉 NEW HIGH SCORE! 🎉', canvas.width / 2, canvas.height / 2 - 50);
             launchConfetti(); // Confetti celebration!
+        } else if (score > DEVELOPER_SCORE) {
+            // Dev Challenge beat
+            ctx.font = 'bold 12px Inter, sans-serif';
+            ctx.fillStyle = '#10b981';
+            ctx.fillText('🚀 DEV SCORE BEATEN!', canvas.width / 2, canvas.height / 2 - 50);
+            launchConfetti();
         }
 
         ctx.fillStyle = '#fff';
@@ -1075,6 +1087,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 100);
 
         overlay.style.display = 'none';
+
+        // Show Share Button
+        if (shareBtn) {
+            shareBtn.style.display = 'block';
+            shareBtn.onclick = (e) => {
+                e.stopPropagation(); // Prevent restart
+                const text = `I scored ${score} in Stack Builder! Can you beat the Dev Score of ${DEVELOPER_SCORE}? 🚀 Play now at ${window.location.href}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = shareBtn.innerHTML;
+                    shareBtn.innerHTML = '<i class="fas fa-check me-1"></i>Copied!';
+                    setTimeout(() => shareBtn.innerHTML = originalText, 2000);
+                });
+            };
+        }
     }
 
     function updateLeaderboard(newScore) {
@@ -1095,9 +1121,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
+        // Check for tutorial
+        const tutorialShown = localStorage.getItem('stackTutorialShown');
+        if (!tutorialShown && tutorialOverlay) {
+            tutorialOverlay.style.display = 'flex';
+            localStorage.setItem('stackTutorialShown', 'true');
+
+            // Should be handled by close button, but safety first
+            if (closeTutorialBtn) {
+                closeTutorialBtn.onclick = () => {
+                    tutorialOverlay.style.display = 'none';
+                    actuallyStartGame();
+                };
+            }
+            return;
+        }
+
+        actuallyStartGame();
+    }
+
+    function actuallyStartGame() {
         overlay.style.display = 'none';
         scoreDisplay.style.display = 'block';
         if (soundToggle) soundToggle.style.display = 'block';
+        if (shareBtn) shareBtn.style.display = 'none';
         gameRunning = true;
         initGame();
         gameLoop();

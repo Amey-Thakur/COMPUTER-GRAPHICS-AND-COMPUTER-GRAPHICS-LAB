@@ -1070,6 +1070,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (bestScoreDisplay) bestScoreDisplay.innerText = leaderboard[0] || score;
 
+            // Populate Top Scores List
+            const topScoresList = document.getElementById('top-scores-list');
+            if (topScoresList) {
+                topScoresList.innerHTML = '';
+                leaderboard.slice(0, 3).forEach((s, i) => {
+                    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
+                    const scoreItem = document.createElement('div');
+                    scoreItem.className = 'd-flex align-items-center justify-content-between px-2 py-1';
+                    scoreItem.style.fontSize = '0.8rem';
+                    scoreItem.innerHTML = `
+                        <span style="color: rgba(255,255,255,0.7);">${medal} Rank ${i + 1}</span>
+                        <span style="color: white; font-weight: 600;">${s}</span>
+                    `;
+                    topScoresList.appendChild(scoreItem);
+                });
+            }
+
             // Setup listeners
             if (restartBtn) {
                 restartBtn.onclick = () => {

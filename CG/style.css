@@ -2087,6 +2087,23 @@ kbd {
     .section-title h3 {
         font-size: 1.5rem;
     }
+
+    /* Info Badges - Keep on Same Line */
+    .info-badges .badge-pill {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+
+    .info-badges .d-flex {
+        flex-wrap: nowrap !important;
+        gap: 4px !important;
+    }
+
+    /* AR Project Section - Better Spacing */
+    #stack-game-wrapper,
+    .phone-frame-container {
+        margin-top: 20px;
+    }
 }
 
 /* Extra Small Mobile - 480px and below */

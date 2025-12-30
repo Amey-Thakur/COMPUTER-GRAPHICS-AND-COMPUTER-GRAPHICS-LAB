@@ -330,6 +330,34 @@ h5 {
 background: var(--accent-hover) !important;
 }
 
+/* Shake Animation for Game Over */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0) !important;
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-8px) !important;
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(8px) !important;
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out !important;
+}
+
 /* 3D Flip Badge */
 .award-scene {
     perspective: 1000px;

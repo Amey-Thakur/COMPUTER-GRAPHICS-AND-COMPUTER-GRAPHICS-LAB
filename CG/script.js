@@ -517,6 +517,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const BLOCK_HEIGHT = 20;
     const COLORS = ['#8b5cf6', '#a78bfa', '#c4b5fd', '#7c3aed', '#6d28d9'];
 
+    // Buzz sound for game over
+    function playBuzzSound() {
+        try {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            oscillator.type = 'square';
+            oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(80, audioCtx.currentTime + 0.15);
+
+            gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.2);
+        } catch (e) { /* Audio not supported */ }
+    }
+
     // Generate starfield
     function generateStars() {
         stars = [];
@@ -696,6 +718,16 @@ document.addEventListener('DOMContentLoaded', () => {
         gameRunning = false;
         cancelAnimationFrame(animationId);
 
+        // Shake animation on wrapper
+        const wrapper = document.getElementById('stack-game-wrapper');
+        if (wrapper) {
+            wrapper.classList.add('shake');
+            setTimeout(() => wrapper.classList.remove('shake'), 400);
+        }
+
+        // Buzz sound
+        playBuzzSound();
+
         const isNewHighScore = score > highScore;
         if (isNewHighScore) {
             highScore = score;
@@ -715,7 +747,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.font = 'bold 14px Inter, sans-serif';
             ctx.fillStyle = '#fbbf24';
             ctx.fillText('🎉 NEW HIGH SCORE! 🎉', canvas.width / 2, canvas.height / 2 - 50);
-            playCelebrateSound();
         }
 
         ctx.fillStyle = '#fff';

@@ -420,10 +420,26 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const awardScene = document.querySelector('.award-scene');
     const awardCard = document.querySelector('.award-badge-card');
+    const awardMsg = document.getElementById('award-msg');
 
-    if (awardScene && awardCard) {
+    const messages = [
+        "Rendered with Love ❤️",
+        "Pixels Perfected ✨",
+        "100% Geometry 📐",
+        "High Five! ✋",
+        "You're a Star! 🌟",
+        "+1 Kudos 🚀",
+        "Contribution: Ack ✅",
+        "Status: Awesome 🟢"
+    ];
+
+    if (awardScene && awardCard && awardMsg) {
         awardScene.addEventListener('click', () => {
             if (!awardCard.classList.contains('flipped')) {
+                // Select Random Message
+                const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+                awardMsg.textContent = randomMsg;
+
                 // Play simplified sound
                 playCelebrateSound();
 

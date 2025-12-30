@@ -338,8 +338,8 @@ background: var(--accent-hover) !important;
 
 .award-badge-card {
     position: relative;
-    width: 320px;
-    /* Fixed width to prevent layout jump */
+    width: 400px;
+    /* Increased to fit text on one line */
     height: 50px;
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -365,6 +365,7 @@ background: var(--accent-hover) !important;
 .award-front {
     z-index: 2;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .award-back {

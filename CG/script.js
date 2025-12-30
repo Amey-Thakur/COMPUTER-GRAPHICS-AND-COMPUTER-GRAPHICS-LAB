@@ -627,31 +627,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Confetti celebration for high score
     function launchConfetti() {
         const confettiColors = ['#8b5cf6', '#a78bfa', '#fbbf24', '#ec4899', '#10b981', '#fff'];
-        const confettiCount = 50;
+        const confettiCount = 60;
         const wrapper = document.getElementById('stack-game-wrapper');
         if (!wrapper) return;
 
+        // Ensure confetti stays within wrapper
+        wrapper.style.overflow = 'hidden';
+
         for (let i = 0; i < confettiCount; i++) {
             const confetti = document.createElement('div');
+            // Spawn from notch area (center top, 30-70% spread)
+            const startX = 30 + Math.random() * 40; // 30% to 70% horizontal
             confetti.style.cssText = `
                 position: absolute;
                 width: ${Math.random() * 8 + 4}px;
                 height: ${Math.random() * 8 + 4}px;
                 background: ${confettiColors[Math.floor(Math.random() * confettiColors.length)]};
-                left: ${Math.random() * 100}%;
-                top: -10px;
+                left: ${startX}%;
+                top: 25px;
                 border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
                 pointer-events: none;
                 z-index: 100;
             `;
             wrapper.appendChild(confetti);
 
-            // Animate falling
-            const duration = Math.random() * 1500 + 1000;
-            const xOffset = (Math.random() - 0.5) * 100;
+            // Animate falling - spread out and fall down
+            const duration = Math.random() * 2000 + 1500;
+            const xOffset = (Math.random() - 0.5) * 200; // Wider horizontal spread
+            const fallDistance = wrapper.offsetHeight * 0.8; // Stay within 80% of wrapper height
+
             confetti.animate([
-                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                { transform: `translateY(350px) translateX(${xOffset}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(${fallDistance}px) translateX(${xOffset}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
             ], {
                 duration: duration,
                 easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'

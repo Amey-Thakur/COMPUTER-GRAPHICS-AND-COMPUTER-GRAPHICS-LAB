@@ -1101,6 +1101,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     shareResult();
                 };
             }
+
+            // Internal Sound Toggle Logic
+            const internalSoundToggle = document.getElementById('game-over-sound-toggle');
+            if (internalSoundToggle) {
+                const icon = internalSoundToggle.querySelector('i');
+                // Set initial state
+                if (isMuted) {
+                    icon.className = 'fas fa-volume-mute';
+                    internalSoundToggle.style.opacity = '0.5';
+                } else {
+                    icon.className = 'fas fa-volume-up';
+                    internalSoundToggle.style.opacity = '1';
+                }
+
+                internalSoundToggle.onclick = (e) => {
+                    e.stopPropagation();
+                    toggleSound();
+                    // Update icon immediately after toggle
+                    if (isMuted) {
+                        icon.className = 'fas fa-volume-mute';
+                        internalSoundToggle.style.opacity = '0.5';
+                    } else {
+                        icon.className = 'fas fa-volume-up';
+                        internalSoundToggle.style.opacity = '1';
+                    }
+                };
+            }
         }
 
         // Draw final frame without text (background only)

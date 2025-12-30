@@ -496,7 +496,13 @@
                                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; flex-direction: column; align-items: center; justify-content: center; z-index: 25; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);">
 
                                                 <div
-                                                    style="background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); text-align: center; width: 85%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
+                                                    style="position: relative; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); text-align: center; width: 85%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
+
+                                                    <!-- Internal Sound Toggle -->
+                                                    <button id="game-over-sound-toggle"
+                                                        style="position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(255,255,255,0.1); color: white; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); cursor: pointer; transition: all 0.2s;">
+                                                        <i class="fas fa-volume-up"></i>
+                                                    </button>
 
                                                     <h2
                                                         style="color: white; font-weight: 800; font-size: 2rem; margin-bottom: 5px; letter-spacing: -0.5px;">
@@ -538,16 +544,16 @@
                                                     </button>
 
                                                     <button id="share-score-btn-overlay"
-                                                        class="btn w-100 py-3 rounded-pill fw-bold"
-                                                        style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white; font-size: 1rem; transition: background 0.2s;">
+                                                        class="btn w-100 py-3 rounded-pill fw-bold btn-glass-hover"
+                                                        style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white; font-size: 1rem; transition: all 0.2s;">
                                                         Share Score
                                                     </button>
-                                                </div>
 
-                                                <div class="mt-4 text-center">
-                                                    <p
-                                                        style="color: rgba(255,255,255,0.4); font-size: 0.75rem; margin: 0; letter-spacing: 0.5px; font-weight: 500;">
-                                                        Designed by Amey Thakur</p>
+                                                    <div class="mt-4 text-center">
+                                                        <p
+                                                            style="color: rgba(255,255,255,0.4); font-size: 0.75rem; margin: 0; letter-spacing: 0.5px; font-weight: 500;">
+                                                            Designed by Amey Thakur</p>
+                                                    </div>
                                                 </div>
                                             </div>
 

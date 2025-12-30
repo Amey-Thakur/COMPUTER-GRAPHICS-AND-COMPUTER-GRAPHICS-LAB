@@ -2123,15 +2123,16 @@ kbd {
         margin: 0 auto;
     }
 
-    /* Stats - Stack Vertically */
+    /* Stats - 2 Per Row Layout */
     .stats-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .stat-item {
         text-align: center;
+        flex: 0 0 45%;
     }
 
     /* Command Palette - Full Width */

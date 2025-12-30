@@ -537,11 +537,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize difficulty buttons
     difficultyBtns.forEach(btn => {
+        // Clear default active class, set based on saved preference
+        btn.classList.remove('active');
+        btn.style.outline = 'none';
         if (btn.dataset.difficulty === difficulty) {
+            btn.classList.add('active');
             btn.style.outline = '2px solid white';
         }
         btn.addEventListener('click', () => {
-            difficultyBtns.forEach(b => b.style.outline = 'none');
+            difficultyBtns.forEach(b => {
+                b.classList.remove('active');
+                b.style.outline = 'none';
+            });
+            btn.classList.add('active');
             btn.style.outline = '2px solid white';
             difficulty = btn.dataset.difficulty;
             localStorage.setItem('stackDifficulty', difficulty);
@@ -667,6 +675,94 @@ document.addEventListener('DOMContentLoaded', () => {
         const G = Math.max(0, ((num >> 8) & 0x00FF) - amt);
         const B = Math.max(0, (num & 0x0000FF) - amt);
         return `rgb(${R},${G},${B})`;
+    }
+
+    // Phase 2: Sparkle particles on perfect placement
+    let particles = [];
+
+    function createSparkles(x, y) {
+        const colors = ['#fbbf24', '#fff', '#a78bfa', '#8b5cf6'];
+        for (let i = 0; i < 12; i++) {
+            particles.push({
+                x: x,
+                y: y,
+                vx: (Math.random() - 0.5) * 6,
+                vy: (Math.random() - 0.5) * 6 - 2,
+                size: Math.random() * 3 + 1,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                life: 1,
+                decay: Math.random() * 0.03 + 0.02
+            });
+        }
+    }
+
+    function updateParticles() {
+        particles = particles.filter(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.1; // Gravity
+            p.life -= p.decay;
+            return p.life > 0;
+        });
+    }
+
+    function drawParticles() {
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.life;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+        });
+    }
+
+    // Phase 2: Screen flash on game over
+    let flashAlpha = 0;
+
+    function triggerFlash() {
+        flashAlpha = 0.6;
+    }
+
+    function drawFlash() {
+        if (flashAlpha > 0) {
+            ctx.fillStyle = `rgba(239, 68, 68, ${flashAlpha})`;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            flashAlpha -= 0.05;
+        }
+    }
+
+    // Phase 2: Floating score popup
+    let floatingTexts = [];
+
+    function createFloatingScore(text, x, y, color = '#fbbf24') {
+        floatingTexts.push({
+            text: text,
+            x: x,
+            y: y,
+            vy: -2,
+            life: 1,
+            color: color
+        });
+    }
+
+    function updateFloatingTexts() {
+        floatingTexts = floatingTexts.filter(t => {
+            t.y += t.vy;
+            t.life -= 0.02;
+            return t.life > 0;
+        });
+    }
+
+    function drawFloatingTexts() {
+        floatingTexts.forEach(t => {
+            ctx.font = 'bold 14px Inter, sans-serif';
+            ctx.fillStyle = t.color;
+            ctx.globalAlpha = t.life;
+            ctx.textAlign = 'center';
+            ctx.fillText(t.text, t.x, t.y);
+            ctx.globalAlpha = 1;
+        });
     }
 
     // Generate starfield
@@ -833,6 +929,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.textAlign = 'center';
             ctx.fillText('🔥 x' + streak, canvas.width / 2, 50);
         }
+
+        // Phase 2: Draw particles and floating texts
+        updateParticles();
+        drawParticles();
+        updateFloatingTexts();
+        drawFloatingTexts();
+        drawFlash();
     }
 
     function placeBlock() {
@@ -861,11 +964,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         score++;
 
+        // Phase 2: Floating score popup
+        const bonusPoints = isPerfect ? streak + 1 : 1;
+        const popupX = newX + newWidth / 2;
+        const popupY = currentBlock.y;
+        createFloatingScore(`+${bonusPoints}`, popupX, popupY, isPerfect ? '#fbbf24' : '#a78bfa');
+
         // Streak logic with combo display
         if (isPerfect) {
             streak++;
             score += streak; // Bonus points for streak
             playCelebrationSound();
+
+            // Phase 2: Sparkle particles on perfect placement
+            createSparkles(newX + newWidth / 2, currentBlock.y);
 
             // Show combo display for 3+ streak
             if (streak >= 3 && comboDisplay) {
@@ -908,6 +1020,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 canvas.style.transform = 'translateX(0)';
             }
         }, 50);
+
+        // Phase 2: Screen flash on game over
+        triggerFlash();
 
         // Buzz sound
         playBuzzSound();

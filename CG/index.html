@@ -394,135 +394,69 @@
             </div>
         </section>
 
-        <!-- Interactive Graphics Canvas (Hero Visualizer) -->
-        <section id="interactive-demo" class="reveal mt-4" aria-labelledby="interactive-title">
-            <div class="section-title">
-                <h3 id="interactive-title">Geometric Canvas Visualizer</h3>
-            </div>
+        <div id="orbital-status"
+            style="position: absolute; bottom: 10px; left: 10px; color: var(--text-secondary); font-family: monospace; font-size: 0.8rem;">
+            Status: Canvas Ready.
+        </div>
+        </div>
+        </div>
 
-            <div class="card-custom interactive-card mx-auto visualizer-bg"
-                style="max-width: 900px; padding: 0; overflow: hidden;">
-                <!-- Custom Tab Navigation -->
-                <div class="algo-tabs d-flex border-bottom">
-                    <button class="algo-tab active" data-tab="raster" onclick="switchTab('raster')">
-                        <i class="fas fa-pencil-ruler me-2"></i>Rasterizer
-                    </button>
-                    <button class="algo-tab" data-tab="orbital" onclick="switchTab('orbital')">
-                        <i class="far fa-circle me-2"></i>Orbital
-                    </button>
-                    <button class="algo-tab" data-tab="transform" onclick="switchTab('transform')">
-                        <i class="fas fa-vector-square me-2"></i>Transform
+        <!-- 3. Transform (Placeholder) -->
+        <div id="tab-transform" class="tab-pane" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <h5 style="color: var(--accent-color);">2D Transformations</h5>
+                <!-- Placeholder content -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-primary-custom" disabled>
+                        <i class="fas fa-cube me-2"></i>Transform (Coming Soon)
                     </button>
                 </div>
-
-                <!-- Tab Content Area -->
-                <div class="algo-content p-4" style="min-height: 400px;">
-
-                    <!-- 1. Rasterizer (Line) -->
-                    <div id="tab-raster" class="tab-pane active" style="display: block;">
-                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                            <h5 style="color: var(--accent-color);">Bresenham's Line Simulations</h5>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-sm btn-primary-custom" onclick="renderRandomLines()">
-                                    <i class="fas fa-random me-2"></i>Generate Lines
-                                </button>
-                                <button class="btn btn-sm btn-outline-share" onclick="shareResult('raster')"
-                                    title="Share Result">
-                                    <i class="fas fa-share-alt"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div id="raster-canvas-container" class="shareable-content"
-                            style="position: relative; border: 1px solid var(--border-color); border-radius: 8px; background: #0f172a; overflow: hidden;">
-                            <canvas id="rasterCanvas" width="850" height="300"></canvas>
-                            <div id="raster-status"
-                                style="position: absolute; bottom: 10px; left: 10px; color: var(--text-secondary); font-family: monospace; font-size: 0.8rem;">
-                                Status: Waiting for input...
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Orbital (Circle/Ellipse) -->
-                    <div id="tab-orbital" class="tab-pane" style="display: none;">
-                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                            <h5 style="color: var(--accent-color);">Midpoint Circle & Ellipse</h5>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-sm btn-primary-custom" onclick="renderOrbital()">
-                                    <i class="fas fa-infinity me-2"></i>Render Shapes
-                                </button>
-                                <button class="btn btn-sm btn-outline-share" onclick="shareResult('orbital')"
-                                    title="Share Result">
-                                    <i class="fas fa-share-alt"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div id="orbital-container" class="shareable-content"
-                            style="position: relative; border: 1px solid var(--border-color); border-radius: 8px; background: #0f172a; overflow: hidden; height: 300px; display: flex; align-items: center; justify-content: center;">
-                            <canvas id="orbitalCanvas" width="850" height="300"></canvas>
-                            <div id="orbital-status"
-                                style="position: absolute; bottom: 10px; left: 10px; color: var(--text-secondary); font-family: monospace; font-size: 0.8rem;">
-                                Status: Canvas Ready.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. Transform (Placeholder) -->
-                    <div id="tab-transform" class="tab-pane" style="display: none;">
-                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                            <h5 style="color: var(--accent-color);">2D Transformations</h5>
-                            <!-- Placeholder content -->
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-sm btn-primary-custom" disabled>
-                                    <i class="fas fa-cube me-2"></i>Transform (Coming Soon)
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p-5 text-center text-muted border rounded"
-                            style="background: rgba(255,255,255,0.05);">
-                            <i class="fas fa-layer-group fa-3x mb-3" style="opacity: 0.5;"></i>
-                            <p>Interactive 2D Transformation Visualizer</p>
-                            <small>Translation • Rotation • Scaling</small>
-                        </div>
-                    </div>
-
-                </div>
             </div>
+            <div class="p-5 text-center text-muted border rounded" style="background: rgba(255,255,255,0.05);">
+                <i class="fas fa-layer-group fa-3x mb-3" style="opacity: 0.5;"></i>
+                <p>Interactive 2D Transformation Visualizer</p>
+                <small>Translation • Rotation • Scaling</small>
+            </div>
+        </div>
 
-            <style>
-                /* Tab Styles */
-                .algo-tab {
-                    flex: 1;
-                    padding: 15px;
-                    background: transparent;
-                    border: none;
-                    color: var(--text-secondary);
-                    font-weight: 600;
-                    border-bottom: 3px solid transparent;
-                    transition: all 0.3s ease;
-                }
+        </div>
+        </div>
 
-                .algo-tab:hover {
-                    background: rgba(255, 255, 255, 0.1);
-                    /* Visible in dark mode */
-                    color: var(--text-primary);
-                }
+        <style>
+            /* Tab Styles */
+            .algo-tab {
+                flex: 1;
+                padding: 15px;
+                background: transparent;
+                border: none;
+                color: var(--text-secondary);
+                font-weight: 600;
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
 
-                [data-theme="dark"] .algo-tab:hover {
-                    background: rgba(255, 255, 255, 0.05);
-                    color: #fff;
-                }
+            .algo-tab:hover {
+                background: rgba(255, 255, 255, 0.1);
+                /* Visible in dark mode */
+                color: var(--text-primary);
+            }
 
-                .algo-tab.active {
-                    color: var(--accent-color);
-                    border-bottom-color: var(--accent-color);
-                    background: rgba(139, 92, 246, 0.1);
-                    /* Purple tint */
-                }
+            [data-theme="dark"] .algo-tab:hover {
+                background: rgba(255, 255, 255, 0.05);
+                color: #fff;
+            }
 
-                .tab-pane {
-                    animation: fadeIn 0.4s ease;
-                }
-            </style>
+            .algo-tab.active {
+                color: var(--accent-color);
+                border-bottom-color: var(--accent-color);
+                background: rgba(139, 92, 246, 0.1);
+                /* Purple tint */
+            }
+
+            .tab-pane {
+                animation: fadeIn 0.4s ease;
+            }
+        </style>
         </section>
 
     </main>

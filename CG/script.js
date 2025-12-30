@@ -161,334 +161,243 @@ async function renderRandomLines(playEffects = true) {
     }
 
     if (btn) {
-        btn.innerHTML = '<i class="fas fa-random me-2"></i>Generate Lines';
-        btn.disabled = false;
-    }
-}
+        // PWA Install Logic
+        let deferredPrompt;
+        const pwaInstallBtn = document.getElementById('pwa-install-btn');
 
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            pwaInstallBtn.style.display = 'flex';
+        });
 
-// 2. Orbital (Midpoint Circle/Ellipse)
-let orbitalCtx, orbitalCanvas;
-
-function initOrbitalCanvas() {
-    orbitalCanvas = document.getElementById('orbitalCanvas');
-    const container = document.getElementById('orbital-container');
-    if (!orbitalCanvas || !container) return;
-
-    const rect = container.getBoundingClientRect();
-    const newWidth = rect.width ? rect.width : 850;
-
-    orbitalCanvas.width = newWidth;
-    orbitalCanvas.height = Math.min(300, newWidth * 0.6);
-    orbitalCtx = orbitalCanvas.getContext('2d');
-}
-
-function drawCircle(x, y, r, color) {
-    orbitalCtx.beginPath();
-    orbitalCtx.arc(x, y, r, 0, 2 * Math.PI);
-    orbitalCtx.strokeStyle = color;
-    orbitalCtx.lineWidth = 2;
-    orbitalCtx.stroke();
-}
-
-function drawEllipse(x, y, rx, ry, rotation, color) {
-    orbitalCtx.beginPath();
-    orbitalCtx.ellipse(x, y, rx, ry, rotation, 0, 2 * Math.PI);
-    orbitalCtx.strokeStyle = color;
-    orbitalCtx.lineWidth = 2;
-    orbitalCtx.stroke();
-}
-
-async function renderOrbital() {
-    if (!orbitalCanvas) initOrbitalCanvas();
-    const w = orbitalCanvas.width;
-    const h = orbitalCanvas.height;
-    const ctx = orbitalCtx;
-    const status = document.getElementById('orbital-status');
-    const btn = document.querySelector('button[onclick="renderOrbital()"]');
-
-    if (btn) {
-        btn.innerHTML = '<i class="fas fa-circle-notch fa-spin me-2"></i>Rendering...';
-        btn.disabled = true;
-    }
-
-    ctx.clearRect(0, 0, w, h);
-    status.innerHTML = "Calculating Decision Parameters...";
-
-    const colors = ['#8b5cf6', '#ec4899', '#3b82f6'];
-
-    // Draw Concentric Circles/Ellipses
-    const centerX = w / 2;
-    const centerY = h / 2;
-
-    for (let i = 1; i <= 6; i++) {
-        const type = Math.random() > 0.5 ? 'circle' : 'ellipse';
-        const color = colors[i % colors.length];
-
-        if (type === 'circle') {
-            drawCircle(centerX, centerY, i * 20, color);
-        } else {
-            drawEllipse(centerX, centerY, i * 25, i * 15, i * 0.2, color);
-        }
-
-        await new Promise(r => setTimeout(r, 200));
-    }
-
-    // Draw some random ones around
-    for (let i = 0; i < 5; i++) {
-        const x = Math.random() * w;
-        const y = Math.random() * h;
-        drawCircle(x, y, Math.random() * 30 + 10, '#ffffff');
-        await new Promise(r => setTimeout(r, 100));
-    }
-
-    status.innerHTML = "Orbital Shapes Rendered.";
-    playCelebrateSound();
-
-    if (btn) {
-        btn.innerHTML = '<i class="fas fa-infinity me-2"></i>Render Shapes';
-        btn.disabled = false;
-    }
-}
-
-
-// PWA Install Logic
-let deferredPrompt;
-const pwaInstallBtn = document.getElementById('pwa-install-btn');
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    pwaInstallBtn.style.display = 'flex';
-});
-
-if (pwaInstallBtn) {
-    pwaInstallBtn.addEventListener('click', async () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted') {
-                pwaInstallBtn.style.display = 'none';
-            }
-            deferredPrompt = null;
-        }
-    });
-}
-
-// Share Functionality
-const shareBtn = document.getElementById('share-btn');
-if (shareBtn) {
-    shareBtn.addEventListener('click', async () => {
-        const shareData = {
-            title: 'Computer Graphics Lab Portfolio — Amey Thakur',
-            text: 'Computer Graphics Lab Portfolio — Amey Thakur',
-            url: window.location.href
-        };
-
-        try {
-            await navigator.share(shareData);
-        } catch (err) {
-            // Fallback: Copy to clipboard
-            const dummy = document.createElement('input');
-            document.body.appendChild(dummy);
-            dummy.value = window.location.href;
-            dummy.select();
-            document.execCommand('copy');
-            document.body.removeChild(dummy);
-            alert('Portfolio link copied to clipboard!');
-        }
-    });
-}
-
-/**
- * =========================================
- *   CORE FUNCTIONALITY
- * =========================================
- */
-
-// Theme Toggle Logic
-const toggleBtn = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
-
-// Back to Top Logic
-const backToTopBtn = document.getElementById("btn-back-to-top");
-if (backToTopBtn) {
-    window.onscroll = function () { scrollFunction(); };
-    backToTopBtn.addEventListener("click", () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
-}
-
-function scrollFunction() {
-    if (!backToTopBtn) return;
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "flex";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-}
-
-// Theme Toggle Logic
-if (toggleBtn) {
-    const themeIcon = toggleBtn.querySelector('i');
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', savedTheme);
-    if (themeIcon) updateIcon(themeIcon, savedTheme);
-
-    toggleBtn.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        if (themeIcon) updateIcon(themeIcon, newTheme);
-    });
-}
-
-function updateIcon(icon, theme) {
-    if (theme === 'dark') {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    }
-}
-
-// Scroll Reveal Logic using Intersection Observer
-const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-});
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-
-// Stats Counter Animation
-const statsObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const suffix = counter.getAttribute('data-suffix') || '';
-                const duration = 2000; // 2 seconds
-                const increment = target / (duration / 16); // 60fps
-
-                let current = 0;
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.textContent = Math.ceil(current) + suffix;
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target + suffix;
+        if (pwaInstallBtn) {
+            pwaInstallBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        pwaInstallBtn.style.display = 'none';
                     }
-                };
-                updateCounter();
+                    deferredPrompt = null;
+                }
             });
-            observer.unobserve(entry.target);
         }
-    });
-}, { threshold: 0.5 });
 
-const statsSection = document.querySelector('.stats-container');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
+        // Share Functionality
+        const shareBtn = document.getElementById('share-btn');
+        if (shareBtn) {
+            shareBtn.addEventListener('click', async () => {
+                const shareData = {
+                    title: 'Computer Graphics Lab Portfolio — Amey Thakur',
+                    text: 'Computer Graphics Lab Portfolio — Amey Thakur',
+                    url: window.location.href
+                };
 
-// Mobile PDF Download Handler
-document.addEventListener('DOMContentLoaded', () => {
-    const pdfLink = document.getElementById('pdf-resource-link');
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    // Fallback: Copy to clipboard
+                    const dummy = document.createElement('input');
+                    document.body.appendChild(dummy);
+                    dummy.value = window.location.href;
+                    dummy.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(dummy);
+                    alert('Portfolio link copied to clipboard!');
+                }
+            });
+        }
 
-    if (pdfLink && isMobile) {
-        pdfLink.removeAttribute('target');
-        pdfLink.setAttribute('download', 'CG_Chapter-1.pdf');
-    }
-});
+        /**
+         * =========================================
+         *   CORE FUNCTIONALITY
+         * =========================================
+         */
 
-// Award Badge Interaction (3D Flip)
-document.addEventListener('DOMContentLoaded', () => {
-    const awardScene = document.querySelector('.award-scene');
-    const awardCard = document.querySelector('.award-badge-card');
-    const awardMsg = document.getElementById('award-msg');
+        // Theme Toggle Logic
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
 
-    const messages = [
-        "Rendered with Love ❤️",
-        "Pixels Perfected ✨",
-        "100% Geometry 📐",
-        "High Five! ✋🏻",
-        "You're a Star! 🌟",
-        "+1 Kudos 🚀",
-        "Contribution: Ack ✅",
-        "Status: Awesome 🟢"
-    ];
+        // Back to Top Logic
+        const backToTopBtn = document.getElementById("btn-back-to-top");
+        if (backToTopBtn) {
+            window.onscroll = function () { scrollFunction(); };
+            backToTopBtn.addEventListener("click", () => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+        }
 
-    if (awardScene && awardCard && awardMsg) {
-        awardScene.addEventListener('click', () => {
-            if (!awardCard.classList.contains('flipped')) {
-                // Select Random Message
-                const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-                awardMsg.textContent = randomMsg;
+        function scrollFunction() {
+            if (!backToTopBtn) return;
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
 
-                // Play simplified sound
-                playCelebrateSound();
+        // Theme Toggle Logic
+        if (toggleBtn) {
+            const themeIcon = toggleBtn.querySelector('i');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            if (themeIcon) updateIcon(themeIcon, savedTheme);
 
-                // Flip
-                awardCard.classList.add('flipped');
+            toggleBtn.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                if (themeIcon) updateIcon(themeIcon, newTheme);
+            });
+        }
 
-                // Revert after 3 seconds
-                setTimeout(() => {
-                    awardCard.classList.remove('flipped');
-                }, 3000);
+        function updateIcon(icon, theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // Scroll Reveal Logic using Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+
+        // Stats Counter Animation
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const suffix = counter.getAttribute('data-suffix') || '';
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); // 60fps
+
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.ceil(current) + suffix;
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target + suffix;
+                            }
+                        };
+                        updateCounter();
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-container');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Mobile PDF Download Handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const pdfLink = document.getElementById('pdf-resource-link');
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (pdfLink && isMobile) {
+                pdfLink.removeAttribute('target');
+                pdfLink.setAttribute('download', 'CG_Chapter-1.pdf');
             }
         });
-    }
-});
 
-// Initialize Default Tab
-document.addEventListener('DOMContentLoaded', () => {
-    switchTab('raster');
-    // Pre-draw something
-    setTimeout(() => renderRandomLines(false), 500);
-});
+        // Award Badge Interaction (3D Flip)
+        document.addEventListener('DOMContentLoaded', () => {
+            const awardScene = document.querySelector('.award-scene');
+            const awardCard = document.querySelector('.award-badge-card');
+            const awardMsg = document.getElementById('award-msg');
 
-// 3D Tilt Interaction Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const tiltElements = document.querySelectorAll('.tilt-effect');
+            const messages = [
+                "Rendered with Love ❤️",
+                "Pixels Perfected ✨",
+                "100% Geometry 📐",
+                "High Five! ✋🏻",
+                "You're a Star! 🌟",
+                "+1 Kudos 🚀",
+                "Contribution: Ack ✅",
+                "Status: Awesome 🟢"
+            ];
 
-    tiltElements.forEach(el => {
-        el.addEventListener('mousemove', handleTilt);
-        el.addEventListener('mouseleave', resetTilt);
-    });
+            if (awardScene && awardCard && awardMsg) {
+                awardScene.addEventListener('click', () => {
+                    if (!awardCard.classList.contains('flipped')) {
+                        // Select Random Message
+                        const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+                        awardMsg.textContent = randomMsg;
 
-    function handleTilt(e) {
-        const el = e.currentTarget;
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left; // x position within the element.
-        const y = e.clientY - rect.top;  // y position within the element.
+                        // Play simplified sound
+                        playCelebrateSound();
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+                        // Flip
+                        awardCard.classList.add('flipped');
 
-        const rotateXVal = ((y - centerY) / centerY) * 20; // Max rotation X
-        const rotateYVal = ((centerX - x) / centerX) * 20; // Max rotation Y
+                        // Revert after 3 seconds
+                        setTimeout(() => {
+                            awardCard.classList.remove('flipped');
+                        }, 3000);
+                    }
+                });
+            }
+        });
 
-        // Apply transform
-        el.style.transform = `perspective(1000px) rotateX(${rotateXVal}deg) rotateY(${rotateYVal}deg) scale3d(1.05, 1.05, 1.05)`;
-    }
+        // Initialize Default Tab
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('raster');
+            // Pre-draw something
+            setTimeout(() => renderRandomLines(false), 500);
+        });
 
-    function resetTilt(e) {
-        const el = e.currentTarget;
-        el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-    }
-});
+        // 3D Tilt Interaction Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tiltElements = document.querySelectorAll('.tilt-effect');
+
+            tiltElements.forEach(el => {
+                el.addEventListener('mousemove', handleTilt);
+                el.addEventListener('mouseleave', resetTilt);
+            });
+
+            function handleTilt(e) {
+                const el = e.currentTarget;
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within the element.
+                const y = e.clientY - rect.top;  // y position within the element.
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateXVal = ((y - centerY) / centerY) * 20; // Max rotation X
+                const rotateYVal = ((centerX - x) / centerX) * 20; // Max rotation Y
+
+                // Apply transform
+                el.style.transform = `perspective(1000px) rotateX(${rotateXVal}deg) rotateY(${rotateYVal}deg) scale3d(1.05, 1.05, 1.05)`;
+            }
+
+            function resetTilt(e) {
+                const el = e.currentTarget;
+                el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            }
+        });

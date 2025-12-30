@@ -1460,18 +1460,18 @@ kbd {
 /* Sound Toggle */
 #sound-toggle {
     position: absolute;
-    top: 25px;
-    /* Aligned with notch area */
-    right: 25px;
+    top: 12px;
+    /* Perfectly aligned with Notch height */
+    right: 20px;
     background: rgba(255, 255, 255, 0.15);
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     z-index: 10001;
     /* Above Overlays */
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     backdrop-filter: blur(8px);
     display: flex;

@@ -545,18 +545,14 @@ document.addEventListener('DOMContentLoaded', () => {
     difficultyBtns.forEach(btn => {
         // Clear default active class, set based on saved preference
         btn.classList.remove('active');
-        btn.style.outline = 'none';
         if (btn.dataset.difficulty === difficulty) {
             btn.classList.add('active');
-            btn.style.outline = '2px solid white';
         }
         btn.addEventListener('click', () => {
             difficultyBtns.forEach(b => {
                 b.classList.remove('active');
-                b.style.outline = 'none';
             });
             btn.classList.add('active');
-            btn.style.outline = '2px solid white';
             difficulty = btn.dataset.difficulty;
             localStorage.setItem('stackDifficulty', difficulty);
         });

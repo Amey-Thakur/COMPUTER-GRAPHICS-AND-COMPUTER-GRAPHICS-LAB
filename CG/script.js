@@ -836,26 +836,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide combo display
         if (comboDisplay) comboDisplay.style.display = 'none';
 
-        // Base block
-        stack.push({
+        // Initial block
+        // Base block (Static foundation)
+        stack = [{
             x: canvas.width / 2 - 60,
-            y: canvas.height - BLOCK_HEIGHT,
+            y: canvas.height - 40, // Dynamic bottom
             width: 120,
+            height: BLOCK_HEIGHT,
             color: COLORS[0]
-        });
+        }];
 
-        spawnBlock();
+        spawnBlock(); // Spawn first moving block
     }
 
     function spawnBlock() {
         const lastBlock = stack[stack.length - 1];
         currentBlock = {
-            x: 0,
+            x: -100, // Start off-screen
             y: lastBlock.y - BLOCK_HEIGHT,
             width: lastBlock.width,
-            color: COLORS[stack.length % COLORS.length]
+            height: BLOCK_HEIGHT,
+            color: COLORS[stack.length % COLORS.length],
+            vx: speed * direction
         };
-        direction = 1;
+        // Randomize direction
+        direction = Math.random() > 0.5 ? 1 : -1;
+        currentBlock.vx = speed * direction;
+
+        // If speed > 0, make sure it moves towards center
+        if (direction === 1) currentBlock.x = -lastBlock.width;
+        else currentBlock.x = canvas.width;
     }
 
     function update() {

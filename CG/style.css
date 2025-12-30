@@ -603,6 +603,167 @@ background: var(--accent-hover) !important;
     /* Lift while flipped */
 }
 
+/* =========================================
+   IPHONE 17 PRO MAX DESIGN
+   ========================================= */
+.iphone-17-frame {
+    position: relative;
+    width: 320px;
+    /* Slightly wider wrapper */
+    height: 620px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    /* Titanium Dark */
+    border-radius: 56px;
+    /* Outer curve */
+    box-shadow:
+        0 0 0 1px #444,
+        /* Outer trim */
+        0 0 0 3px #1c1c1c,
+        /* Frame body */
+        0 0 0 4px #111,
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+        /* Metallic shine */
+        0 30px 60px -12px rgba(0, 0, 0, 0.6),
+        0 18px 36px -18px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    /* Bezel thickness */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.iphone-17-frame:hover {
+    transform: scale(1.02);
+}
+
+.iphone-bezel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 46px;
+    /* Inner bezel curve */
+    overflow: hidden;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+.screen-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 42px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Dynamic Island */
+.dynamic-island {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 28px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dynamic-island:hover {
+    width: 140px;
+    height: 40px;
+}
+
+.island-camera {
+    width: 10px;
+    height: 10px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.island-sensor {
+    width: 8px;
+    height: 8px;
+    background: #111;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Home Indicator */
+.home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+}
+
+/* Side Buttons */
+.iphone-btn {
+    position: absolute;
+    background: #1c1c1c;
+    border-radius: 4px;
+    box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.5);
+    left: -4px;
+}
+
+.iphone-btn.volume-up {
+    top: 140px;
+    width: 4px;
+    height: 50px;
+    border-radius: 4px 0 0 4px;
+}
+
+.iphone-btn.volume-down {
+    top: 200px;
+    width: 4px;
+    height: 50px;
+    border-radius: 4px 0 0 4px;
+}
+
+.iphone-btn.action-btn {
+    top: 100px;
+    width: 4px;
+    height: 30px;
+    border-radius: 4px 0 0 4px;
+    background: #c34d30;
+    /* Action Orange */
+}
+
+.iphone-btn.power-btn {
+    left: auto;
+    right: -4px;
+    top: 160px;
+    width: 4px;
+    height: 80px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Reflective Shine for Titanium Look */
+.iphone-17-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 56px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 200;
+}
+
 /* Front face specific hover visual */
 .award-scene:hover .award-front {
     border-color: var(--accent-color) !important;

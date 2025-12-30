@@ -508,6 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tutorialOverlay = document.getElementById('tutorial-overlay');
     const closeTutorialBtn = document.getElementById('close-tutorial');
     const shareBtn = document.getElementById('share-score-btn');
+    const gameOverOverlay = document.getElementById('game-over-overlay');
 
     // Constants
     const DEVELOPER_SCORE = 58; // Challenge score to beat
@@ -1045,68 +1046,55 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('stackGameHighScore', highScore);
         }
 
-        // Draw final frame with background
-        draw();
-
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.textAlign = 'center';
-
-        // New High Score celebration
-        if (isNewHighScore && score > 1) {
-            ctx.font = 'bold 14px Inter, sans-serif';
-            ctx.fillStyle = '#fbbf24';
-            ctx.fillText('🎉 NEW HIGH SCORE! 🎉', canvas.width / 2, canvas.height / 2 - 50);
-            launchConfetti(); // Confetti celebration!
-        } else if (score > DEVELOPER_SCORE) {
-            // Dev Challenge beat
-            ctx.font = 'bold 12px Inter, sans-serif';
-            ctx.fillStyle = '#10b981';
-            ctx.fillText('🚀 DEV SCORE BEATEN!', canvas.width / 2, canvas.height / 2 - 50);
-            launchConfetti();
-        }
-
-        ctx.fillStyle = '#fff';
-        ctx.font = 'bold 22px Inter, sans-serif';
-        ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2 - 15);
-
-        ctx.font = '14px Inter, sans-serif';
-        ctx.fillText('Score: ' + score, canvas.width / 2, canvas.height / 2 + 15);
-
         // Update leaderboard
         updateLeaderboard(score);
 
-        ctx.font = '11px Inter, sans-serif';
-        ctx.fillStyle = '#a78bfa';
+        // const gameOverOverlay = document.getElementById('game-over-overlay'); // Now global
+        const finalScoreDisplay = document.getElementById('final-score-display');
+        const bestScoreDisplay = document.getElementById('best-score-display');
+        const newHighScoreBadge = document.getElementById('new-highscore-badge');
+        const restartBtn = document.getElementById('restart-btn');
+        const shareBtnOverlay = document.getElementById('share-score-btn-overlay');
 
-        // Display top 3 scores
-        ctx.fillText('🏆 Top Scores:', canvas.width / 2, canvas.height / 2 + 40);
-        ctx.font = '10px Inter, sans-serif';
-        leaderboard.slice(0, 3).forEach((s, i) => {
-            const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
-            ctx.fillText(`${medal} ${s}`, canvas.width / 2, canvas.height / 2 + 55 + (i * 12));
-        });
+        if (gameOverOverlay) {
+            gameOverOverlay.style.display = 'flex';
+            if (finalScoreDisplay) finalScoreDisplay.innerText = score;
 
-        ctx.font = '10px Inter, sans-serif';
-        ctx.fillStyle = '#94a3b8';
-        ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 100);
+            // Handle High Score logic
+            if (isNewHighScore && score > 0) {
+                if (newHighScoreBadge) newHighScoreBadge.style.display = 'block';
+                launchConfetti();
+            } else {
+                if (newHighScoreBadge) newHighScoreBadge.style.display = 'none';
+            }
 
-        // Authorship
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-        ctx.font = '9px Inter, sans-serif';
-        ctx.fillText('Designed by Amey Thakur', canvas.width / 2, canvas.height - 15);
+            if (bestScoreDisplay) bestScoreDisplay.innerText = leaderboard[0] || score;
 
-        overlay.style.display = 'none';
+            // Setup listeners
+            if (restartBtn) {
+                restartBtn.onclick = () => {
+                    gameOverOverlay.style.display = 'none';
+                    startGame();
+                };
+            }
 
-        // Show Share Button
-        if (shareBtn) {
-            shareBtn.style.display = 'block';
-            shareBtn.onclick = (e) => {
-                e.stopPropagation(); // Prevent restart
-                shareResult();
-            };
+            if (shareBtnOverlay) {
+                shareBtnOverlay.onclick = (e) => {
+                    e.stopPropagation();
+                    shareResult();
+                };
+            }
         }
+
+        // Draw final frame without text (background only)
+        draw();
+
+        // Darken canvas slightly
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Hide old HUD if needed
+        overlay.style.display = 'none';
     }
 
     /* =========================================
@@ -1291,6 +1279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function actuallyStartGame() {
         overlay.style.display = 'none';
+        if (gameOverOverlay) gameOverOverlay.style.display = 'none';
         scoreDisplay.style.display = 'block';
         if (soundToggle) soundToggle.style.display = 'block';
         if (shareBtn) shareBtn.style.display = 'none';

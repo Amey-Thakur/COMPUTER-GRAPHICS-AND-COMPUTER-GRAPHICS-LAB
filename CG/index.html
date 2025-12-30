@@ -491,6 +491,60 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Game Over Overlay -->
+                                            <div id="game-over-overlay"
+                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; flex-direction: column; align-items: center; justify-content: center; z-index: 25; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);">
+
+                                                <div
+                                                    style="background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); text-align: center; width: 85%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
+
+                                                    <h2
+                                                        style="color: white; font-weight: 800; font-size: 2rem; margin-bottom: 5px; letter-spacing: -0.5px;">
+                                                        Game Over</h2>
+                                                    <p
+                                                        style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 20px;">
+                                                        Score</p>
+
+                                                    <h1 id="final-score-display"
+                                                        style="color: white; font-size: 3.5rem; font-weight: 800; margin-bottom: 25px; line-height: 1;">
+                                                        0</h1>
+
+                                                    <div
+                                                        style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 16px; margin-bottom: 25px;">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-2">
+                                                            <span
+                                                                style="color: #a78bfa; font-size: 0.85rem; font-weight: 500;">Best
+                                                                Score</span>
+                                                            <span id="best-score-display"
+                                                                style="color: white; font-weight: 700;">0</span>
+                                                        </div>
+                                                        <div id="new-highscore-badge"
+                                                            style="display: none; color: #fbbf24; font-size: 0.8rem; font-weight: 600; margin-top: 5px;">
+                                                            <i class="fas fa-trophy me-1"></i> New High Score!
+                                                        </div>
+                                                    </div>
+
+                                                    <button id="restart-btn"
+                                                        class="btn btn-primary-custom w-100 py-3 rounded-pill fw-bold mb-3"
+                                                        style="background: #2563eb; border: none; font-size: 1rem; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
+                                                        Play Again
+                                                    </button>
+
+                                                    <button id="share-score-btn-overlay"
+                                                        class="btn w-100 py-3 rounded-pill fw-bold"
+                                                        style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white; font-size: 1rem; transition: background 0.2s;">
+                                                        Share Score
+                                                    </button>
+                                                </div>
+
+                                                <div class="mt-4 text-center">
+                                                    <p
+                                                        style="color: rgba(255,255,255,0.4); font-size: 0.75rem; margin: 0; letter-spacing: 0.5px; font-weight: 500;">
+                                                        Designed by Amey Thakur</p>
+                                                </div>
+                                            </div>
+
                                             <!-- Hidden Share Card Template -->
                                             <div id="share-card-template"
                                                 style="position: absolute; top: 0; left: 0; width: 280px; height: 580px; 

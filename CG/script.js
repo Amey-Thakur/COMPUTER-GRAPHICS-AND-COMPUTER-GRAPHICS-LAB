@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareBtn = document.getElementById('share-score-btn');
 
     // Constants
-    const DEVELOPER_SCORE = 25; // Challenge score to beat
+    const DEVELOPER_SCORE = 58; // Challenge score to beat
 
     // Game State
     let gameRunning = false;

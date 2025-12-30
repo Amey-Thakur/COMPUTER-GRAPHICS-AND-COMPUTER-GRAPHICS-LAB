@@ -1040,13 +1040,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Buzz sound
         playBuzzSound();
 
-        // 1. Hide Global HUD Elements (Score & Global Sound Toggle)
-        // This prevents them from overlapping the Game Over Card
+        // 1. Hide Global HUD Elements (Score Only)
+        // Keep sound toggle visible as it's now part of the global UI
         const globalScoreDisplay = document.getElementById('stack-score');
-        const globalSoundToggle = document.getElementById('sound-toggle');
+        // const globalSoundToggle = document.getElementById('sound-toggle'); // Keep visible
 
         if (globalScoreDisplay) globalScoreDisplay.style.display = 'none';
-        if (globalSoundToggle) globalSoundToggle.style.display = 'none';
+        // if (globalSoundToggle) globalSoundToggle.style.display = 'none';
 
         const isNewHighScore = score > highScore;
         if (isNewHighScore) {
@@ -1107,33 +1107,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 shareBtnOverlay.onclick = (e) => {
                     e.stopPropagation();
                     shareResult();
-                };
-            }
-
-            // Internal Sound Toggle Logic
-            const internalSoundToggle = document.getElementById('game-over-sound-toggle');
-            if (internalSoundToggle) {
-                const icon = internalSoundToggle.querySelector('i');
-                // Set initial state
-                if (isMuted) {
-                    icon.className = 'fas fa-volume-mute';
-                    internalSoundToggle.style.opacity = '0.5';
-                } else {
-                    icon.className = 'fas fa-volume-up';
-                    internalSoundToggle.style.opacity = '1';
-                }
-
-                internalSoundToggle.onclick = (e) => {
-                    e.stopPropagation();
-                    toggleSound();
-                    // Update icon immediately after toggle
-                    if (isMuted) {
-                        icon.className = 'fas fa-volume-mute';
-                        internalSoundToggle.style.opacity = '0.5';
-                    } else {
-                        icon.className = 'fas fa-volume-up';
-                        internalSoundToggle.style.opacity = '1';
-                    }
                 };
             }
         }
@@ -1314,9 +1287,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset Global HUD
         const globalScoreDisplay = document.getElementById('stack-score');
-        const globalSoundToggle = document.getElementById('sound-toggle');
+        // const globalSoundToggle = document.getElementById('sound-toggle');
         if (globalScoreDisplay) globalScoreDisplay.style.display = 'block';
-        if (globalSoundToggle) globalSoundToggle.style.display = 'flex';
+        // if (globalSoundToggle) globalSoundToggle.style.display = 'flex';
         // Check for tutorial
         const tutorialShown = localStorage.getItem('stackTutorialShown');
         if (!tutorialShown && tutorialOverlay) {

@@ -1377,7 +1377,7 @@ function initCommandPalette() {
         { type: 'Command', name: 'Toggle Theme', icon: 'fa-adjust', action: () => document.getElementById('theme-toggle').click() },
         { type: 'Command', name: 'Scroll to Top', icon: 'fa-arrow-up', action: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
         { type: 'Command', name: 'Go to Experiments', icon: 'fa-flask', action: () => document.getElementById('experiments').scrollIntoView({ behavior: 'smooth' }) },
-        { type: 'Command', name: 'Go to Visualizer', icon: 'fa-shapes', action: () => document.getElementById('interactive-demo').scrollIntoView({ behavior: 'smooth' }) },
+        { type: 'Command', name: 'Go to The Wall', icon: 'fa-users', action: () => document.getElementById('the-wall').scrollIntoView({ behavior: 'smooth' }) },
         { type: 'Command', name: 'Go to Mini Game', icon: 'fa-gamepad', action: () => document.getElementById('mini-project').scrollIntoView({ behavior: 'smooth' }) },
     ];
 

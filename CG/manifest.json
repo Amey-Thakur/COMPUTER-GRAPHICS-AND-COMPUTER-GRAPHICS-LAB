@@ -1,16 +1,43 @@
 {
-    "name": "Computer Graphics Lab",
-    "short_name": "CG Lab",
+    "name": "Amey | Computer Graphics Lab Portfolio",
+    "short_name": "CG Portfolio",
+    "description": "Scholarly portfolio for Computer Graphics Laboratory featuring interactive shape generation, transformations, and clipping algorithm visualizations by Amey Thakur.",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "background_color": "#0f172a",
     "theme_color": "#8b5cf6",
-    "description": "Comprehensive showcase of Computer Graphics experiments by Amey Thakur.",
+    "categories": [
+        "education",
+        "development"
+    ],
+    "lang": "en",
+    "dir": "ltr",
     "icons": [
         {
             "src": "assets/icon.svg",
             "sizes": "192x192 512x512",
-            "type": "image/svg+xml"
+            "type": "image/svg+xml",
+            "purpose": "maskable any"
         }
-    ]
+    ],
+    "screenshots": [
+        {
+            "src": "assets/screenshot-wide.svg",
+            "sizes": "1280x720",
+            "type": "image/svg+xml",
+            "form_factor": "wide",
+            "label": "CG Lab Portfolio - Desktop View"
+        },
+        {
+            "src": "assets/screenshot-narrow.svg",
+            "sizes": "720x1280",
+            "type": "image/svg+xml",
+            "form_factor": "narrow",
+            "label": "CG Lab Portfolio - Mobile View"
+        }
+    ],
+    "shortcuts": [],
+    "related_applications": [],
+    "prefer_related_applications": false
 }

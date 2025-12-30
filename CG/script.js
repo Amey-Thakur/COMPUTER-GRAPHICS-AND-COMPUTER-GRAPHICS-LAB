@@ -492,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Stack Builder Mini-Game
+// Stack Builder Mini-Game (Enhanced)
 (function () {
     const canvas = document.getElementById('stackCanvas');
     if (!canvas) return;
@@ -506,19 +506,73 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameRunning = false;
     let animationId = null;
     let score = 0;
+    let streak = 0; // Perfect placements in a row
     let stack = [];
     let currentBlock = null;
     let direction = 1;
     let speed = 2;
+    let stars = [];
+    let highScore = parseInt(localStorage.getItem('stackGameHighScore')) || 0;
 
     const BLOCK_HEIGHT = 20;
     const COLORS = ['#8b5cf6', '#a78bfa', '#c4b5fd', '#7c3aed', '#6d28d9'];
 
+    // Generate starfield
+    function generateStars() {
+        stars = [];
+        for (let i = 0; i < 40; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 1.5 + 0.5,
+                alpha: Math.random() * 0.5 + 0.3,
+                twinkleSpeed: Math.random() * 0.02 + 0.01
+            });
+        }
+    }
+
+    // Draw CG-themed background
+    function drawBackground() {
+        // Gradient already set in CSS, draw grid lines
+        ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
+        ctx.lineWidth = 1;
+
+        // Vertical grid
+        for (let x = 0; x < canvas.width; x += 30) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvas.height);
+            ctx.stroke();
+        }
+
+        // Horizontal grid
+        for (let y = 0; y < canvas.height; y += 30) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y);
+            ctx.stroke();
+        }
+
+        // Draw twinkling stars
+        stars.forEach(star => {
+            star.alpha += star.twinkleSpeed;
+            if (star.alpha > 0.8 || star.alpha < 0.2) {
+                star.twinkleSpeed = -star.twinkleSpeed;
+            }
+            ctx.beginPath();
+            ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+            ctx.fill();
+        });
+    }
+
     function initGame() {
         score = 0;
+        streak = 0;
         speed = 2;
         stack = [];
         scoreValue.textContent = '0';
+        generateStars();
 
         // Base block
         stack.push({
@@ -558,16 +612,36 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Draw stacked blocks
-        stack.forEach(block => {
+        // Draw background elements
+        drawBackground();
+
+        // Draw stacked blocks with subtle glow
+        stack.forEach((block, i) => {
+            // Glow effect for recent blocks
+            if (i >= stack.length - 3) {
+                ctx.shadowColor = block.color;
+                ctx.shadowBlur = 8;
+            }
             ctx.fillStyle = block.color;
             ctx.fillRect(block.x, block.y, block.width, BLOCK_HEIGHT - 2);
+            ctx.shadowBlur = 0;
         });
 
         // Draw current moving block
         if (currentBlock) {
+            ctx.shadowColor = currentBlock.color;
+            ctx.shadowBlur = 10;
             ctx.fillStyle = currentBlock.color;
             ctx.fillRect(currentBlock.x, currentBlock.y, currentBlock.width, BLOCK_HEIGHT - 2);
+            ctx.shadowBlur = 0;
+        }
+
+        // Draw streak indicator
+        if (streak > 1) {
+            ctx.font = 'bold 12px Inter, sans-serif';
+            ctx.fillStyle = '#fbbf24';
+            ctx.textAlign = 'center';
+            ctx.fillText('🔥 x' + streak, canvas.width / 2, 50);
         }
     }
 
@@ -579,7 +653,6 @@ document.addEventListener('DOMContentLoaded', () => {
             Math.max(currentBlock.x, lastBlock.x);
 
         if (overlap <= 0) {
-            // Game Over
             gameOver();
             return;
         }
@@ -587,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Calculate new block dimensions
         const newX = Math.max(currentBlock.x, lastBlock.x);
         const newWidth = overlap;
+        const isPerfect = Math.abs(newWidth - lastBlock.width) < 5;
 
         stack.push({
             x: newX,
@@ -596,39 +670,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         score++;
-        scoreValue.textContent = score;
-        speed = Math.min(speed + 0.15, 6); // Increase difficulty
 
-        // Check if stack is getting too tall (scroll view)
-        if (stack.length > 10) {
+        // Streak logic
+        if (isPerfect) {
+            streak++;
+            score += streak; // Bonus points for streak
+            playCelebrateSound();
+        } else {
+            streak = 0;
+        }
+
+        scoreValue.textContent = score;
+        speed = Math.min(speed + 0.12, 5.5);
+
+        // Scroll view
+        if (stack.length > 12) {
             stack.forEach(block => block.y += BLOCK_HEIGHT);
             stack = stack.filter(block => block.y < canvas.height);
         }
 
         spawnBlock();
-
-        // Perfect placement bonus
-        if (Math.abs(newWidth - lastBlock.width) < 5) {
-            playCelebrateSound();
-        }
     }
 
     function gameOver() {
         gameRunning = false;
         cancelAnimationFrame(animationId);
 
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        const isNewHighScore = score > highScore;
+        if (isNewHighScore) {
+            highScore = score;
+            localStorage.setItem('stackGameHighScore', highScore);
+        }
+
+        // Draw final frame with background
+        draw();
+
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = '#fff';
-        ctx.font = 'bold 20px Inter, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('Game Over!', canvas.width / 2, canvas.height / 2 - 15);
+
+        // New High Score celebration
+        if (isNewHighScore && score > 1) {
+            ctx.font = 'bold 14px Inter, sans-serif';
+            ctx.fillStyle = '#fbbf24';
+            ctx.fillText('🎉 NEW HIGH SCORE! 🎉', canvas.width / 2, canvas.height / 2 - 50);
+            playCelebrateSound();
+        }
+
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 22px Inter, sans-serif';
+        ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2 - 15);
+
         ctx.font = '14px Inter, sans-serif';
         ctx.fillText('Score: ' + score, canvas.width / 2, canvas.height / 2 + 15);
-        ctx.font = '11px Inter, sans-serif';
+
+        ctx.font = '12px Inter, sans-serif';
         ctx.fillStyle = '#a78bfa';
-        ctx.fillText('Click to restart', canvas.width / 2, canvas.height / 2 + 40);
+        ctx.fillText('Best: ' + highScore, canvas.width / 2, canvas.height / 2 + 35);
+
+        ctx.font = '11px Inter, sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 60);
 
         overlay.style.display = 'none';
     }
@@ -655,8 +758,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameRunning) {
             placeBlock();
         } else if (score > 0) {
-            // Restart after game over
             startGame();
         }
     });
+
+    // Draw initial background preview
+    generateStars();
+    drawBackground();
 })();

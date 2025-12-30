@@ -406,16 +406,15 @@
                     <div class="card-custom mini-project-card">
                         <div class="row g-0 align-items-center">
                             <!-- Project Info -->
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <div class="icon-wrapper mb-3">
                                     <i class="fas fa-cube"></i>
                                 </div>
                                 <span class="exp-tag">AUGMENTED REALITY</span>
                                 <h4 class="mt-2 mb-3 text-primary-theme fw-bold">AR Stack Builder Game</h4>
-                                <p class="text-secondary mb-3">
-                                    A Computer Graphics Mini-Project exploring Augmented Reality in mobile gaming.
-                                    Using Google ARCore for plane detection and Unity for 3D rendering, players stack
-                                    blocks in their real-world environment. Build the highest stack without toppling!
+                                <p class="text-secondary mb-3" style="font-size: 0.9rem;">
+                                    An AR Mini-Project using Google ARCore and Unity. Stack 3D blocks in your real-world
+                                    environment!
                                 </p>
 
                                 <!-- Tech Stack -->
@@ -440,9 +439,9 @@
                             </div>
 
                             <!-- Interactive Stack Builder Game -->
-                            <div class="col-md-4 text-center d-none d-md-block">
+                            <div class="col-md-6 text-center d-none d-md-block">
                                 <div class="stack-game-container" style="position: relative;">
-                                    <canvas id="stackCanvas" width="200" height="280"
+                                    <canvas id="stackCanvas" width="280" height="320"
                                         style="border-radius: 12px; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); cursor: pointer;"></canvas>
                                     <div id="stack-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
                                         display: flex; flex-direction: column; align-items: center; justify-content: center; 
@@ -453,8 +452,9 @@
                                             <i class="fas fa-gamepad me-1"></i>Play Demo
                                         </button>
                                     </div>
-                                    <div id="stack-score" style="position: absolute; top: 10px; left: 10px; 
-                                        color: white; font-weight: bold; font-size: 0.9rem; display: none;">
+                                    <div id="stack-score" style="position: absolute; top: 8px; left: 50%; transform: translateX(-50%); 
+                                        color: white; font-weight: bold; font-size: 0.85rem; display: none;
+                                        background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px;">
                                         Score: <span id="score-value">0</span>
                                     </div>
                                 </div>

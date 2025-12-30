@@ -457,70 +457,95 @@
                                             <!-- Start Overlay with Difficulty -->
                                             <div id="stack-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
                                                 display: flex; flex-direction: column; align-items: center; justify-content: center; 
-                                                background: rgba(0,0,0,0.6); z-index: 20;">
+                                                background: rgba(0,0,0,0.4); backdrop-filter: blur(8px); z-index: 20;">
                                                 <i class="fas fa-cubes"
-                                                    style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 8px;"></i>
-                                                <p style="color: #a78bfa; font-size: 0.75rem; margin-bottom: 12px;">
-                                                    Choose
-                                                    Difficulty</p>
-                                                <div class="d-flex gap-2 mb-2">
-                                                    <button class="btn btn-sm difficulty-btn" data-difficulty="easy"
-                                                        style="background: #10b981; color: white; font-size: 0.7rem; padding: 4px 10px;">Easy</button>
-                                                    <button class="btn btn-sm difficulty-btn active"
-                                                        data-difficulty="medium"
-                                                        style="background: #8b5cf6; color: white; font-size: 0.7rem; padding: 4px 10px;">Medium</button>
-                                                    <button class="btn btn-sm difficulty-btn" data-difficulty="hard"
-                                                        style="background: #ef4444; color: white; font-size: 0.7rem; padding: 4px 10px;">Hard</button>
+                                                    style="font-size: 3rem; color: white; margin-bottom: 12px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));"></i>
+                                                <h4
+                                                    style="color: white; font-weight: 700; font-size: 1.5rem; margin-bottom: 4px; letter-spacing: -0.5px;">
+                                                    Stack Builder</h4>
+                                                <p
+                                                    style="color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-bottom: 20px;">
+                                                    Tap to stack blocks!</p>
+
+                                                <div class="d-flex flex-column gap-2 mb-3 w-75">
+                                                    <div class="d-flex justify-content-center gap-2 bg-white bg-opacity-20 p-1 rounded-pill"
+                                                        style="backdrop-filter: blur(10px);">
+                                                        <button
+                                                            class="btn btn-sm difficulty-btn flex-fill rounded-pill border-0 text-white"
+                                                            data-difficulty="easy"
+                                                            style="font-size: 0.75rem; background: transparent; transition: all 0.2s;">Easy</button>
+                                                        <button
+                                                            class="btn btn-sm difficulty-btn active flex-fill rounded-pill border-0 text-white"
+                                                            data-difficulty="medium"
+                                                            style="font-size: 0.75rem; background: rgba(255,255,255,0.2); font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.2s;">Medium</button>
+                                                        <button
+                                                            class="btn btn-sm difficulty-btn flex-fill rounded-pill border-0 text-white"
+                                                            data-difficulty="hard"
+                                                            style="font-size: 0.75rem; background: transparent; transition: all 0.2s;">Hard</button>
+                                                    </div>
                                                 </div>
-                                                <button id="startStackGame" class="btn btn-sm btn-primary-custom mt-1">
-                                                    <i class="fas fa-play me-1"></i>Start Game
+
+                                                <button id="startStackGame"
+                                                    class="btn btn-primary-custom mt-2 px-4 py-2 rounded-pill fw-bold"
+                                                    style="background: #2563eb; border: none; font-size: 0.95rem; box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);">
+                                                    <i class="fas fa-play me-2"></i>Play Now
                                                 </button>
                                             </div>
 
                                             <!-- Score Display -->
                                             <div id="stack-score"
-                                                style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); 
-                                                color: white; font-weight: bold; font-size: 0.85rem; display: none;
-                                                background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; z-index: 30;">
-                                                Score: <span id="score-value">0</span>
+                                                style="position: absolute; top: 45px; left: 50%; transform: translateX(-50%); 
+                                                color: white; font-weight: 600; font-size: 1rem; display: none;
+                                                background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); padding: 6px 16px; border-radius: 20px; z-index: 30; border: 1px solid rgba(255,255,255,0.1);">
+                                                <span id="score-value">0</span>
                                             </div>
 
                                             <!-- Sound Toggle -->
                                             <button id="sound-toggle"
-                                                style="position: absolute; top: 40px; right: 15px; 
-                                                background: rgba(0,0,0,0.5); border: none; color: white; 
-                                                width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: none; font-size: 0.8rem; z-index: 30;"
+                                                style="position: absolute; top: 45px; right: 20px; 
+                                                background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white; 
+                                                width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 0.9rem; z-index: 30; transition: all 0.2s;"
                                                 title="Toggle Sound">
                                                 <i class="fas fa-volume-up"></i>
                                             </button>
 
                                             <!-- Tutorial Overlay -->
-                                            <div id="tutorial-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                                            <div id="tutorial-overlay"
+                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
                                                 display: flex; flex-direction: column; align-items: center; justify-content: center; 
-                                                background: rgba(0,0,0,0.85); z-index: 40; display: none;">
-                                                <h5 style="color: #fbbf24; margin-bottom: 10px;">How to Play</h5>
-                                                <p
-                                                    style="color: white; font-size: 0.8rem; padding: 0 20px; line-height: 1.4;">
-                                                    Tap to drop the block.<br>
-                                                    Align perfectly for <span style="color: #fbbf24;">Streak
-                                                        Bonuses</span>!<br>
-                                                    Don't miss the stack!
-                                                </p>
-                                                <button id="close-tutorial" class="btn btn-sm btn-outline-light mt-2"
-                                                    style="font-size: 0.8rem;">Got it!</button>
+                                                background: rgba(0,0,0,0.6); backdrop-filter: blur(15px); z-index: 40; display: none;">
+                                                <div class="text-center p-4 rounded-4"
+                                                    style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); max-width: 85%;">
+                                                    <h5 style="color: white; margin-bottom: 12px; font-weight: 700;">How
+                                                        to Play</h5>
+                                                    <p
+                                                        style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.5;">
+                                                        Tap screen to drop blocks.<br>
+                                                        Align perfectly for <span
+                                                            class="text-warning fw-bold">Combos</span>!<br>
+                                                        Don't miss the platform!
+                                                    </p>
+                                                    <button id="close-tutorial"
+                                                        class="btn btn-light rounded-pill px-4 mt-2 fw-bold"
+                                                        style="font-size: 0.9rem;">Got it!</button>
+                                                </div>
                                             </div>
 
                                             <!-- Share Button (Hidden by default) -->
                                             <button id="share-score-btn" class="btn btn-sm" onclick="shareResult()"
-                                                style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); 
-                                                background: #2563eb; color: white; font-size: 0.8rem; padding: 4px 12px; border-radius: 15px; display: none; z-index: 30;">
-                                                <i class="fas fa-share-alt me-1"></i>Share Score
+                                                style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); 
+                                                background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);
+                                                color: white; font-size: 0.9rem; font-weight: 500; padding: 8px 16px; border-radius: 20px; display: none; z-index: 30;
+                                                display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                                                <i class="fas fa-share-ios"></i> Share Score
                                             </button>
 
                                             <!-- Combo Display -->
-                                            <div id="combo-display" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%); 
-                                                color: #fbbf24; font-weight: bold; font-size: 0.9rem; display: none;
-                                                text-shadow: 0 0 10px rgba(251, 191, 36, 0.5); z-index: 30;"></div>
+                                            <div id="combo-display"
+                                                style="position: absolute; top: 90px; left: 50%; transform: translateX(-50%); 
+                                                color: #fbbf24; font-weight: 800; font-size: 1.2rem; display: none;
+                                                text-shadow: 0 4px 12px rgba(251, 191, 36, 0.4); z-index: 30; letter-spacing: 0.5px;">
+                                            </div>
                                         </div>
 
                                         <!-- Side Buttons -->
@@ -530,7 +555,6 @@
                                         <div class="iphone-btn action-btn"></div>
                                     </div>
                                 </div>
-                                <p class="text-secondary mt-2 mb-0"><small>Tap/Click to stack blocks!</small></p>
                             </div>
                         </div>
                     </div>

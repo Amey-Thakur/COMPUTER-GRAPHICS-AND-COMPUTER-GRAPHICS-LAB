@@ -1096,6 +1096,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = '#94a3b8';
         ctx.fillText('Tap to play again', canvas.width / 2, canvas.height / 2 + 100);
 
+        // Authorship
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.font = '9px Inter, sans-serif';
+        ctx.fillText('Designed by Amey Thakur', canvas.width / 2, canvas.height - 15);
+
         overlay.style.display = 'none';
 
         // Show Share Button

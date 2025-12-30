@@ -1,0 +1,140 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg-grad" x1="0" y1="0" x2="1280" y2="800" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F1F5F9"/>
+            <stop offset="1" stop-color="#CBD5E1"/>
+        </linearGradient>
+        <pattern id="grid-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="#E2E8F0" stroke-width="1"/>
+        </pattern>
+        <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#94A3B8" fill-opacity="0.3"/>
+        </pattern>
+        <filter id="win-shadow" x="100" y="40" width="1080" height="760" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0" dy="20" stdDeviation="30" flood-opacity="0.15"/>
+        </filter>
+        <style>
+            .code-line { font-family: 'Menlo', 'Consolas', monospace; font-size: 10px; }
+            .ui-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        </style>
+    </defs>
+
+    <!-- Professional Backdrop -->
+    <rect width="1280" height="800" fill="url(#bg-grad)"/>
+    <rect width="1280" height="800" fill="url(#grid-pattern)"/>
+
+    <!-- Browser Window Frame -->
+    <g filter="url(#win-shadow)">
+        <rect x="140" y="60" width="1000" height="680" rx="8" fill="#FFFFFF"/>
+        
+        <!-- Browser Chrome (Dark Mode for contrast) -->
+        <path d="M140 68C140 63.5817 143.582 60 148 60H1132C1136.42 60 1140 63.5817 1140 68V100H140V68Z" fill="#1E293B"/>
+        
+        <!-- Traffic Lights -->
+        <circle cx="160" cy="80" r="6" fill="#FF5F57"/>
+        <circle cx="180" cy="80" r="6" fill="#FEBC2E"/>
+        <circle cx="200" cy="80" r="6" fill="#28C840"/>
+
+        <!-- Tab Bar -->
+        <rect x="230" y="68" width="200" height="32" rx="4" fill="#334155"/>
+        <text x="250" y="89" class="ui-text" font-size="12" fill="#E2E8F0">Amey | CG Portfolio</text>
+        <rect x="230" y="100" width="200" height="2" fill="#8B5CF6"/> <!-- Active Tab Indicator -->
+
+        <!-- URL Bar Area -->
+        <rect x="140" y="100" width="1000" height="36" fill="#F1F5F9" stroke-bottom="#E2E8F0"/>
+        <rect x="300" y="106" width="500" height="24" rx="4" fill="#E2E8F0"/>
+        <text x="310" y="122" class="ui-text" font-size="11" fill="#64748B">🔒 github.io/amey-thakur/cg-lab</text>
+    </g>
+
+    <!-- Viewport Content -->
+    <g transform="translate(140, 136)">
+        <!-- Hero Banner with Data Viz Background -->
+        <rect width="1000" height="200" fill="#F8FAFC"/>
+        <rect width="1000" height="200" fill="url(#dot-pattern)"/>
+        
+        <!-- Hero Text -->
+        <text x="500" y="80" class="ui-text" font-weight="900" font-size="42" fill="#1E293B" text-anchor="middle">Computer Graphics</text>
+        <text x="500" y="120" class="ui-text" font-size="16" fill="#64748B" text-anchor="middle">Laboratory Portfolio • Amey Thakur</text>
+        
+        <!-- Hero Buttons -->
+        <rect x="440" y="150" width="120" height="36" rx="18" fill="#7C3AED"/>
+        <text x="500" y="173" class="ui-text" font-weight="600" font-size="13" fill="white" text-anchor="middle">View Experiments</text>
+
+        <!-- Main Workspace (Split View) -->
+        <g transform="translate(40, 240)">
+            <!-- Left Panel: Canvas -->
+            <rect width="600" height="350" rx="8" fill="#0F172A" stroke="#334155"/>
+            <!-- Canvas Grid -->
+            <path d="M0 50H600 M0 100H600 M0 150H600 M0 200H600 M0 250H600 M0 300H600" stroke="#1E293B" stroke-width="1"/>
+            <path d="M50 0V350 M100 0V350 M150 0V350 M200 0V350 M250 0V350 M300 0V350 M350 0V350 M400 0V350 M450 0V350 M500 0V350 M550 0V350" stroke="#1E293B" stroke-width="1"/>
+            
+            <!-- Shapes -->
+            <line x1="100" y1="300" x2="500" y2="50" stroke="#8B5CF6" stroke-width="2"/> <!-- Bresenham Line -->
+            <circle cx="300" cy="175" r="80" stroke="#EC4899" stroke-width="2" fill="none"/> <!-- Midpoint Circle -->
+            <ellipse cx="450" cy="250" rx="60" ry="30" stroke="#10B981" stroke-width="2" fill="none"/> <!-- Ellipse -->
+            
+            <!-- Floating Toolbar inside Canvas -->
+            <rect x="20" y="20" width="40" height="180" rx="4" fill="rgba(30, 41, 59, 0.9)" stroke="#475569"/>
+            <circle cx="40" cy="40" r="12" fill="#8B5CF6"/>
+            <rect x="28" y="70" width="24" height="24" rx="4" stroke="#94A3B8" stroke-width="2"/>
+            <circle cx="40" cy="130" r="12" stroke="#94A3B8" stroke-width="2"/>
+            
+            <!-- Canvas Footer Info -->
+            <text x="20" y="330" class="code-line" fill="#64748B">X: 450 Y: 250 | Zoom: 100% | Layer: 2</text>
+        </g>
+
+        <g transform="translate(660, 240)">
+            <!-- Right Panel: Code & Properties -->
+            <rect width="300" height="350" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+            
+            <!-- Tab Header -->
+            <rect width="300" height="40" rx="8" fill="#F8FAFC" stroke-bottom="#E2E8F0"/>
+            <text x="20" y="25" class="ui-text" font-weight="600" font-size="12" fill="#475569">PROPERTIES</text>
+            <text x="120" y="25" class="ui-text" font-weight="600" font-size="12" fill="#8B5CF6">CODE VIEW</text>
+            <rect x="115" y="38" width="70" height="2" fill="#8B5CF6"/>
+
+            <!-- Code Content -->
+            <g transform="translate(20, 60)">
+                <!-- Line Numbers -->
+                <text x="0" y="0" class="code-line" fill="#CBD5E1">01</text>
+                <text x="0" y="20" class="code-line" fill="#CBD5E1">02</text>
+                <text x="0" y="40" class="code-line" fill="#CBD5E1">03</text>
+                <text x="0" y="60" class="code-line" fill="#CBD5E1">04</text>
+                <text x="0" y="80" class="code-line" fill="#CBD5E1">05</text>
+                
+                <!-- Code Text -->
+                <text x="20" y="0" class="code-line" fill="#C4B5FD">// Bresenham Line Algo</text>
+                <text x="20" y="20" class="code-line" fill="#7C3AED">void</text> <text x="50" y="20" class="code-line" fill="#1E293B">draw_line(int x0, ...)</text>
+                <text x="20" y="40" class="code-line" fill="#1E293B">{</text>
+                <text x="30" y="60" class="code-line" fill="#EC4899">int</text> <text x="55" y="60" class="code-line" fill="#1E293B">dx = abs(x1-x0);</text>
+                <text x="30" y="80" class="code-line" fill="#1E293B">...</text>
+                
+                <!-- Active Line Highlight -->
+                <rect x="-10" y="50" width="280" height="14" fill="#F3E8FF" opacity="0.5"/>
+            </g>
+            
+            <!-- Properties Panel Below -->
+            <rect x="0" y="150" width="300" height="1" fill="#E2E8F0"/>
+            <g transform="translate(20, 180)">
+                <text x="0" y="0" class="ui-text" font-size="11" font-weight="bold" fill="#64748B">SETTINGS</text>
+                
+                <!-- Setting 1 -->
+                <text x="0" y="30" class="ui-text" font-size="12" fill="#1E293B">Stroke Width</text>
+                <rect x="150" y="20" width="100" height="4" rx="2" fill="#E2E8F0"/>
+                <circle cx="180" cy="22" r="6" fill="#8B5CF6"/>
+                
+                <!-- Setting 2 -->
+                <text x="0" y="60" class="ui-text" font-size="12" fill="#1E293B">Anti-aliasing</text>
+                <rect x="220" y="50" width="30" height="16" rx="8" fill="#10B981"/>
+                <circle cx="242" cy="58" r="6" fill="white"/>
+            </g>
+        </g>
+    </g>
+
+    <!-- Overlay Author Watermark (Professional Style) -->
+    <rect x="1050" y="740" width="180" height="40" rx="4" fill="white" stroke="#E2E8F0" filter="url(#win-shadow)"/>
+    <rect x="1056" y="746" width="28" height="28" rx="4" fill="#7C3AED"/>
+    <text x="1063" y="765" font-family="serif" fill="white" font-weight="bold">A</text>
+    <text x="1095" y="765" class="ui-text" font-weight="600" font-size="12" fill="#1E293B">AMEY THAKUR</text>
+
+</svg>

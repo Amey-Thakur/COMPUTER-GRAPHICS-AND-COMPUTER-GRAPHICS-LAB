@@ -1,0 +1,608 @@
+<!--
+    ================================================================
+    Computer Graphics (CG) Lab Portfolio
+    ================================================================
+    Author: Amey Thakur
+    GitHub: https://github.com/Amey-Thakur
+    Course: Computer Graphics (CG) Lab
+    Roll No: 50
+    Batch: B3
+    Repository: https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB
+    Date: January 17, 2020
+    
+    Description: Primary dashboard for the CG Lab repository. Showcases implementations of
+                 Line Drawing, Circle Generation, Ellipse Generation, and other CG Algorithms.
+    License: CC BY 4.0
+    ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEY | CG Lab Portfolio</title>
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8b5cf6">
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <link rel="apple-touch-icon" href="assets/icon.svg">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Amey | CG Lab Portfolio">
+    <meta name="description"
+        content="Official scholarly portfolio for Computer Graphics Laboratory (CSC403) at University of Mumbai. Features C implementations of Bresenham's, Midpoint Circle, and Ellipse Algorithms by Amey Thakur.">
+    <meta name="keywords"
+        content="Computer Graphics, Algorithms, C Programming, Bresenham's Algorithm, Midpoint Circle, Ellipse Generation, Mumbai University, Computer Engineering, Portfolio, Amey Thakur">
+    <meta name="author" content="Amey Thakur">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/">
+    <meta property="og:site_name" content="CG Lab Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Amey | CG Lab Portfolio">
+    <meta property="og:description"
+        content="Comprehensive showcase of Computer Graphics experiments including Line Drawing, Circle, and Ellipse Algorithms implemented in C.">
+    <meta property="og:image"
+        content="https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/assets/og-image.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/">
+    <meta name="twitter:title" content="Amey | CG Lab Portfolio">
+    <meta name="twitter:description"
+        content="Explore Computer Graphics implementations: Bresenham's Line, Midpoint Circle, and Ellipse Algorithms.">
+    <meta name="twitter:image"
+        content="https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/assets/og-image.svg">
+    <meta name="twitter:creator" content="@AmeyThakur">
+
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' blob: https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: blob: https: raw.githubusercontent.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' blob:; worker-src 'self' blob:;">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CG Lab Portfolio",
+        "url": "https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/",
+        "description": "Official scholarly portfolio for Computer Graphics Laboratory (CSC403) at University of Mumbai",
+        "author": {
+            "@type": "Person",
+            "name": "Amey Thakur",
+            "url": "https://github.com/Amey-Thakur"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "University of Mumbai",
+            "url": "https://mu.ac.in"
+        },
+        "mainEntity": {
+            "@type": "SoftwareSourceCode",
+            "name": "Computer Graphics Algorithms",
+            "programmingLanguage": "C",
+            "codeRepository": "https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB"
+        },
+        "educationalLevel": "Undergraduate",
+        "teaches": ["Computer Graphics", "Rasterization", "Geometric Algorithms", "Rendering"]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div id="skeleton-loader"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0f172a; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: fadeOutLoader 0.5s ease 1s forwards;">
+        <div
+            style="width: 60px; height: 60px; border: 4px solid rgba(139, 92, 246, 0.2); border-top-color: #8b5cf6; border-radius: 50%; animation: spin 1s linear infinite;">
+        </div>
+        <p style="margin-top: 20px; color: #94a3b8; font-family: 'Poppins', sans-serif; font-size: 0.9rem;">Initializing
+            Computer Graphics Portfolio...</p>
+        <style>
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes fadeOutLoader {
+                to {
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+
+            .skip-link {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                background: var(--accent-color);
+                color: white;
+                padding: 8px 16px;
+                z-index: 10001;
+                transition: top 0.3s;
+                text-decoration: none;
+                border-radius: 0 0 8px 0;
+            }
+
+            .skip-link:focus {
+                top: 0;
+            }
+        </style>
+    </div>
+
+    <main class="main-container" id="main-content">
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="top-controls">
+                <button class="control-btn" id="pwa-install-btn" title="Install App" aria-label="Install App"
+                    style="display: none;">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                </button>
+                <button class="control-btn" id="share-btn" title="Share Portfolio" aria-label="Share Portfolio">
+                    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+                </button>
+                <button class="control-btn" id="theme-toggle" title="Switch Theme" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <h1>Computer Graphics Lab</h1>
+            <p>A curated portfolio of computer graphics algorithms, demonstrating primitive shape generation,
+                transformations, and clipping algorithms with high precision.</p>
+
+            <div class="info-badges">
+                <div class="d-flex gap-2 justify-content-center w-100 flex-wrap mb-2 align-items-center">
+                    <a href="https://github.com/Amey-Thakur" class="badge-pill clickable-badge" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fas fa-user-graduate me-2"></i>Amey Thakur
+                    </a>
+                    <span class="badge-pill">Roll No: 50</span>
+                    <span class="badge-pill">Batch: B3</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB"
+                    class="btn btn-primary-custom" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github me-2"></i>CG Repo
+                </a>
+                <a href="https://github.com/Amey-Thakur/COMPUTER-ENGINEERING"
+                    class="btn btn-primary-custom btn-secondary-custom" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-code-branch me-2"></i>Computer Engineering Repo
+                </a>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Programs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">Visualizer</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+                    <span class="stat-label">Complete</span>
+                </div>
+            </div>
+
+            <!-- Scroll Hint -->
+            <div class="mt-4 text-center" style="animation: fadeInDown 1s ease 0.5s both;">
+                <a href="#interactive-demo"
+                    style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s;">
+                    <i class="fas fa-chevron-down" style="animation: bounce 2s infinite;"></i>
+                    Scroll down for Interactive Geometric Canvas
+                    <i class="fas fa-chevron-down" style="animation: bounce 2s infinite;"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Section: Experiments -->
+        <section aria-labelledby="experiments-title" id="experiments">
+            <div class="section-title reveal">
+                <h3 id="experiments-title">Laboratory Experiments</h3>
+            </div>
+
+            <div class="row g-4 mb-5 justify-content-center">
+
+                <!-- Experiment 1: Graphics Primitives & Bresenham's -->
+                <div class="col-md-6 reveal-left">
+                    <div class="card-custom">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-draw-polygon"></i>
+                        </div>
+                        <span class="exp-tag">EXPERIMENT 01</span>
+                        <h5>Line Rasterization</h5>
+                        <div class="tech-stack mb-3 d-flex align-items-center flex-wrap gap-2">
+                            <span class="badge-tech">Bresenham's Algo</span>
+                            <span class="badge-tech">Basic Shapes</span>
+                            <span class="badge-tech">Rasterization</span>
+                            <span class="badge bg-primary ms-1" style="font-size: 0.7rem;"
+                                data-tooltip="2 programs for basic shapes and line drawing.">2 Programs</span>
+                        </div>
+                        <p>Implementation of fundamental graphics primitive functions and Bresenham's Line Drawing
+                            Algorithm for efficient line rasterization.</p>
+                        <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-1"
+                            class="launch-link" target="_blank">
+                            View Programs <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experiment 2: Midpoint Circle Algorithm -->
+                <div class="col-md-6 reveal-right">
+                    <div class="card-custom">
+                        <div class="icon-wrapper">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <span class="exp-tag">EXPERIMENT 02</span>
+                        <h5>Midpoint Circle</h5>
+                        <div class="tech-stack mb-3 d-flex align-items-center flex-wrap gap-2">
+                            <span class="badge-tech">Midpoint Algo</span>
+                            <span class="badge-tech">8-Way Symmetry</span>
+                            <span class="badge-tech">Scan Conversion</span>
+                            <span class="badge bg-primary ms-1" style="font-size: 0.7rem;"
+                                data-tooltip="1 program implementing Midpoint Circle Algorithm.">1 Program</span>
+                        </div>
+                        <p>Implementation of the Midpoint Circle Algorithm to generate circles using decision parameters
+                            for integer-based pixel plotting.</p>
+                        <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-2"
+                            class="launch-link" target="_blank">
+                            View Program <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experiment 3: Midpoint Ellipse Algorithm -->
+                <div class="col-md-6 reveal-left">
+                    <div class="card-custom">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="exp-tag">EXPERIMENT 03</span>
+                        <h5>Midpoint Ellipse</h5>
+                        <div class="tech-stack mb-3 d-flex align-items-center flex-wrap gap-2">
+                            <span class="badge-tech">Midpoint Algo</span>
+                            <span class="badge-tech">4-Way Symmetry</span>
+                            <span class="badge-tech">Region Splitting</span>
+                            <span class="badge bg-primary ms-1" style="font-size: 0.7rem;"
+                                data-tooltip="1 program implementing Midpoint Ellipse Algorithm.">1 Program</span>
+                        </div>
+                        <p>Implementation of the Midpoint Ellipse Algorithm utilizing 4-way symmetry and decision
+                            parameters for precision rendering.</p>
+                        <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/tree/main/Computer%20Graphics%20Lab/Experiment-3"
+                            class="launch-link" target="_blank">
+                            View Program <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- The Wall Section -->
+        <section id="the-wall" class="reveal mt-4">
+            <div class="section-title">
+                <h3>The Wall</h3>
+                <p class="text-secondary mt-2">Collaborative Study Notes</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Collaborative Profiles -->
+                <div class="col-md-5 mb-4 reveal-left">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="https://github.com/Amey-Thakur.png" alt="Amey Thakur" class="profile-img">
+                        </div>
+                        <h4 class="profile-name">Amey Thakur</h4>
+                        <p class="profile-role">Author & Curator</p>
+                        <div class="social-links">
+                            <a href="https://github.com/Amey-Thakur" class="text-secondary me-2"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/amey-thakur" class="text-secondary"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 mb-4 reveal-right">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="assets/Mega_Satish.png" alt="Mega Satish" class="profile-img">
+                        </div>
+                        <h4 class="profile-name">Mega Satish</h4>
+                        <p class="profile-role">Author & Collaborator</p>
+                        <div class="social-links">
+                            <a href="https://github.com/msatmod" class="text-secondary me-2"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mega-satish" class="text-secondary"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Thanks Visual -->
+                <div class="col-lg-10 col-12 reveal text-center">
+                    <div class="award-badge d-inline-flex align-items-center gap-3 py-2 px-4 rounded-pill border border-secondary-subtle"
+                        style="background: var(--card-bg);">
+                        <i class="fas fa-heart text-danger fs-5 heart-beat"></i>
+                        <span class="text-secondary fw-medium">Special Thanks to <strong class="text-primary-theme">Mega
+                                Satish</strong></span>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-10 col-12 reveal">
+                    <div class="resource-list">
+                        <a href="assets/CG_Chapter-1.pdf" class="resource-item text-decoration-none"
+                            id="pdf-resource-link" target="_blank">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-file-pdf text-danger fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="mb-0 text-primary-theme fw-bold">CG Chapter - 1</h6>
+                                    <small class="text-secondary">Introduction to Computer Graphics</small>
+                                </div>
+                            </div>
+                            <span class="badge badge-pulse"><i class="fas fa-download me-1"></i>
+                                Download PDF</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Graphics Canvas (Hero Visualizer) -->
+        <section id="interactive-demo" class="reveal mt-4" aria-labelledby="interactive-title">
+            <div class="section-title">
+                <h3 id="interactive-title">Geometric Canvas Visualizer</h3>
+            </div>
+
+            <div class="card-custom interactive-card mx-auto visualizer-bg"
+                style="max-width: 900px; padding: 0; overflow: hidden;">
+                <!-- Custom Tab Navigation -->
+                <div class="algo-tabs d-flex border-bottom">
+                    <button class="algo-tab active" data-tab="raster" onclick="switchTab('raster')">
+                        <i class="fas fa-pencil-ruler me-2"></i>Rasterizer
+                    </button>
+                    <button class="algo-tab" data-tab="orbital" onclick="switchTab('orbital')">
+                        <i class="far fa-circle me-2"></i>Orbital
+                    </button>
+                    <button class="algo-tab" data-tab="transform" onclick="switchTab('transform')">
+                        <i class="fas fa-vector-square me-2"></i>Transform
+                    </button>
+                </div>
+
+                <!-- Tab Content Area -->
+                <div class="algo-content p-4" style="min-height: 400px;">
+
+                    <!-- 1. Rasterizer (Line) -->
+                    <div id="tab-raster" class="tab-pane active" style="display: block;">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <h5 style="color: var(--accent-color);">Bresenham's Line Simulations</h5>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-primary-custom" onclick="renderRandomLines()">
+                                    <i class="fas fa-random me-2"></i>Generate Lines
+                                </button>
+                                <button class="btn btn-sm btn-outline-share" onclick="shareResult('raster')"
+                                    title="Share Result">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="raster-canvas-container" class="shareable-content"
+                            style="position: relative; border: 1px solid var(--border-color); border-radius: 8px; background: #0f172a; overflow: hidden;">
+                            <canvas id="rasterCanvas" width="850" height="300"></canvas>
+                            <div id="raster-status"
+                                style="position: absolute; bottom: 10px; left: 10px; color: var(--text-secondary); font-family: monospace; font-size: 0.8rem;">
+                                Status: Waiting for input...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Orbital (Circle/Ellipse) -->
+                    <div id="tab-orbital" class="tab-pane" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <h5 style="color: var(--accent-color);">Midpoint Circle & Ellipse</h5>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-primary-custom" onclick="renderOrbital()">
+                                    <i class="fas fa-infinity me-2"></i>Render Shapes
+                                </button>
+                                <button class="btn btn-sm btn-outline-share" onclick="shareResult('orbital')"
+                                    title="Share Result">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="orbital-container" class="shareable-content"
+                            style="position: relative; border: 1px solid var(--border-color); border-radius: 8px; background: #0f172a; overflow: hidden; height: 300px; display: flex; align-items: center; justify-content: center;">
+                            <canvas id="orbitalCanvas" width="850" height="300"></canvas>
+                            <div id="orbital-status"
+                                style="position: absolute; bottom: 10px; left: 10px; color: var(--text-secondary); font-family: monospace; font-size: 0.8rem;">
+                                Status: Canvas Ready.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Transform (Placeholder) -->
+                    <div id="tab-transform" class="tab-pane" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <h5 style="color: var(--accent-color);">2D Transformations</h5>
+                            <!-- Placeholder content -->
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-primary-custom" disabled>
+                                    <i class="fas fa-cube me-2"></i>Transform (Coming Soon)
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-5 text-center text-muted border rounded"
+                            style="background: rgba(255,255,255,0.05);">
+                            <i class="fas fa-layer-group fa-3x mb-3" style="opacity: 0.5;"></i>
+                            <p>Interactive 2D Transformation Visualizer</p>
+                            <small>Translation • Rotation • Scaling</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <style>
+                /* Tab Styles */
+                .algo-tab {
+                    flex: 1;
+                    padding: 15px;
+                    background: transparent;
+                    border: none;
+                    color: var(--text-secondary);
+                    font-weight: 600;
+                    border-bottom: 3px solid transparent;
+                    transition: all 0.3s ease;
+                }
+
+                .algo-tab:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    /* Visible in dark mode */
+                    color: var(--text-primary);
+                }
+
+                [data-theme="dark"] .algo-tab:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    color: #fff;
+                }
+
+                .algo-tab.active {
+                    color: var(--accent-color);
+                    border-bottom-color: var(--accent-color);
+                    background: rgba(139, 92, 246, 0.1);
+                    /* Purple tint */
+                }
+
+                .tab-pane {
+                    animation: fadeIn 0.4s ease;
+                }
+            </style>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto" role="contentinfo">
+        <p>2018 - 2022 &copy; All Rights Reserved | Designed and Developed by <a href="https://github.com/Amey-Thakur"
+                rel="noopener noreferrer">Amey
+                Thakur</a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="btn" id="btn-back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Keyboard Shortcut Hint -->
+    <div id="kbd-hint" class="kbd-hint">
+        <span>Press</span>
+        <kbd>Ctrl</kbd>
+        <span>+</span>
+        <kbd>K</kbd>
+        <span>to search</span>
+    </div>
+
+    <!-- Command Palette Overlay -->
+    <div id="cmd-overlay" class="cmd-overlay">
+        <div class="cmd-modal">
+            <div class="cmd-header">
+                <i class="fas fa-search"></i>
+                <input type="text" id="cmd-input" placeholder="Search algorithms, experiments, or commands..."
+                    autocomplete="off">
+                <span class="cmd-esc"><kbd>ESC</kbd></span>
+            </div>
+            <div class="cmd-body">
+                <div id="cmd-results" class="cmd-results">
+                    <!-- Results injected here -->
+                </div>
+            </div>
+            <div class="cmd-footer">
+                <div class="cmd-keys">
+                    <span><kbd class="k-small">↑</kbd> <kbd class="k-small">↓</kbd> to navigate</span>
+                    <span><kbd class="k-small">↵</kbd> to select</span>
+                    <span><kbd class="k-small">T</kbd> to toggle theme</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Result Modal -->
+    <div id="share-modal" class="share-modal-overlay">
+        <div class="share-modal">
+            <div class="share-modal-header">
+                <h5><i class="fas fa-share-alt me-2"></i>Share Result</h5>
+                <button class="share-modal-close" onclick="closeShareModal()">&times;</button>
+            </div>
+            <div class="share-modal-body">
+                <div id="share-preview" class="share-preview">
+                    <!-- Preview will be rendered here -->
+                </div>
+                <div class="share-author-badge">
+                    <i class="fas fa-code me-2"></i>
+                    Created by <a href="https://github.com/Amey-Thakur" target="_blank">Amey Thakur</a>
+                    <span class="share-badge-separator">|</span>
+                    <a href="https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB"
+                        target="_blank">CG Lab Portfolio</a>
+                </div>
+            </div>
+            <div class="share-modal-footer">
+                <button class="btn btn-sm btn-primary-custom" onclick="downloadShareImage()">
+                    <i class="fas fa-download me-2"></i>Download Image
+                </button>
+                <button class="btn btn-sm btn-primary-custom btn-secondary-custom" onclick="copyShareLink()">
+                    <i class="fas fa-link me-2"></i>Copy Link
+                </button>
+                <button class="btn btn-sm btn-primary-custom btn-secondary-custom" onclick="shareNative()">
+                    <i class="fas fa-share me-2"></i>Share
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Service Worker Registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered:', reg.scope))
+                    .catch(err => console.log('SW registration failed:', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

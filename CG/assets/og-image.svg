@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="url(#bg_gradient)"/>
+    
+    <!-- Abstract 3D Grid Floor -->
+    <path d="M-100 630L400 300H800L1300 630H-100Z" fill="url(#grid_pattern)" fill-opacity="0.2"/>
+    
+    <!-- Main Content Box -->
+    <rect x="150" y="100" width="900" height="430" rx="24" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    
+    <!-- Title Section -->
+    <text x="600" y="240" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="70" fill="white" text-anchor="middle" letter-spacing="-1">
+        COMPUTER GRAPHICS
+    </text>
+    <text x="600" y="300" font-family="'Segoe UI', Roboto, sans-serif" font-weight="300" font-size="32" fill="#E9D5FF" text-anchor="middle" letter-spacing="8">
+        LABORATORY PORTFOLIO
+    </text>
+
+    <!-- Author Badge -->
+    <g transform="translate(450, 380)">
+        <rect width="300" height="60" rx="30" fill="white"/>
+        <circle cx="40" cy="30" r="20" fill="#7C3AED"/>
+        <text x="40" y="40" font-family="serif" font-weight="bold" font-size="24" fill="white" text-anchor="middle">A</text>
+        <text x="80" y="40" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="24" fill="#7C3AED" text-anchor="start">
+            AMEY THAKUR
+        </text>
+    </g>
+
+    <!-- Decorative Elements -->
+    <circle cx="1050" cy="150" r="50" stroke="white" stroke-width="4" stroke-opacity="0.2"/>
+    <circle cx="150" cy="500" r="30" stroke="white" stroke-width="4" stroke-opacity="0.2"/>
+
+    <defs>
+        <linearGradient id="bg_gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#7C3AED"/>
+            <stop offset="1" stop-color="#4C1D95"/>
+        </linearGradient>
+        <pattern id="grid_pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="white" stroke-width="1"/>
+        </pattern>
+    </defs>
+</svg>

@@ -1128,22 +1128,40 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('active');
 
         try {
-            // Target the game container
-            const targetEl = document.getElementById('stack-game-wrapper'); // Wrapper captures shake too
-            if (!targetEl) throw new Error("Game container not found");
+            // Prepare Share Card
+            const template = document.getElementById('share-card-template');
+            const cardScore = document.getElementById('share-card-score');
+            const cardHigh = document.getElementById('share-card-highscore');
+
+            if (cardScore) cardScore.innerText = score;
+            // Get highscore from local storage explicitly just in case
+            const currentHigh = leaderboard[0] || score;
+            if (cardHigh) cardHigh.innerText = currentHigh;
+
+            if (!template) throw new Error("Share template not found");
+
+            // Clone to body to capture (must be visible to html2canvas)
+            const clone = template.cloneNode(true);
+            clone.id = 'share-card-capture';
+            clone.style.display = 'flex'; // Make visible
+            clone.style.position = 'fixed';
+            clone.style.left = '-9999px'; // Move off-screen
+            clone.style.top = '0';
+            clone.style.zIndex = '-1';
+            document.body.appendChild(clone);
 
             // Use html2canvas to capture the element
             // We need to wait a moment if animation is happening
-            const canvas = await html2canvas(targetEl, {
-                backgroundColor: '#0f172a', // Dark background
+            const canvas = await html2canvas(clone, {
+                backgroundColor: null,
                 scale: 2, // High resolution
                 logging: false,
                 useCORS: true,
-                ignoreElements: (element) => {
-                    // Ignore existing share buttons/controls to avoid clutter
-                    return element.id === 'share-score-btn' || element.id === 'sound-toggle';
-                }
+                allowTaint: true
             });
+
+            // Cleanup
+            document.body.removeChild(clone);
 
             // Display in preview
             previewContainer.innerHTML = '';

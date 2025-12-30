@@ -459,16 +459,16 @@
                                                 display: flex; flex-direction: column; align-items: center; justify-content: center; 
                                                 background: rgba(0,0,0,0.4); backdrop-filter: blur(8px); z-index: 20;">
                                                 <i class="fas fa-cubes"
-                                                    style="font-size: 3rem; color: white; margin-bottom: 12px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));"></i>
+                                                    style="font-size: 3.5rem; color: white; margin-bottom: 16px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));"></i>
                                                 <h4
-                                                    style="color: white; font-weight: 700; font-size: 1.5rem; margin-bottom: 4px; letter-spacing: -0.5px;">
+                                                    style="color: white; font-weight: 700; font-size: 1.75rem; margin-bottom: 8px; letter-spacing: -0.5px;">
                                                     Stack Builder</h4>
                                                 <p
-                                                    style="color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-bottom: 20px;">
+                                                    style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 35px;">
                                                     Tap to stack blocks!</p>
 
-                                                <div
-                                                    class="d-flex justify-content-center p-1 rounded-pill ios-segmented-control">
+                                                <div class="d-flex justify-content-center p-1 rounded-pill ios-segmented-control"
+                                                    style="margin-bottom: 35px; width: 85%;">
                                                     <button class="difficulty-btn flex-fill rounded-pill text-white"
                                                         data-difficulty="easy">Easy</button>
                                                     <button
@@ -479,15 +479,58 @@
                                                 </div>
 
                                                 <button id="startStackGame"
-                                                    class="btn btn-primary-custom mt-2 px-4 py-2 rounded-pill fw-bold"
-                                                    style="background: #2563eb; border: none; font-size: 0.95rem; box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);">
+                                                    class="btn btn-primary-custom px-5 py-3 rounded-pill fw-bold"
+                                                    style="background: #2563eb; border: none; font-size: 1rem; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4); width: 70%;">
                                                     <i class="fas fa-play me-2"></i>Play Now
                                                 </button>
 
-                                                <div class="mt-4 text-center">
+                                                <div class="mt-5 text-center">
                                                     <p
-                                                        style="color: rgba(255,255,255,0.4); font-size: 0.7rem; margin: 0; letter-spacing: 0.5px;">
+                                                        style="color: rgba(255,255,255,0.5); font-size: 0.75rem; margin: 0; letter-spacing: 0.5px; font-weight: 500;">
                                                         Designed by Amey Thakur</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Hidden Share Card Template -->
+                                            <div id="share-card-template"
+                                                style="position: absolute; top: 0; left: 0; width: 280px; height: 580px; 
+                                                background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); display: none; flex-direction: column; 
+                                                align-items: center; justify-content: center; z-index: -10; pointer-events: none;">
+                                                <div
+                                                    style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; 
+                                                    border: 1px solid rgba(255,255,255,0.2); text-align: center; width: 85%;">
+                                                    <i class="fas fa-cubes"
+                                                        style="font-size: 4rem; color: #fbbf24; margin-bottom: 20px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));"></i>
+                                                    <h2
+                                                        style="color: white; font-weight: 800; font-size: 2rem; margin-bottom: 10px;">
+                                                        Stack Builder</h2>
+                                                    <div
+                                                        style="width: 50px; height: 4px; background: #fbbf24; margin: 0 auto 20px; border-radius: 2px;">
+                                                    </div>
+
+                                                    <p
+                                                        style="color: rgba(255,255,255,0.9); font-size: 1rem; margin-bottom: 5px;">
+                                                        I SCORED</p>
+                                                    <h1 id="share-card-score" style="color: white; font-size: 4.5rem; font-weight: 900; line-height: 1; margin-bottom: 20px; 
+                                                        text-shadow: 0 4px 20px rgba(0,0,0,0.3);">0</h1>
+
+                                                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3"
+                                                        style="background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 12px; display: inline-flex;">
+                                                        <span style="color: #a78bfa; font-size: 0.9rem;">🏆 High
+                                                            Score:</span>
+                                                        <span id="share-card-highscore"
+                                                            style="color: white; font-weight: 700; font-size: 1rem;">0</span>
+                                                    </div>
+
+                                                    <div
+                                                        style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                                                        <p
+                                                            style="color: rgba(255,255,255,0.6); font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 0;">
+                                                            DESIGNED BY</p>
+                                                        <p
+                                                            style="color: white; font-weight: 600; font-size: 1rem; margin: 0;">
+                                                            AMEY THAKUR</p>
+                                                    </div>
                                                 </div>
                                             </div>
 

@@ -1907,8 +1907,8 @@ kbd {
     color: var(--text-secondary);
     z-index: 999;
     opacity: 1;
-    transition: opacity 0.5s ease, transform 0.3s ease;
-    animation: kbdSlideIn 0.5s ease forwards;
+    transition: opacity 0.5s ease, transform 0.3s ease, visibility 0.5s ease;
+    animation: kbdSlideIn 0.5s ease;
 }
 
 .kbd-hint.hidden {
@@ -1916,6 +1916,7 @@ kbd {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(20px);
+    animation: none !important;
 }
 
 .kbd-hint kbd {

@@ -626,7 +626,7 @@ background: var(--accent-hover) !important;
         /* Metallic shine */
         0 30px 60px -12px rgba(0, 0, 0, 0.6),
         0 18px 36px -18px rgba(0, 0, 0, 0.5);
-    padding: 12px;
+    padding: 5px;
     /* Bezel thickness */
     display: inline-block;
     transition: transform 0.3s ease;
@@ -641,7 +641,7 @@ background: var(--accent-hover) !important;
     width: 100%;
     height: 100%;
     background: #000;
-    border-radius: 46px;
+    border-radius: 51px;
     /* Inner bezel curve */
     overflow: hidden;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.05);
@@ -651,7 +651,7 @@ background: var(--accent-hover) !important;
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 42px;
+    border-radius: 48px;
     overflow: hidden;
     background: #000;
 }

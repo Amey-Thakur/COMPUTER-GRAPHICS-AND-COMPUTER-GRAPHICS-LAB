@@ -1,38 +1,22 @@
-# ALL REPOSITORIES
-# ----------------
-# General
+# Computer Graphics - Academic Repository
+# Specialized .gitignore for graphics and scholarly archiving
+
+# OS-generated files
+[Tt]humbs.db
+[Dd]esktop.ini
 .DS_Store
-Thumbs.db
-*.swp
-*.log
-*.tmp
-*.bak
-*~
+.AppleDouble
+.LSOverride
 
-# Windows
-desktop.ini
-$RECYCLE.BIN/
-
-# VS Code
+# Editor and IDE configuration
 .vscode/
-*.code-workspace
-
-# JetBrains
 .idea/
+*.swp
+*.swo
+*~
 *.iml
-
-# Visual Studio
-*.suo
-*.sln
-*.user
-*.pdb
-*.idb
-*.tlog
-*.vs/
-Debug/
-Release/
-x64/
-x86/
+*.code-workspace
+.vs/
 
 # C/C++ Build Artifacts
 *.exe
@@ -44,25 +28,30 @@ x86/
 *.a
 *.lib
 *.out
-*.app
 bin/
 obj/
+Debug/
+Release/
 
-# Turbo C++ / Borland
+# Turbo C++ / Borland artifacts
 *.dsk
 *.tc
 *.r
 *.sym
 *.map
 
-# Python (if used)
+# Python Build Artifacts
 __pycache__/
 *.py[cod]
 
-# Graphics Artifacts
-# Generally we want to KEEP images, but ignore temp renders if any
-# *.bmp
-# *.tga
+# Temporary and Cache files
+*.tmp
+*.log
+.cache/
+node_modules/
 
-# Git
+# Academic build/output artifacts
+*.bak
+*.sav
+*.old
 *.orig

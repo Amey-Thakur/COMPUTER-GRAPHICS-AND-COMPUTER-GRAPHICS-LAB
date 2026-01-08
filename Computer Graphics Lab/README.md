@@ -27,8 +27,14 @@
 
 ---
 
+<div align="center">
+
+  [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-007bff?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/)
+
+</div>
+
 > [!TIP]
-> **Graphics Visualization**: Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and symmetry properties - is essential for implementing efficient graphics algorithms.
+> **Live Implementation**: For a comprehensive visual showcase, visit the [CG Lab Portfolio Dashboard](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/). For the complete source code and detailed documentation, visit the [Computer Graphics Lab](./) directory. Visualization is key. Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and symmetry properties - is essential for implementing efficient graphics algorithms.
 
 > [!WARNING]
 > **Environment Setup**: These programs require **Turbo C++** or a compatible environment with the **graphics.h** library. Modern compilers like GCC/Clang do not support graphics.h natively. Use DOSBox with Turbo C++ or WinBGIm library for modern systems.

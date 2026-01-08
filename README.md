@@ -53,7 +53,7 @@ As I progress in my career, I recognize that computer graphics fundamentals rema
 **Why this repository exists:**
 
 - **Knowledge Preservation**: To maintain organized access to comprehensive study materials beyond the classroom.
-- **Continuous Learning**: To support lifelong learning by enabling seamless revisitation of fundamental graphics concepts.
+- **Continuous Learning**: To support lifelong learning by enabling easy revisitation of fundamental graphics concepts.
 - **Academic Documentation**: To authentically document my learning journey through CG and CG Lab.
 - **Community Contribution**: To share these resources with students and learners who may benefit from them.
 
@@ -210,8 +210,9 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 | # | Resource | Description |
 |:-:|:---|:---|
-| 1 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
-| 2 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
+| 1 | [Interactive Lab Portfolio](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/) | Interactive dashboard with source code descriptions and visualizations |
+| 2 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
+| 3 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
 ---
 

@@ -105,7 +105,7 @@ Comprehensive chapter-wise notes curated by Mega Satish, covering all essential 
 |:-:|:---|:---|
 | 1 | [CG Chapter - 1](THE%20WALL/CG_Chapter-1.pdf) | Introduction to computer graphics and graphics systems |
 
-> [!NOTE]
+> [!IMPORTANT]
 > **COVID-19 Impact**: This coursework was completed during the COVID-19 pandemic in 2020. Due to the nationwide lockdown and the sudden transition to online learning, several planned laboratory sessions and collaborative note-taking activities could not be carried out as originally intended. Despite these challenges, efforts were made to adapt and preserve as much work as possible. The limited chapter notes in this section reflect the disruption caused by the pandemic, rather than a lack of effort or commitment.
 
 ---

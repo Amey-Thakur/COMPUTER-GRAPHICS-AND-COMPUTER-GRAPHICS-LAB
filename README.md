@@ -214,7 +214,8 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 | 2 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
 | 3 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
-                                     PROJECT SECTION
+<!-- =========================================================================================
+                                     MINI-PROJECT SECTION
      ========================================================================================= -->
 ## Computer Graphics Mini-Project
 
@@ -233,7 +234,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 <div align="center">
 
-### 👥 Authors
+### Authors
 | <img src="https://github.com/Amey-Thakur.png" width="150" alt="Amey Thakur"><br>[**Amey Thakur**](https://github.com/Amey-Thakur) | <img src="https://github.com/rizvihasan.png" width="150" alt="Hasan Rizvi"><br>[**Hasan Rizvi**](https://github.com/rizvihasan) |
 | :---: | :---: |
 </div>

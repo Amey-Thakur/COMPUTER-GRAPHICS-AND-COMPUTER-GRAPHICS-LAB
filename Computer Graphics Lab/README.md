@@ -151,7 +151,7 @@ tc
 
   <br>
 
-  🏠 **[Back to Main Repository](../)**
+  🏠 **[Back to Main Repository](../)** &nbsp;·&nbsp; **[Mini-Project](https://github.com/Amey-Thakur/AR-STACK-GAME)** &nbsp;·&nbsp; 🎮 **[AR Stack Game Repository](https://github.com/Amey-Thakur/AR-STACK-GAME)**
 
 </div>
 

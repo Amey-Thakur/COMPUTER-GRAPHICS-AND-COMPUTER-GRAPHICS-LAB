@@ -18,7 +18,7 @@
 
   ---
 
-  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Project](#computer-graphics-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Mini-Project](#computer-graphics-mini-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -214,18 +214,15 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 | 2 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
 | 3 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
----
-
-<!-- =========================================================================================
                                      PROJECT SECTION
      ========================================================================================= -->
-## Computer Graphics Project
+## Computer Graphics Mini-Project
 
 <div align="center">
 
-  ### [🎮 Augmented Reality Stack Builder Game](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  ### 💻 3DScreensaver
 
-  **An immersive AR gaming experience built with Unity, ARCore, and C#**
+  **A graphical simulation of a 3D environment**
 
   [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-purple.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
@@ -335,7 +332,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
   <!-- Footer Navigation -->
   [↑ Back to Top](#computer-graphics-and-computer-graphics-lab)
 
-  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Project](#computer-graphics-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Overview](#overview) &nbsp;·&nbsp; [Contents](#repository-contents) &nbsp;·&nbsp; [Reference Books](#reference-books) &nbsp;·&nbsp; [The Wall](#the-wall) &nbsp;·&nbsp; [Personal Preparation](#personal-preparation) &nbsp;·&nbsp; [Assignments](#assignments) &nbsp;·&nbsp; [Practice Test](#practice-test) &nbsp;·&nbsp; [Laboratory](#computer-graphics-laboratory) &nbsp;·&nbsp; [Mini-Project](#computer-graphics-mini-project) &nbsp;·&nbsp; [Syllabus](#syllabus) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 

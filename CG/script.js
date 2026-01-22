@@ -1555,3 +1555,35 @@ function initCommandPalette() {
         if (e.target === overlay) closePalette();
     });
 }
+
+// =========================================
+//   LOW-LEVEL SECURITY & ANTI-CLICK
+// =========================================
+
+// Disable Right Click
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
+// Disable Dragging images
+document.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+});
+
+// Disable DevTools Shortcuts
+document.addEventListener('keydown', (e) => {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+        (e.ctrlKey && e.key === 'u')
+    ) {
+        e.preventDefault();
+    }
+});
+
+// Disable Selection (Anti-Select)
+document.addEventListener('selectstart', (e) => {
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+    }
+});

@@ -382,9 +382,6 @@ h5 {
     transition: all 0.3s ease;
 }
 
-background: var(--accent-hover) !important;
-}
-
 /* Shake Animation for Game Over */
 @keyframes shake {
 
@@ -706,6 +703,10 @@ background: var(--accent-hover) !important;
     /* Titanium Dark */
     border-radius: 56px;
     /* Outer curve */
+    overflow: hidden;
+    /* Deep Fix: Force hardware clipping and isolation to prevent sub-pixel corner bleeding */
+    isolation: isolate;
+    transform: translateZ(0);
     box-shadow:
         0 0 0 1px #444,
         /* Outer trim */
@@ -734,6 +735,9 @@ background: var(--accent-hover) !important;
     border-radius: 51px;
     /* Inner bezel curve */
     overflow: hidden;
+    /* Webkit hack for perfect radius clipping */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.05);
 }
 
@@ -744,6 +748,16 @@ background: var(--accent-hover) !important;
     border-radius: 48px;
     overflow: hidden;
     background: #000;
+}
+
+/* Force all full-screen game overlays to respect container radius */
+#stack-overlay,
+#game-over-overlay,
+#tutorial-overlay,
+#share-card-template {
+    border-radius: 48px !important;
+    /* Explicitly match screen-content */
+    overflow: hidden !important;
 }
 
 /* Dynamic Island */
@@ -2179,4 +2193,22 @@ kbd {
     #game-over-overlay h2 {
         font-size: 1.5rem !important;
     }
+}
+
+/* --- Mini Project Custom Refinements --- */
+.mini-project-card {
+    padding: 40px !important;
+    background: linear-gradient(-45deg, #ffffff, #f3e8ff, #e9d5ff, #f8fafc);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    border-radius: 20px !important;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .mini-project-card {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #2e1065, #0f172a);
+    background-size: 400% 400%;
 }

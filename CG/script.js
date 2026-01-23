@@ -280,8 +280,8 @@ const shareBtn = document.getElementById('share-btn');
 if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
         const shareData = {
-            title: 'Computer Graphics Lab Portfolio — Amey Thakur',
-            text: 'Computer Graphics Lab Portfolio — Amey Thakur',
+            title: 'Computer Graphics Lab Portfolio — Amey Thakur & Mega Satish',
+            text: 'Computer Graphics Lab Portfolio — Amey Thakur & Mega Satish',
             url: window.location.href
         };
 

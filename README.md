@@ -161,12 +161,12 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
   [![Language](https://img.shields.io/badge/Language-C-blueviolet.svg)](Computer%20Graphics%20Lab/)
   [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-brightgreen.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
 
-  [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-007bff?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/)
+  [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-007bff?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/)
 
 </div>
 
 > [!TIP]
-> **Live Implementation**: For a comprehensive visual showcase, visit the [CG Lab Portfolio Dashboard](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/). For the complete source code and detailed documentation, visit the [Computer Graphics Lab](Computer%20Graphics%20Lab/) directory. Visualization is key. Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and homogeneous coordinates - is essential for implementing efficient graphics algorithms and debugging visual output.
+> **Live Implementation**: For a comprehensive visual showcase, visit the [CG Lab Portfolio Dashboard](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/). For the complete source code and detailed documentation, visit the [Computer Graphics Lab](Computer%20Graphics%20Lab/) directory. Visualization is key. Always sketch your graphics output on paper before coding. Draw coordinate systems, trace pixel positions for line/circle algorithms step-by-step, and visualize transformation matrices with example points. Understanding the mathematical foundation - Bresenham's error terms, midpoint decisions, and homogeneous coordinates - is essential for implementing efficient graphics algorithms and debugging visual output.
 
 ### Laboratory Experiments
 
@@ -210,7 +210,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 | # | Resource | Description |
 |:-:|:---|:---|
-| 1 | [Interactive Lab Portfolio](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/CG/) | Interactive dashboard with source code descriptions and visualizations |
+| 1 | [Interactive Lab Portfolio](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/) | Interactive dashboard with source code descriptions and visualizations |
 | 2 | [Laboratory Journal](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf) | Complete record of experiments with theory, diagrams, and analysis |
 | 3 | [Lab README](Computer%20Graphics%20Lab/) | Detailed navigation guide with program descriptions |
 
@@ -337,7 +337,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 
   <br>
 
-  🔬 **[Computer Graphics Laboratory](Computer%20Graphics%20Lab/)** &nbsp;·&nbsp; **[🎮 AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
+  🔬 **[Computer Graphics Laboratory](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/)** &nbsp;·&nbsp; **[🎮 AR Stack Game](https://github.com/Amey-Thakur/AR-STACK-GAME)**
 
 </div>
 

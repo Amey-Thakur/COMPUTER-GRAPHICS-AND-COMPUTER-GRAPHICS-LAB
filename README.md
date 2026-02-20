@@ -35,14 +35,14 @@ Computer Graphics (CSC404) and Computer Graphics Lab (CSL402) are core subjects 
 
 The curriculum encompasses several key domains in computer graphics:
 
-- **Graphics Primitives**: Line drawing algorithms (DDA, Bresenham's), circle and ellipse generation
-- **Scan Conversion**: Polygon filling, boundary fill, flood fill algorithms
-- **2D Transformations**: Translation, rotation, scaling, reflection, shearing
-- **3D Transformations**: 3D coordinate systems, projection techniques (parallel, perspective)
-- **Viewing & Clipping**: Window-to-viewport mapping, line clipping (Cohen-Sutherland), polygon clipping
-- **Curves and Surfaces**: Bezier curves, B-spline curves, parametric representations
-- **Hidden Surface Removal**: Z-buffer algorithm, painter's algorithm, BSP trees
-- **Illumination Models**: Ambient, diffuse, specular lighting, Phong shading
+- **Graphics Primitives**: Line drawing algorithms (DDA, Bresenham's), circle and ellipse generation.
+- **Scan Conversion**: Polygon filling, boundary fill, flood fill algorithms.
+- **2D Transformations**: Translation, rotation, scaling, reflection, shearing.
+- **3D Transformations**: 3D coordinate systems, projection techniques (parallel, perspective).
+- **Viewing & Clipping**: Window-to-viewport mapping, line clipping (Cohen-Sutherland), polygon clipping.
+- **Curves and Surfaces**: Bezier curves, B-spline curves, parametric representations.
+- **Hidden Surface Removal**: Z-buffer algorithm, painter's algorithm, BSP trees.
+- **Illumination Models**: Ambient, diffuse, specular lighting, Phong shading.
 
 ### Repository Purpose
 

@@ -9,7 +9,7 @@
 
   ### CSC404 & CSL402 · Semester IV · Computer Engineering
 
-  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-6E7681.svg)](LICENSE)
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
   [![University](https://img.shields.io/badge/University-Mumbai-A6192E.svg)](https://mu.ac.in/)
   [![Institution](https://img.shields.io/badge/Institution-Terna%20Engineering%20College-E8710A.svg)](https://ternaengg.ac.in/)
   [![Curated by](https://img.shields.io/badge/Curated%20by-Amey%20Thakur-0969DA.svg)](https://github.com/Amey-Thakur)
@@ -158,8 +158,8 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 <div align="center">
 
-  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-795548.svg)](Computer%20Graphics%20Lab/)
-  [![Language](https://img.shields.io/badge/Language-C-8250DF.svg)](Computer%20Graphics%20Lab/)
+  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-3949AB.svg)](Computer%20Graphics%20Lab/)
+  [![Language](https://img.shields.io/badge/Language-C-A8B9CC.svg)](Computer%20Graphics%20Lab/)
   [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-39FF14.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
 
   [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-00B8D9?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/)
@@ -227,7 +227,7 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
   **An immersive AR gaming experience built with Unity, ARCore, and C#**
 
   [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-BF3989.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
-  [![Platform](https://img.shields.io/badge/Platform-Android-00838F.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Platform](https://img.shields.io/badge/Platform-Android-3DDC84.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Technology](https://img.shields.io/badge/Technology-ARCore%20%7C%20Unity-8250DF.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
   [![Status](https://img.shields.io/badge/Status-Completed-2EA043.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
 

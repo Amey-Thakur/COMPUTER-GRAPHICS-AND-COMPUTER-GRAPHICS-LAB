@@ -9,10 +9,10 @@
 
   ### CSC404 & CSL402 · Semester IV · Computer Engineering
 
-  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-  [![University](https://img.shields.io/badge/University-Mumbai-%23A6192E.svg)](https://mu.ac.in/)
-  [![Institution](https://img.shields.io/badge/Institution-Terna%20Engineering%20College-orange.svg)](https://ternaengg.ac.in/)
-  [![Curated by](https://img.shields.io/badge/Curated%20by-Amey%20Thakur-blue.svg)](https://github.com/Amey-Thakur)
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-9E9E9E.svg)](LICENSE)
+  [![University](https://img.shields.io/badge/University-Mumbai-A6192E.svg)](https://mu.ac.in/)
+  [![Institution](https://img.shields.io/badge/Institution-Terna%20Engineering%20College-E8710A.svg)](https://ternaengg.ac.in/)
+  [![Curated by](https://img.shields.io/badge/Curated%20by-Amey%20Thakur-0969DA.svg)](https://github.com/Amey-Thakur)
 
   **A comprehensive academic resource for Computer Graphics (CG) and Computer Graphics Laboratory (CG Lab), covering fundamental graphics algorithms, 2D/3D transformations, rendering techniques, and practical implementations using graphics programming.**
 
@@ -158,11 +158,11 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
 <div align="center">
 
-  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-yellowgreen.svg)](Computer%20Graphics%20Lab/)
-  [![Language](https://img.shields.io/badge/Language-C-blueviolet.svg)](Computer%20Graphics%20Lab/)
-  [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-brightgreen.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
+  [![Total Experiments](https://img.shields.io/badge/Total%20Experiments-3-827717.svg)](Computer%20Graphics%20Lab/)
+  [![Language](https://img.shields.io/badge/Language-C-8250DF.svg)](Computer%20Graphics%20Lab/)
+  [![Lab Manual](https://img.shields.io/badge/Lab%20Manual-Available-5D4037.svg)](Computer%20Graphics%20Lab/PRACTICAL%20LAB.pdf)
 
-  [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-007bff?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/)
+  [![Live Demo](https://img.shields.io/badge/Live%20Demo-CG%20Lab%20Portfolio-00B8D9?style=flat&logo=github)](https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/)
 
 </div>
 
@@ -226,10 +226,10 @@ The laboratory component (CSL402) focuses on hands-on implementation of various 
 
   **An immersive AR gaming experience built with Unity, ARCore, and C#**
 
-  [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-purple.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
-  [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
-  [![Technology](https://img.shields.io/badge/Technology-ARCore%20%7C%20Unity-blue.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
-  [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Project](https://img.shields.io/badge/Project-AR%20Stack%20Game-6A1B9A.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Platform](https://img.shields.io/badge/Platform-Android-455A64.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Technology](https://img.shields.io/badge/Technology-ARCore%20%7C%20Unity-8250DF.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
+  [![Status](https://img.shields.io/badge/Status-Completed-2EA043.svg)](https://github.com/Amey-Thakur/AR-STACK-GAME)
 
 </div>
 

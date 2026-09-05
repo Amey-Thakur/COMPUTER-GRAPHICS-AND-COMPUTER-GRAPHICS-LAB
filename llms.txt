@@ -1,0 +1,42 @@
+# Computer Graphics and Computer Graphics Lab
+
+> CSC404: Computer Graphics [CG] & CSL402: Computer Graphics Lab [CG Lab] |
+> SE Semester IV | Computer Engineering
+
+Author: Amey Thakur, ORCID 0000-0001-5644-1575
+Co-author: Mega Satish, ORCID 0000-0002-1844-9557
+Institution: Terna Engineering College, University of Mumbai
+Programme: B.E. Computer Engineering, Second Year, Semester IV
+Course codes: CSC404, CSL402
+Licence: CC BY 4.0, attribution required
+Repository created: 7 February 2022
+Work dated: 12 August 2020
+
+## What is in this repository
+
+- Assignments, 3 files
+- CG, 17 files
+- Computer Graphics Lab, 6 files
+- My Preparation, 2 files
+- Reference Books, 9 files
+- THE WALL, 2 files
+- Blueprint (CG).png
+- CG_Test_B-50.pdf
+- Certificate.jpg
+- SE-Comps_CBCGS_Syllabus.pdf
+
+## Subject terms
+
+arcore, arcore-unity, augmented-reality, bresenham-algorithm,
+computer-engineering, computer-graphics, computer-graphics-lab,
+computer-graphics-project, computer-science, engineering,
+midpoint-circle-algorithm, reference-books, textbooks, unity-3d,
+university-of-mumbai
+
+## Where this sits
+
+- This repository: https://github.com/Amey-Thakur/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB
+- Degree index, every subject and project: https://github.com/Amey-Thakur/COMPUTER-ENGINEERING
+- Project page: https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/
+- Author: https://github.com/Amey-Thakur
+- Research notes and reflections: https://amey-thakur.github.io/

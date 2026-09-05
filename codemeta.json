@@ -36,8 +36,6 @@
     "applicationCategory": "Academic Course Archive",
     "educationalLevel": "Undergraduate, Second Year, Semester IV",
     "keywords": [
-        "Arcore",
-        "Arcore Unity",
         "Augmented Reality",
         "Bresenham Algorithm",
         "Computer Engineering",
@@ -49,7 +47,6 @@
         "Midpoint Circle Algorithm",
         "Reference Books",
         "Textbooks",
-        "Unity 3d",
         "University Of Mumbai",
         "CSC404",
         "CSL402",
@@ -76,7 +73,10 @@
         "SE Comps",
         "Algorithms",
         "C Programming",
-        "Bresenham"
+        "Bresenham",
+        "ARCore",
+        "ARCore Unity",
+        "Unity 3D"
     ],
     "url": "https://amey-thakur.github.io/COMPUTER-GRAPHICS-AND-COMPUTER-GRAPHICS-LAB/"
 }
